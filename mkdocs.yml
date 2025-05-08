@@ -8,6 +8,7 @@ nav:
         - Creating Figures: basic/basics/creatingfigures.md
         - Figure Challenge: basic/basics/figurechallenge.md
     - AI for Segmentation: 
+        - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
         - Pixel classification: basic/mlforsegmentation/pixelclassification.md
         - Deep Learning: basic/mlforsegmentation/dl.md
     - Reproducible Image Analysis Workflows:
