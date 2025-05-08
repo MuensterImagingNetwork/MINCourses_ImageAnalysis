@@ -1,0 +1,24 @@
+site_name: MIN - Image Analysis Courses
+nav:
+  - Welcome: index.md
+  - Basic Image Analysis: 
+    - Basics of Image Analysis: 
+        - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
+        - Introduction to Fiji/ImageJ: basic/basics/fiji.md
+        - Creating Figures: basic/basics/creatingfigures.md
+        - Figure Challenge: basic/basics/figurechallenge.md
+    - AI for Segmentation: 
+        - Pixel classification: basic/mlforsegmentation/pixelclassification.md
+        - Deep Learning: basic/mlforsegmentation/dl.md
+    - Reproducible Image Analysis Workflows:
+        - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
+        - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
+        - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
+ 
+  - Advanced Image Analysis: 
+    - Advanced Image Analysis: advanced/advanced.md
+theme: readthedocs
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
