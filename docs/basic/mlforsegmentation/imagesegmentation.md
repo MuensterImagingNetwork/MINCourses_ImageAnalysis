@@ -1,4 +1,6 @@
-### Image Segmentation
+# Basics of Image Segmentation
+
+### What is Image Segmentation?
 
 Image segmentation refers to the process of partitioning or dividing an image into different regions or components. 
 This is typically done to extract relevant information from an image, such as the identification and analysis of specific structures or features.
@@ -12,6 +14,8 @@ and distribution, which can be used to understand biological processes and pheno
 structure count as well as the intensity of cells and nuclei.* <br>
 <br>
 <br>
+
+### Image Segmentation before AI
 Traditional approaches to image segmentation rely on manually defining rules-based algorithms that separate objects from the background based on 
 their intensity, texture, or other visual characteristics. These algorithms often involve techniques such as thresholding, edge detection, and 
 region growing. For example, a researcher might use thresholding to separate cells from the background by setting a minimum intensity value, above 
@@ -25,12 +29,15 @@ can be time-consuming to optimize, especially when dealing with complex or heter
 ***By Pete Bankhead © Copyright 2022-2024. Derived from https://bioimagebook.github.io/***  <br>
 <br>
 <br>
+
+### Limitations of Traditional Segmentation Approaches
 Moreover, traditional approaches may struggle with images that exhibit high levels of noise, variability, or ambiguity, leading to incomplete or inaccurate 
 segmentations. This is where more advanced techniques, such as machine learning-based approaches, come into play. By leveraging patterns and 
 relationships learned from large datasets, machine learning algorithms can automatically identify and segment objects of interest, even in challenging images. 
 In the next section, we will explore some of these advanced techniques, including Ilastik, Cellpose, and Stardist, and how they can be applied to improve 
 image segmentation in bioimage analysis.
-
+<br>
+<br>
 
 ### Learning Objectives
 
