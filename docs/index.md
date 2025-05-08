@@ -1,6 +1,6 @@
 # Welcome to our Image Anaysis Courses
 
-- Welcome blablab blub
+- Welcome blablab
 - Link to website
 
 
