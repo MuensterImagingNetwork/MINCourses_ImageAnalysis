@@ -36,11 +36,11 @@ image segmentation in bioimage analysis.
 
 By the end of this module, you will be able to:
 
-1. ***Define image segmentation and its importance in bioimage analysis:*** <br>
+1. **Define image segmentation and its importance in bioimage analysis:** <br>
 Explain the concept of image segmentation, its applications, and its role in extracting meaningful information 
 from biological images.
-2. ***Understand the principles of machine learning and deep learning for image segmentation:***<br>
-Describe how machine learning and deep learning can be applied to image segmentation, including the concepts of supervised learning, convolutional neural networks (CNNs), and semantic segmentation.
-Apply AI tools for image segmentation: Use tools such as Ilastik, Stardist, and Cellpose to segment biological images, including:
-3. You will gain ***practical experience with ML and DL tools***, including navigating the user interfaces, loading and processing images, and adjusting algorithm parameters.
-You will apply these tools to segment sample biological images and evaluate the results.
+2. **Understand the principles of machine learning and deep learning for image segmentation:**<br>
+Describe how machine learning and deep learning can be applied to image segmentation, including the concepts of semantic and instance segmentation, supervised learning, convolutional neural networks (CNNs).
+3. **Apply AI tools for image segmentation:** <br>
+You will gain practical experience with ML and DL tools, including navigating the user interfaces, loading and processing images, and adjusting algorithm parameters.
+Use tools such as Ilastik, Stardist, and Cellpose to segment biological images and evaluate the results.
