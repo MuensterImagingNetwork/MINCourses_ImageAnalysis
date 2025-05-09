@@ -18,7 +18,10 @@ nav:
  
   - Advanced Image Analysis: 
     - Advanced Image Analysis: advanced/advanced.md
-theme: readthedocs
+theme:
+   name: readthedocs
+   logo: assets/logo.png
+   favicon: assets/favicon.png
 markdown_extensions:
   - admonition
   - pymdownx.details
