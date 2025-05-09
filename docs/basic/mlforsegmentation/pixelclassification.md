@@ -19,6 +19,7 @@ The first step is to train your pixel classifier by drawing annotations of your 
 	
 	- The more features, the more annotations
 	- Focus on edges and borders
+	- Try to draw background and foreground annotations close to each other
 	- Training time depends on number of training samples (e.g. annotated pixels)
 	- Adding lot of very similar “looking” pixels will not improve the classifier
 	- Include variations on your dataset into the training set (e.g. WT vs mutants, treatments)
