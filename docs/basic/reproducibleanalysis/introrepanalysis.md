@@ -47,8 +47,8 @@ By the end of this module, you will be able to:
  Students will gain practical experience with Arivis and CellProfiler, including loading and processing images, configuring pipelines, and analyzing results. They will learn how to navigate the software interfaces, troubleshoot common issues, and optimize pipeline performance.
 3. **Produce reproducible results with the CellProfiler pipeline:** <br>
 By the end of this module, students will be able to design, implement, and execute a CellProfiler pipeline to analyze biological images, including:
-- Creating and editing pipelines
-- Configuring modules for image processing and analysis
-- Running the pipeline on sample images
-- Evaluating and refining pipeline results to ensure reproducibility and accuracy
-- Documenting and reporting pipeline settings and results for future reference and collaboration.
+	* Creating and editing pipelines
+	* Configuring modules for image processing and analysis
+	* Running the pipeline on sample images
+	* Evaluating and refining pipeline results to ensure reproducibility and accuracy
+	* Documenting and reporting pipeline settings and results for future reference and collaboration.
