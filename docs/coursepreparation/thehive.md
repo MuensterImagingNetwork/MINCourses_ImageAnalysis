@@ -1,11 +1,11 @@
 # The HIVE
 
-The HIVE is a high end Analysis Server for your imaging data. The HIVE is available to all users
+The HIVE is a high end analysis server for your imaging data. The HIVE is available to all users
  of the Imaging Network and can be easily accessed via the remote desktop connection, via VPN 
  also from home. Since it runs on windows server 2019, it is very easy to use.
 
-The Hive is centrally connected to the WWU-Cloud, which means that all data stored on user shares 
-of the WWU-Cloud is directly available. There is no need to copy and duplicate data.
+The Hive is centrally connected to the Uni Münster Cloud, which means that all data stored on user shares 
+of the Uni Münster Cloud is directly available. There is no need to copy and duplicate data.
 
 ### Connect to the HIVE
 
