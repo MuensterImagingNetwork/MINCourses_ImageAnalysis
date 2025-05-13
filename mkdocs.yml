@@ -1,7 +1,11 @@
 site_name: MIN - Image Analysis Courses
 nav:
   - Welcome: index.md
-  - Basic Image Analysis:
+  - Course Preparation: 
+    - General Information: coursepreparation/generalprep.md
+    - JupyterHub: coursepreparation/jupyterhub.md
+    - The HIVE: coursepreparation/thehive.md
+  - Course "Basic Image Analysis":
     - Basics of Image Analysis: 
         - Welcome to the Course: basic/index.md
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
@@ -16,9 +20,7 @@ nav:
         - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
         - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
- 
-  - Advanced Image Analysis: 
-    - Advanced Image Analysis: advanced/advanced.md
+
 theme:
    name: readthedocs
    logo: assets/logo.png
