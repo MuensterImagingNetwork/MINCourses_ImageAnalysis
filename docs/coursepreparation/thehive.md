@@ -24,3 +24,6 @@ The connection is established using a Remote Desktop Connection.
 - Please download the "Windows App" (older versions: "Microsoft Remote Desktop App").
 - Start the App.
 - Enter the IP address and credentials you received as email.
+
+You can find a detailed manual on our [confluence pages](https://confluence.uni-muenster.de/spaces/WWUIMW/pages/54528157/The+HIVE+-+FAQ#expand-HowdoIgetaccesstomydata). 
+

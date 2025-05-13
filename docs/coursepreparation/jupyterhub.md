@@ -14,6 +14,8 @@ The following software is available on the Hub:
 
 ### Setting up Your JuypterHub
 
+You can find a detailed manual on our [confluence pages](https://confluence.uni-muenster.de/spaces/WWUIMW/pages/92414286/JupyterHub). 
+
 1. Start your JupyterHub on [JupyterHub](https://jupyterhub.uni-muenster.de/). 
 2. Configure your environment
 3. Launch your server
