@@ -9,7 +9,7 @@ structures and behaviors at unprecedented levels of detail. This website aims to
 describe some of the most prominent deep learning tools used in bioimage analysis, demonstrating
  their importance in advancing our understanding of cellular biology.
 
-### Basic principles of Deep Learning
+### Basic principles of DL
 
 At its core, deep learning is a type of machine learning that uses artificial neural networks 
 to analyze data. These networks are composed of layers of interconnected nodes (neurons) that 
@@ -17,7 +17,7 @@ process and transform inputs into outputs. In the context of image analysis, the
 typically an image, and the output is a predicted label or mask that identifies the objects 
 or objects of interest.
 
-### Key Components of Deep Learning for Image Segmentation
+### Key Components of DL for Image Segmentation
 
 - **Large Datasets:** A large collection of annotated images is necessary to train the network and ensure accurate predictions.
 - **Convolutional Neural Networks (CNNs):** A type of neural network that uses convolutional and pooling layers to extract features from images.
@@ -44,7 +44,7 @@ and segment objects with round or ellipsoid shapes, such as cells and nuclei. It
 and ability to handle limited training data make it ideal for various biological imaging tasks.
 
 ![ImageData](dl_stardist1.png)
-*The images shows nuclei segmentation using Stardist, displayed as image mask and outlines*
+*The images shows nuclei segmentation using Stardist, displayed as image mask and outlines.* <br>
 Images were derived from the Broad Bioimage Benchmark Collection (Caicedo et al., Nature Methods, 2019)]
 
 [Read the paper: Cell Detection with Star-convex Polygons](https://arxiv.org/abs/1806.03535) | [Source code on Github](https://github.com/stardist/stardist)
@@ -57,11 +57,14 @@ within dense populations. Utilizing a custom-designed loss function and a U-Net-
 network, Cellpose is widely used for cell segmentation in different tissues.
 
 ![ImageData](dl_stardist1.png)
-*The images shows cell segmentation using CellPose, displayed as image mask and outlines*
+*The images shows cell segmentation using CellPose, displayed as image mask and outlines.* <br>
 Images were derived from the Broad Bioimage Benchmark Collection (Caicedo et al., Nature Methods, 2019)]
 
 [Read the paper: Cell Detection with Star-convex Polygons](https://www.nature.com/articles/s41592-020-01018-x) | [Source code on Github](https://github.com/MouseLand/cellpose)
 
+### Cellpose Tutorial
+
+You can find the materials for the full Cellpose tutorial in your course folder.
 
 ### Further Reading
 
