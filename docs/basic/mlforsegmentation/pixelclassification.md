@@ -40,24 +40,16 @@ In a typical pixel classification workflow, you:
 
 ### Tools for Pixel Classification
 
-There are several tools for creating a pixel classifier that do not require any machine learning or coding knowledge.
-
-- [Ilastik](https://www.ilastik.org)
-- [Trainable Weka Segmentation in Fiji](https://imagej.net/plugins/tws/)
-- Machine Learning Segmenter in Arivis
-
-
-
 Several user-friendly applications let you build a pixel classifier without writing code:
 
 - **Ilastik**<br>
 Interactive GUI for pixel‑ and object‑level classification, segmentation, and tracking. 
-Great for rapid prototyping and batch processing.
+Great for rapid prototyping and batch processing. <br>
 [Ilastik](https://www.ilastik.org) | [GitHub](https://github.com/ilastik/ilastik)
 
 - **Trainable Weka Segmentation (Fiji/ImageJ)**<br>
 Leverages the Weka machine‑learning library inside ImageJ. Offers a familiar ImageJ interface with feature selection 
-and model training.
+and model training.  <br>
 [Trainable Weka Segmentation in Fiji](https://imagej.net/plugins/tws/)
 
 - **Machine Learning Segmenter (Zeiss Arivis Pro)**<br>
