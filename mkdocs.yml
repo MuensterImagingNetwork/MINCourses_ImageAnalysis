@@ -7,16 +7,18 @@ nav:
     - JupyterHub: coursepreparation/jupyterhub.md
     - The HIVE: coursepreparation/thehive.md
   - Course "Basic Image Analysis":
+    - Welcome to the Course: basic/index.md
     - Basics of Image Analysis: 
-        - Welcome to the Course: basic/index.md
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
         - Creating Figures: basic/basics/creatingfigures.md
         - Figure Challenge: basic/basics/figurechallenge.md
-    - AI for Segmentation: 
+    - AI for Image Segmentation: 
         - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
-        - Pixel classification: basic/mlforsegmentation/pixelclassification.md
+        - Supervised Machine Learning: basic/mlforsegmentation/pixelclassification.md
+        - Hands-On "ilastik": basic/mlforsegmentation/ilastik.md
         - Deep Learning: basic/mlforsegmentation/dl.md
+        - Hands-On "CellPose": basic/mlforsegmentation/cellpose.md
     - Reproducible Image Analysis Workflows:
         - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md

@@ -1,94 +1,66 @@
 # Machine-learning for image segmentation
 
-### The Principle behind Pixel Classification
-Pixel classification is a very powerful tool for image segmentation, where pixels are assigned to different categories or classes 
-based on their spatial, textural, or color properties. A pixel classifier is an algorithm that automates this process 
-by analyzing the image pixels and determining their class membership. The core concept behind pixel classification 
-involves the identification of patterns, similarities, and differences among pixels within an image. 
-In contrast to thresholding, the algorithm does not only look at intensity, but creates additional "features" that represents structure and texture differences.
+Machine‑learning–based segmentation teaches a computer to recognize and delineate structures in microscopy images by example rather than by writing explicit rules for 
+every possible case. 
 
-In the workflow, you will create manual annotations of your signal and background, 
-select appropriate features the algorithm should take into account, 
-and then train the algorithm - often a Random Forest classifier - to distinguish signal and background.
-You will iteratively add annotations and then train again until the algorithm achieves a good segmentation.
-Once your pixel classifier is trained, you can apply it to the rest of your data. 
+In ***supervised learning***, you give the software a handful of images where you’ve already drawn the correct outlines (the “ground truth”).
+ The program then figures out which pixel patterns—brightness, texture, edges—match your drawings. After checking that it works on a 
+ few test images, it can automatically create masks on new images for you, saving hours of manual tweaking.
+ 
+ Thus the programs learns to discern different cells or structures — much as a student might study example slides showing healthy 
+ versus diseased cells to learn what visual cues distinguish them.
+
+Here’s how it works step by step:
+
+- **Feature Extraction:** The algorithm examines each pixel (and its local neighborhood) to compute simple characteristics—intensity, texture, edge responses, or color.
+
+- **Model Training:** Using your labeled examples, the algorithm “learns” which combinations of features correspond to the object class (e.g., cell, nucleus, background). It builds a mathematical model—often a decision tree or a small neural network—that can predict the class of each pixel.
+
+- **Validation:** A separate set of labeled images (the “validation” or “test” set) checks how well the model performs on new data. This helps avoid overfitting (when a model learns the training examples too exactly but fails on unseen images).
+
+- **Prediction:** Once the model is trained and validated, you feed it new, unlabeled images. It applies the learned rules to assign each pixel to a class, producing a segmentation mask automatically.
+
+### The Principle behind Pixel Classification
+
+***Pixel classification*** is a specific type of supervised segmentation where each pixel is assigned to a category such as "signal" or "background" 
+by evaluating not only its raw intensity but also a suite of engineered features (that capture local texture, edge, and spatial information.
+
+In a typical pixel classification workflow, you:
+
+**1. Select Features:** Choose features and scales that capture the structural and textural cues in your data.
+
+**2. Annotate:** Scribble example regions for each class (signal vs. background).
+
+**3. Train & Refine:** Fit a Random Forest (or similar) to your annotations, inspect the results, then iteratively add or adjust annotations until the segmentation is robust.
+
+**4. Batch‑Apply:** Use the finalized classifier to process all images in your dataset automatically.
+<br>
+<br>
 ![Principle of Pixel Classification](pixelclassification_1.jpg)
 
 ### Tools for Pixel Classification
+
+There are several tools for creating a pixel classifier that do not require any machine learning or coding knowledge.
 
 - [Ilastik](https://www.ilastik.org)
 - [Trainable Weka Segmentation in Fiji](https://imagej.net/plugins/tws/)
 - Machine Learning Segmenter in Arivis
 
-### Ilastik
-User-friendly tool for machine learning–based segmentation, classification, and tracking without programming. 
-Offers an interactive GUI to train models on pixel and object features for rapid analysis. 
-[GitHub Repository](https://github.com/ilastik/ilastik)
 
-When using Ilastik for your image analysis, please cite:
 
->***ilastik: interactive machine learning for (bio)image analysis*** <br>
-Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N. Straehle, Bernhard X. Kausler, Carsten Haubold, 
-Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A. Hamprecht & Anna Kreshuk
-in: Nature Methods, (2019)
+Several user-friendly applications let you build a pixel classifier without writing code:
 
-### Selection of Features
-Ilastik provides different feature types, that can be calculated in 2D or 3D. <br>
+- **Ilastik**<br>
+Interactive GUI for pixel‑ and object‑level classification, segmentation, and tracking. 
+Great for rapid prototyping and batch processing.
+[Ilastik](https://www.ilastik.org) | [GitHub](https://github.com/ilastik/ilastik)
 
-- **Color/Intensity:** <br>
-		 Select these features if color or brightness can be used to distinguish objects
+- **Trainable Weka Segmentation (Fiji/ImageJ)**<br>
+Leverages the Weka machine‑learning library inside ImageJ. Offers a familiar ImageJ interface with feature selection 
+and model training.
+[Trainable Weka Segmentation in Fiji](https://imagej.net/plugins/tws/)
 
-- **Edge:** <br>
-		Select these features if brightness or color gradients can be used to distinguish objects.
+- **Machine Learning Segmenter (Zeiss Arivis Pro)**<br>
+Commercial, point‑and‑click segmentation tool embedded in the Arivis Vision4D environment. Provides GPU acceleration and 3D support.
 
-- **Texture:** <br>
-		 This feature may be important if the objects in the image have a unique texture.
 
-All of these features can be selected at different scales. The scales correspond to the sigma 
-value of the Gaussian filter used to smooth the image before applying the filter. Filters with 
-larger sigma values can capture information from larger neighborhoods, but may also average out
- fine details. If you think a specific sigma value would be particularly well-suited to your 
- data, you can also add it to the last column, as shown in red above. The following image shows
- an example of the edge filter computed with three different sigma values. Note how the filter 
- detects the smallest edges at very low sigma values and only captures the rough cell outlines 
- at high sigma values.
-
-![ImageData](feature_selection.png) <br>
-*The image shows the edge feature with different sigma values.*
-**© Copyright by the ilastik developers** |
-[Source](https://www.ilastik.org/license)
-
-!!! tip "Selection of **good** features"
-	As a general guideline, we recommend starting by selecting a broad range of feature types 
-	and scales. For smaller 2D datasets where computational resources are not a limitation, 
-	you can even choose to select all options. After confirming your selections in the feature 
-	selection dialog, you can review the chosen features in the bottom-left panel. 
-	Usually, you can quickly see by eye if the feature "makes sense" for your data.
-	If you are unsure - Ilastik can suggest features for you. Please follow the offical documentation [here](https://www.ilastik.org/documentation/pixelclassification/pixelclassification#suggest).
-
-### Training your Pixel classifier
-
-This training process involves a repetitive cycle of human input and machine learning. 
-The user starts by creating initial annotations, which are then used to generate predictive 
-models. The user evaluates these predictions, identifies areas for improvement, 
-and adds additional annotations to correct any mistakes, thereby refining the model's 
-performance through multiple iterations.
-
-![ImageData](training.png) <br>
-*The image is showing the iterative training process in ilastik. By evaluating the prediction, the user can add targeted annotations to improve the model.*
-
-!!! tip "How to draw **good** annotations"
-	
-	- The more features, the more annotations
-	- Focus on edges and borders
-	- Try to draw background and foreground annotations close to each other
-	- Training time depends on number of training samples (e.g. annotated pixels)
-	- Adding lot of very similar “looking” pixels will not improve the classifier
-	- Include variations on your dataset into the training set (e.g. WT vs mutants, treatments)
-
-### Ilastik - Pixel Classification Tutorial
-
-For a recap of the demonstration of the Pixel Classification Workflow in ilastik, 
-please visit the [Ilastik page](https://www.ilastik.org/documentation/pixelclassification/pixelclassification).
-
-You can find the materials for the full pixel classification tutorial in your course folder.

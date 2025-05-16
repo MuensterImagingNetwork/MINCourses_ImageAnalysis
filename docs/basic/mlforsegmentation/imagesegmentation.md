@@ -3,10 +3,15 @@
 ### What is Image Segmentation?
 
 Image segmentation refers to the process of partitioning or dividing an image into different regions or components. 
-This is typically done to extract relevant information from an image, such as the identification and analysis of specific structures or features.
-In the context of biological imaging, this typically means identifying and isolating specific cells or organelles within an image. 
-Image segmentation is useful because it enables researchers to extract meaningful information from images, such as object size, shape, location, 
-and distribution, which can be used to understand biological processes and phenomena.
+This is typically done to extract relevant information from an image, such as the identification and analysis of specific structures 
+or features, such as individual cells or subcellular structures.
+In biomedical research, segmentation lets you automatically isolate features like neurons in brain tissue, mitochondria in live-cell 
+assays, or cancer cell clusters in histological sections. By converting raw pixel data into discrete objects, 
+you can quantify critical metrics—size, shape, intensity, spatial distribution, and colocalization—at scale and with 
+reproducibility. These quantitative readouts form the foundation for rigorous analyses of cellular behavior, tissue architecture, 
+and disease progression, turning complex images into actionable biological insights. Furthermore, segmented objects can serve as the 
+basis for downstream workflows such as time‑lapse tracking, colocalization studies, spatial pattern analysis, and modeling of 
+cellular interactions.
 <br>
 <br>
 ![segmentation](imagesegmentation_1.png)
@@ -14,13 +19,25 @@ and distribution, which can be used to understand biological processes and pheno
 structure count as well as the intensity of cells and nuclei.* <br>
 <br>
 <br>
-
+### Semantic vs. Instance Segmentation
+Semantic segmentation assigns a class label to every pixel in an image—e.g., “nucleus,” “cytoplasm,” or “background” — 
+but does not distinguish between multiple objects of the same class. In contrast, instance segmentation not only classifies each 
+pixel but also separates each individual object, giving each cell or organelle its own unique identifier (e.g., “nucleus #1,” 
+“nucleus #2,” etc.). In bioimage analysis, semantic segmentation might tell you where all mitochondria are in a tissue section, 
+whereas instance segmentation would allow you to count and measure each mitochondrion individually, enabling per-object statistics 
+and more detailed single‑cell or subcellular analyses.
+<br>
+<br>
+![semanticvsinstance](semanticvsinstance.png)
+*Principle of semantic and instance segmentation.* <br>
+<br>
+<br>
 ### Image Segmentation before AI
-Traditional approaches to image segmentation rely on manually defining rules-based algorithms that separate objects from the background based on 
-their intensity, texture, or other visual characteristics. These algorithms often involve techniques such as thresholding, edge detection, and 
-region growing. For example, a researcher might use thresholding to separate cells from the background by setting a minimum intensity value, above 
-which pixels are considered part of a cell. While these traditional approaches can be effective, they often require careful tuning of parameters and 
-can be time-consuming to optimize, especially when dealing with complex or heterogeneous images.
+Traditional segmentation methods use hand‑crafted, rule‑based workflows that distinguish objects from background by leveraging simple 
+image features such as intensity, texture, or edge information. Common techniques include global or adaptive thresholding, where pixels above 
+a chosen brightness cutoff are labeled as “foreground,” edge‑detection filters that trace object boundaries, and region‑growing 
+algorithms that expand from seed points. For instance, you might set an intensity threshold to isolate fluorescently labeled nuclei, 
+then apply a watershed transform to delineate touching cells. 
 <br>
 <br>
 ![thresholding](bioimagebook_thresholding.png)
@@ -31,11 +48,14 @@ can be time-consuming to optimize, especially when dealing with complex or heter
 <br>
 
 ### Limitations of Traditional Segmentation Approaches
-Moreover, traditional approaches may struggle with images that exhibit high levels of noise, variability, or ambiguity, leading to incomplete or inaccurate 
-segmentations. This is where more advanced techniques, such as machine learning-based approaches, come into play. By leveraging patterns and 
-relationships learned from large datasets, machine learning algorithms can automatically identify and segment objects of interest, even in challenging images. 
-In the next section, we will explore some of these advanced techniques, including Ilastik, Cellpose, and Stardist, and how they can be applied to improve 
-image segmentation in bioimage analysis.
+While these approaches can work well on clean, uniform datasets, they demand meticulous parameter tuning—threshold values and 
+filter sizes- and often need to be re‑optimized for each new experimental condition. That manual calibration 
+becomes especially burdensome when images exhibit variable staining, uneven illumination, overlapping structures, high levels of 
+noise, or intrinsic biological variability, leading to incomplete or inaccurate segmentations. This is where machine‑learning– and 
+deep‑learning–based methods step in. By learning patterns and relationships directly from annotated datasets, tools like Ilastik, 
+Cellpose, and Stardist can automatically identify and delineate cells, nuclei, and subcellular structures even in challenging images. 
+In the next section, we’ll explore how these advanced techniques work and how to apply them effectively for robust bioimage 
+segmentation.
 <br>
 <br>
 
@@ -47,7 +67,8 @@ By the end of this module, you will be able to:
 Explain the concept of image segmentation, its applications, and its role in extracting meaningful information 
 from biological images.
 2. **Understand the principles of machine learning and deep learning for image segmentation:**<br>
-Describe how machine learning and deep learning can be applied to image segmentation, including the concepts of semantic and instance segmentation, supervised learning, convolutional neural networks (CNNs).
+Describe how machine learning and deep learning can be applied to image segmentation, 
+including the basic concepts of supervised learning, pixel classification and convolutional neural networks (CNNs).
 3. **Apply AI tools for image segmentation:** <br>
 You will gain practical experience with ML and DL tools, including navigating the user interfaces, loading and processing images, and adjusting algorithm parameters.
 Use tools such as Ilastik, Stardist, and Cellpose to segment biological images and evaluate the results.
