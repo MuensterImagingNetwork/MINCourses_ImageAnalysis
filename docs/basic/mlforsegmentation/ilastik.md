@@ -50,8 +50,8 @@ models. The user evaluates these predictions, identifies areas for improvement,
 and adds additional annotations to correct any mistakes, thereby refining the model's 
 performance through multiple iterations.
 
-![ImageData](training.png) <br>
-*The image is showing the iterative training process in ilastik. By evaluating the prediction, the user can add targeted annotations to improve the model.*
+![ImageData](training.png) <br> 
+*The image is showing the iterative training process in ilastik. By evaluating the prediction, the user can add targeted annotations to improve the model.* 
 
 !!! tip "How to draw **good** annotations"
 	
@@ -64,23 +64,45 @@ performance through multiple iterations.
 
 ### Step-by-Step Tutorial
 
-Thresholding was failing
--- example image -- failed thresholding
+Background and Goal
+You have acquired 3D fluorescence images of XY stained for (green) and (blue). 
+Your goal is to segment individual nuclei.
+
+You have tried traditional segmentation approaches using "Otsu" threshold
+1. Traditional Segmentation Approach
+Global Thresholding
+
+You apply Otsu’s method on the nuclear channel to separate “foreground” nuclei from “background.”
+
+Result: Over‑merged objects in crowded regions; small nuclei are lost in noisy areas.
+
+2D slice after thresholding (left) vs. ground truth outline (right). Note merged nuclei and missing small objects.
+
+Take‑home: Simple thresholding cannot cope with intensity heterogeneity, uneven illumination, or variable nuclear texture. We need a more robust, pixel‑wise model.
 
 Task: Proper segmentation using a pixel classification algorithm
 
 Image data 
 
-- **Step 1**: Create a new Project by choosing the workflow you want to apply. For segmentation choose "Pixel Classification".
-- **Step 2**: Load your Input Data under Raw Data. You can load multiple individual files or stacks by choosing the "Add a single 3D/4D Volume from sequence" option. Ilastik can handle many standard formats like tiff, png, jpeg or HDF5.
-- **Step 3**: Feature Selection. You select the features that will be measured and fed into the machine learning algorithm. The features will be measured on the original image, as well as smoothed images. The level of smoothing is determined by σ, the larger this scale, the more information of the neighborhood around a pixel is taken into account.
-- **Step 4**: Training. Train your pixel classifier by marking foreground and background pixel. Use the live prediction view to preview your segmentation. Refine until satisfied.
 
-!!! info "Congratulations":
+| Step                             | Description                                                                
+| -------------------------------- | -------------------------------------------------------------- 
+| **1. Project Setup**             | Open your image in ilastik’s “Pixel Classification” workflow.              
+| **2. Feature Selection**         | You select the features that will be measured and fed into the <br> machine learning algorithm. The features will be measured <br>on the original image, as well as smoothed images. The level of <br> smoothing is determined by σ, the larger this scale, the more <br> information of the neighborhood around a pixel is taken into account.
+| **3. Define Classes**            | Create two classes: **Nucleus** and **Background**.                        
+| **4. Annotate Training Regions** | Brush representative regions for each class across different tissue <br>  areas. Annotate at least 5 regions each for nucleus and background. 
+| **5. Train Classifier**          | Click **“Live Update”** to see probability map.                            
+| **6. Refine Annotations**        | Add or remove brush strokes where misclassifications occur.                
+| **7. Export Segmentation**       | Threshold the nucleus probability channel and apply watershed.
+| **8. Batch Application**         |  Apply your model to your dataset. Load more images and apply your <br> pixel classifier batch-wise.               
+
+!!! tip "Congratulations"
 	You have trained your own pixel classifier that outperforms thresholding!
 
-- **Step 5**: Export your predictions. You can export segmentation masks or probability maps.
-- **Step 6**: Apply your model to your dataset. Load more images and apply your pixel classifier batch-wise.
+
+           
+
+
 
 For a detailed recap of the demonstration of the Pixel Classification Workflow in ilastik, 
 please visit the [Ilastik page](https://www.ilastik.org/documentation/pixelclassification/pixelclassification).
