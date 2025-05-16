@@ -8,22 +8,7 @@ nav:
     - The HIVE: coursepreparation/thehive.md
   - Course "Basic Image Analysis":
     - Welcome to the Course: basic/index.md
-    - Basics of Image Analysis: 
-        - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
-        - Introduction to Fiji/ImageJ: basic/basics/fiji.md
-        - Creating Figures: basic/basics/creatingfigures.md
-        - Figure Challenge: basic/basics/figurechallenge.md
-    - AI for Image Segmentation: 
-        - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
-        - Supervised Machine Learning: basic/mlforsegmentation/pixelclassification.md
-        - Hands-On "ilastik": basic/mlforsegmentation/ilastik.md
-        - Deep Learning: basic/mlforsegmentation/dl.md
-        - Hands-On "CellPose": basic/mlforsegmentation/cellpose.md
-    - Reproducible Image Analysis Workflows:
-        - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
-        - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
-        - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
-
+    
 theme:
    name: readthedocs
    logo: assets/logo.png
