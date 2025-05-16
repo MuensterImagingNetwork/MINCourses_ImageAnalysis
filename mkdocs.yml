@@ -16,7 +16,8 @@ nav:
     - AI for Image Segmentation: 
         - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
         - Supervised Machine Learning: basic/mlforsegmentation/pixelclassification.md
-        - Hands-On "ilastik": basic/mlforsegmentation/ilastik.md
+        - Best Practices: basic/mlforsegmentation/ilastik.md
+        - Hands-On "ilastik": basic/mlforsegmentation/ilastik_v2.md
         - Deep Learning: basic/mlforsegmentation/dl.md
         - Hands-On "CellPose": basic/mlforsegmentation/cellpose.md
     - Reproducible Image Analysis Workflows:

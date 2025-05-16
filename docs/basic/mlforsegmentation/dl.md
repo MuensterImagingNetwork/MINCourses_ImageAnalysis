@@ -36,17 +36,20 @@ image, it can predict the correct labels or segmentation masks on its own.
 	- **Customizable Accuracy**: 
 		Quickly fine‑tune or retrain on your own examples (transfer learning) to adapt the model to new stains, microscopes, or tissues.
 
+---
+
 ### DL Tools for Cell Segmentation
 
 **StarDist** and **Cellose** are two popular deep learning models for image segmentation that work very well on various image data. 
 
 
 ### StarDist
+[Cell Detection with Star‑convex Polygons](https://arxiv.org/abs/1806.03535) | [GitHub](https://github.com/stardist/stardist)
 
-**What it Does** <br>
+###### What it Does
 StarDist excels at segmenting round or slightly elongated structures—think nuclei, small spheroids, or yeast cells—by representing each object as a “star” of radial lines from its center.
 
-**Applications** <br>
+##### Applications
 - Nuclear segmentation in fluorescence images <br>
 - Yeast or bacterial colonies in phase‑contrast <br>
 - Any roughly round objects in 2D or 3D <br>
@@ -55,48 +58,70 @@ StarDist excels at segmenting round or slightly elongated structures—think nuc
 *The images shows nuclei segmentation using Stardist, displayed as image mask and outlines.* <br>
 Images were derived from the Broad Bioimage Benchmark Collection (Caicedo et al., Nature Methods, 2019)]
 
-**How It Works** <br>
+###### How It Works
 1. **Probability Map:** Learns a pixel‑wise probability of being part of an object versus background. <br>
 2. **Polygon Prediction:** For each object pixel, predicts distances along evenly spaced rays to the object boundary, 
 yielding a star‑convex polygon. <br>
 3. **Mask Generation:** Applies non‑maximum suppression on overlapping polygons to produce separated object masks. <br>
 
+###### Advantages and Disadvantages
 | **Advantages** | **Disadvantages** |
 | --------------- |------------------- |
 | **Handles Crowding:** <br> Separates touching nuclei more reliably than simple watershed. | **Shape Restriction:** <br> Not ideal for highly irregular or filamentous cells (e.g., neurons). |
 | **3D‑Ready:** <br> Directly segments volumetric stacks without needing slice‑by‑slice cleanup. | **Annotation Overhead:** Requires drawing individual object centers if you fine‑tune the model. |
 
 
-[Paper: Cell Detection with Star‑convex Polygons](https://arxiv.org/abs/1806.03535) | [GitHub](https://github.com/stardist/stardist)
+
+
+!!! warning "Citation"
+	When using Ilastik for your image analysis, please cite:
+	>***ilastik: interactive machine learning for (bio)image analysis*** <br>
+	Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N. Straehle, Bernhard X. Kausler, Carsten Haubold, 
+	Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A. Hamprecht & Anna Kreshuk
+	in: Nature Methods, (2019) 
+	<br> DOI: [10.1038/s41592-019-0582-9](10.1038/s41592-019-0582-9)
 
 ---
 
 ### Cellpose
+[Cellpose: a generalist algorithm for cellular segmentation](https://www.nature.com/articles/s41592-020-01018-x) | [GitHub](https://github.com/MouseLand/cellpose)
 
-**What it Does** <br>
+###### What it Does
 Cellpose is a generalist cell segmentation tool designed to work “out of the box” on a wide variety of cell types, imaging modalities, and magnifications.
 
-**How It Works** <br>
-	1. **Flow Field Prediction:** Learns a vector field where each pixel “flows” toward its cell center, naturally separating touching cells. <br>
-	2. **Cell Probability Map:** Predicts the likelihood that each pixel belongs to any cell. <br>
-	3. **Mask Extraction:** Integrates the flow field to define individual cell masks. <br>
-
-**Applications** <br>
-	- Whole‑cell segmentation in fluorescence, brightfield, or phase‑contrast <br>
-	- Dense tissue sections with varied cell shapes and sizes <br>
-	- High‑throughput screens where manual tuning is impractical <br>
+##### Applications
+- Whole‑cell segmentation in fluorescence, brightfield, or phase‑contrast <br>
+- Dense tissue sections with varied cell shapes and sizes <br>
+- High‑throughput screens where manual tuning is impractical <br>
 
 ![ImageData](dl_cellpose1.png)
 *The images shows cell segmentation using CellPose, displayed as image mask and outlines.* <br>
 Images were derived from the Broad Bioimage Benchmark Collection (Caicedo et al., Nature Methods, 2019)]
 
+###### How It Works
+1. **Flow Field Prediction:** Learns a vector field where each pixel “flows” toward its cell center, naturally separating touching cells. <br>
+2. **Cell Probability Map:** Predicts the likelihood that each pixel belongs to any cell. <br>
+3. **Mask Extraction:** Integrates the flow field to define individual cell masks. <br>
+
+###### Advantages and Disadvantages
 | **Advantages** | **Disadvantages** |
 | --------------- |------------------- |
 | **Pre-trained on Diverse Data:** <br> Performs well without additional training on most cell types. | **GPU Recommended:** <br>Large 3D stacks or high‑resolution images can be slow on CPU. |
 | **Automatic Diameter Estimation:** <br>No need to guess object size—Cellpose infers it from your image. | **Less Accurate on Pure Nuclear Stains:** <br> May over‑segment clumped nuclei unless you switch to the “nuclei” model. |
 | **GUI Support:** <br>Easy point‑and‑click interface. | |
 
-[Paper: Cellpose: a generalist algorithm for cellular segmentation](https://www.nature.com/articles/s41592-020-01018-x) | [GitHub](https://github.com/MouseLand/cellpose)
+
+!!! warning "Citation"
+	When using CellPose for your image analysis, please cite:
+	>***ilastik: interactive machine learning for (bio)image analysis*** <br>
+	Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N. Straehle, Bernhard X. Kausler, Carsten Haubold, 
+	Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A. Hamprecht & Anna Kreshuk
+	in: Nature Methods, (2019) 
+	<br> DOI: [10.1038/s41592-019-0582-9](10.1038/s41592-019-0582-9)
+
+
+
+---
 
 ### Further Reading
 
