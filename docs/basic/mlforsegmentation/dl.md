@@ -7,6 +7,8 @@ few hand‑drawn annotations to get clean segmentation masks, remove background 
 might miss by eye. In this tutorial, we’ll explore two beginner‑friendly tools — StarDist and Cellpose — that let you 
 harness deep learning’s power without writing a single line of code.
 
+---
+
 ### Basic principles of DL
 
 Deep learning is a way for computers to learn patterns from examples—no need to hand‑craft rules. Think of it like 
@@ -14,6 +16,8 @@ teaching a digital “brain” to recognize structures in images: you feed it lo
 with the answers you want (outputs), such as “this is a cell” or “this pixel is background.” The network, made of 
 many simple units called neurons organized in layers, adjusts itself during training so that when you show it a new 
 image, it can predict the correct labels or segmentation masks on its own.
+
+---
 
 ### What You Need for Image Segmentation
 - **Example Images with Annotations**:
@@ -37,6 +41,8 @@ image, it can predict the correct labels or segmentation masks on its own.
 		Quickly fine‑tune or retrain on your own examples (transfer learning) to adapt the model to new stains, microscopes, or tissues.
 
 ---
+
+
 
 ### DL Tools for Cell Segmentation
 
@@ -74,13 +80,12 @@ yielding a star‑convex polygon. <br>
 
 
 !!! warning "Citation"
-	When using Ilastik for your image analysis, please cite:
-	>***ilastik: interactive machine learning for (bio)image analysis*** <br>
-	Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N. Straehle, Bernhard X. Kausler, Carsten Haubold, 
-	Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A. Hamprecht & Anna Kreshuk
-	in: Nature Methods, (2019) 
-	<br> DOI: [10.1038/s41592-019-0582-9](10.1038/s41592-019-0582-9)
-
+	When using Stardist for your image analysis, please cite:
+	>***Cell Detection with Star-convex Polygons*** <br>
+	Uwe Schmidt, Martin Weigert, Coleman Broaddus, and Gene Myers. International Conference
+	on Medical Image Computing and Computer-Assisted Intervention (MICCAI), Granada, Spain, 2018.
+	DOI: [https://doi.org/10.48550/arXiv.1806.03535](https://doi.org/10.48550/arXiv.1806.03535)
+	
 ---
 
 ### Cellpose
@@ -113,14 +118,10 @@ Images were derived from the Broad Bioimage Benchmark Collection (Caicedo et al.
 
 !!! warning "Citation"
 	When using CellPose for your image analysis, please cite:
-	>***ilastik: interactive machine learning for (bio)image analysis*** <br>
-	Stuart Berg, Dominik Kutra, Thorben Kroeger, Christoph N. Straehle, Bernhard X. Kausler, Carsten Haubold, 
-	Martin Schiegg, Janez Ales, Thorsten Beier, Markus Rudy, Kemal Eren, Jaime I Cervantes, Buote Xu, Fynn Beuttenmueller, Adrian Wolny, Chong Zhang, Ullrich Koethe, Fred A. Hamprecht & Anna Kreshuk
-	in: Nature Methods, (2019) 
-	<br> DOI: [10.1038/s41592-019-0582-9](10.1038/s41592-019-0582-9)
-
-
-
+	>***Cellpose: a generalist algorithm for cellular segmentation. *** <br>
+	Stringer, C., Wang, T., Michaelos, M. et al. Nat Methods 18, 100–106 (2021).
+	DOI: [https://doi.org/10.1038/s41592-020-01018-x](https://doi.org/10.1038/s41592-020-01018-x)
+	
 ---
 
 ### Further Reading

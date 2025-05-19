@@ -1,38 +1,44 @@
-# 🧪 **Hands-on ilastik: Segmenting Nuclei with Pixel Classification**
+# 🛠️ **Hands-on ilastik: <br> Segmenting Lysosomes with Pixel Classification**
 
 ### Background Scenario
 
-You’ve acquired fluorescence microscopy images with two channels:
+You’ve acquired a fluorescence microscopy image with three channels:
 
-* **Green:** cytoplasmic marker
-* **Blue:** nuclear stain (e.g., DAPI)
+* **Red**: lysosomes
+* **Green:** mitochondria
+* **Blue:** nuclear stain
 
-**Goal:** Segment individual nuclei from the blue channel, even in crowded or noisy areas.
+![ImageData](helacells.jpg) <br>
+*Fiji - Sample Image. This is a composite color image of HeLa cells is courtesy of Tony Collins, creator of the ImageJ for Microscopy
+collection of plugins at <http://www.macbiophotonics.ca/imagej/>.*
 
 ---
 
-### ⚠️ Where Traditional Segmentation Fails
+### **Goal:** 
+Segment individual lysosomes from the red channel, even in crowded or noisy areas.
 
-You try global thresholding using **Otsu’s method** on the nuclear channel:
+---
+
+### Where Traditional Segmentation Fails
+
+You try global thresholding of the red lysosomes channel:
 
 **Problem:**
 
-  * Merged adjacent nuclei
-  * Faint nuclei missed entirely
+  * Merged adjacent lysosomes
+  * Faint lysosomes missed entirely
   * Intensity variation and texture not handled
 
-**Result Example:**
-Left: thresholded image with merged objects
-Right: ground truth outlines showing individual nuclei
-
-**Take‑home message:**
-We need a smarter method that considers *context* and *local features* — not just intensity.
-Let’s use a **pixel classifier** in ilastik!
+![ImageData](segmentationproblem.jpg) <br>
+*Original: Channel 1 (lysosomes) - in gray scale; Threshold 1: thresholded image with merged objects; Threshold 2: thresholded image with missing objects
+Right: ground truth outlines showing individual nuclei*
 
 ---
 
-## 🧭 **Step-by-Step Instructions**
+### 🧭 **Step-by-Step Instructions**
 
+We need a smarter method that considers *context* and *local features* — not just intensity.
+Let’s use a **pixel classifier** in ilastik!
 You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start ilastik by clicking on the ilastik icon.
 Alternatively, you can start ilastik v1.4 on the HIVE. 
 
@@ -42,14 +48,14 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 * Open **ilastik** 
 * Select the **Pixel Classification** workflow
-* Create a new project and name it meaningfully (e.g., `nuclei_segmentation.ilp`)
+* Create a new project and name it meaningfully (e.g., `lysosome_segmentation.ilp`)
 
 ---
 
 #### 🖼️ Step 2: Import Your Image
 
 * Go to **Input Data > Add New > Add separate Image(s)**
-* Load your images
+* Load your image (red channel only)
 * Preview it in the image viewer to ensure it loads correctly
 
 ---
@@ -62,7 +68,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
   * Color/Intensity
   * Edge
   * Texture
-* Choose multiple feature scales (σ values).
+* Choose multiple (or all) feature scales (σ values).
   Example: `0.3`, `1.0`, `3.5`, `5.0`
 * These help the classifier distinguish fine vs. coarse structures.
 
@@ -72,9 +78,8 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 * Go to the **Training** Tab
 * Add two classes:
-
-  * **Class 1**: *Nucleus*
-  * **Class 2**: *Background*
+	- **Class 1**: *Lysosomes*
+	- **Class 2**: *Background*
 * You can rename classes by double-clicking their labels
 
 ---
@@ -101,7 +106,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 * Activate **Live Update** (top left of viewer)
 * ilastik will update a **probability map** in real time
-* Bright areas = high likelihood of being “nucleus”
+* Bright areas = high likelihood of being “lysosomes”
 * Familiarize yourself with the different visibility options by enabling the **eye ball** icon.
 * What does *Labels*, *Uncertainty*, *Segmentation* and *Prediction* show?
 
@@ -110,9 +115,8 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 #### 🧹 Step 7: Refine Annotations
 
 * If the classifier is making mistakes:
-
-  * Add or erase brush strokes
-  * Focus on misclassified edge areas or noisy zones
+	- Add or erase brush strokes
+	- Focus on misclassified edge areas or noisy zones
 * Live Update helps you immediately see the effect of changes
 
 ---
@@ -122,16 +126,18 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 * Go to the **Prediction Export** tab
 * Choose what to export:
 
-  * Raw probability map (for post-processing in Fiji/ImageJ)
-  * Binary segmentation mask
+	- Raw probability map (for post-processing in Fiji/ImageJ)
+	- Binary segmentation mask
 
 ---
 
 #### 🔁 Step 9: Batch Apply to New Images
 
-* In **Batch Input**, load additional images
-* ilastik will apply your trained classifier across the entire set
-* Great for high-throughput image analysis
+*If we had any more images ...* <br>
+
+- In **Batch Input**, load additional images
+- ilastik will apply your trained classifier across the entire set
+- Great for high-throughput image analysis
 
 ---
 

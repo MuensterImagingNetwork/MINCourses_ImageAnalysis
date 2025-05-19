@@ -7,6 +7,7 @@ Then, we’ll proceed through the full workflow: creating training annotations,
 selecting meaningful image features, and iteratively refining the model. By the end, you’ll know how to build a pixel classifier 
 that can accurately segment your images and scale across large datasets with minimal manual effort.
 
+---
 
 ### Selection of Features
 Ilastik offers three main feature types, each available in 2D or 3D and at multiple scales: <br>
@@ -41,6 +42,8 @@ The following image shows an example of the edge filter computed with three diff
 	selection dialog, you can review the chosen features in the bottom-left panel. 
 	Usually, you can quickly see by eye if the feature "makes sense" for your data.
 	If you are unsure - Ilastik can suggest features for you. Please follow the offical documentation [here](https://www.ilastik.org/documentation/pixelclassification/pixelclassification#suggest).
+
+---
 
 ###  Training your Pixel Classifier 
 

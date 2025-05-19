@@ -1,23 +1,40 @@
-# 🧪 **Hands-On Cellpose: Segmenting Difficult Cell Images**
+# 🛠️ **Hands-On Cellpose: Segmenting Difficult Cells**
 
 ### **Background Scenario**
 
-You're working with fluorescent microscopy images of densely packed cells. You’ve tried conventional thresholding and watershed segmentation in Fiji or ImageJ—but the cells are touching, boundaries are unclear, and over- or under-segmentation is a common issue.
+You're working with fluorescent microscopy images of densely packed cells. 
+You’ve tried conventional thresholding and watershed segmentation in Fiji or ImageJ
+— but the cells are touching, boundaries are unclear, and over- or under-segmentation is a 
+common issue.
 
-**Goal:** Use **Cellpose** to generate accurate cell masks, separating individual cells, even in cluttered images.
+![ImageData](vargas_image.jpg)
+**© Copyright by Pascual-Vargas et al.** |
+[Source](https://idr.openmicroscopy.org/webclient/img_detail/2874783/?well=1246992)
+
+The data we will analysis today, is derived from this research paper: 
+
+>***Analysis of YAP/TAZ localization in triple negative breast cancer in response to Rho GTPase regulators*** <br>
+Pascual-Vargas P, Cooper S, Sero J, Bousgouni V, Arias-Garcia M, Bakal C., Scientific Data, 2017
+
+[Publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC5332010/) | [Full Dataset](https://idr.openmicroscopy.org/webclient/?show=screen-1651)
+
+---
+
+### **Goal:** 
+Use **Cellpose** to generate accurate cell masks, separating individual cells, 
+even in cluttered images.
 
 ---
 
 ### 🧭 **Step-by-Step Instructions**
 
 You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start Cellpose by clicking on the Cellpose icon.
-Alternatively, you can start Cellpose on the HIVE using the Anaconda Prompt and type 
+Alternatively, you can start Cellpose on the HIVE using the Anaconda Prompt and type:
 ```bash
 conda activate cellpose
 cellpose
 ``` 
-
-
+---
 #### 📂 Step 1: Load Your Image
 
 * Open your image using **File > Open** in the GUI
@@ -27,12 +44,11 @@ cellpose
 
 #### 🧠 Step 2: Choose a Pre-Trained Model
 
-* **Model type:** Choose between:
-
-  * **cyto** – for whole-cell segmentation (typical for cytoplasm or membrane-stained images)
-  * **nuclei** – for nuclear staining (e.g., DAPI)
-* **Flow threshold / cell probability:** Leave default for now
-* **Use GPU:** Enable if you have one (optional but faster)
+- **Model type:** Choose between:
+	- **cyto** – for whole-cell segmentation (typical for cytoplasm or membrane-stained images)
+	- **nuclei** – for nuclear staining (e.g., DAPI) 
+- **Flow threshold / cell probability:** Leave default for now
+- **Use GPU:** Enable if you have one (optional but faster)
 
 ---
 
@@ -48,6 +64,8 @@ cellpose
 * Click **“Run segmentation”**
 * You’ll see overlaid cell outlines and a segmentation mask
 * Evaluate: Are all cells segmented? Are there missed detections or merged objects?
+* Compare results between the different **cyto** and **nuclei** models.
+* Try adjusting the **diameter** or **flow threshold**—what changes?
 
 ---
 
@@ -71,9 +89,6 @@ Try running Cellpose on:
 * A DAPI-stained image with clustered nuclei
 * A tissue section with mixed cell sizes
 
-Compare results between the **cyto** and **nuclei** models.
-Try adjusting the **diameter** or **flow threshold**—what changes?
-
 ---
 
 ### 📌 **Key Takeaways**
@@ -91,4 +106,3 @@ Try adjusting the **diameter** or **flow threshold**—what changes?
 
 * [Official Cellpose Tutorial (YouTube)](https://www.youtube.com/watch?v=K1o2YzEYrRc)
 * [Cellpose GitHub Page](https://github.com/MouseLand/cellpose)
-* [Napari Plugin Info](https://github.com/MouseLand/cellpose#using-cellpose-in-napari)

@@ -20,6 +20,8 @@ Here’s how it works step by step:
 
 - **Prediction:** Once the model is trained and validated, you feed it new, unlabeled images. It applies the learned rules to assign each pixel to a class, producing a segmentation mask automatically.
 
+---
+
 ### The Principle behind Pixel Classification
 
 ***Pixel classification*** is a specific type of supervised segmentation where each pixel is assigned to a category such as "signal" or "background" 
@@ -37,6 +39,8 @@ In a typical pixel classification workflow, you:
 <br>
 <br>
 ![Principle of Pixel Classification](pixelclassification_1.jpg)
+
+---
 
 ### Tools for Pixel Classification
 
