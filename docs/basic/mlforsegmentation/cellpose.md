@@ -1,4 +1,4 @@
-## 🧪 **Hands-On Cellpose: Segmenting Difficult Cell Images**
+# 🧪 **Hands-On Cellpose: Segmenting Difficult Cell Images**
 
 ### **Background Scenario**
 
@@ -8,15 +8,14 @@ You're working with fluorescent microscopy images of densely packed cells. You�
 
 ---
 
-### 🧰 **What You’ll Need**
-
-* A few example images of your cells (TIFF, PNG, or JPEG)
-* [Cellpose GUI](https://www.cellpose.org/) or [Napari + Cellpose plugin](https://github.com/MouseLand/cellpose)
-* Optional: Annotations if you plan to train your own model (advanced)
-
----
-
 ### 🧭 **Step-by-Step Instructions**
+
+You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start Cellpose by clicking on the Cellpose icon.
+Alternatively, you can start Cellpose on the HIVE using the Anaconda Prompt and type 
+```bash
+conda activate cellpose
+cellpose
+``` 
 
 
 #### 📂 Step 1: Load Your Image
@@ -93,7 +92,3 @@ Try adjusting the **diameter** or **flow threshold**—what changes?
 * [Official Cellpose Tutorial (YouTube)](https://www.youtube.com/watch?v=K1o2YzEYrRc)
 * [Cellpose GitHub Page](https://github.com/MouseLand/cellpose)
 * [Napari Plugin Info](https://github.com/MouseLand/cellpose#using-cellpose-in-napari)
-
----
-
-Let me know if you'd like a version of this tutorial with **screenshots**, **custom data**, or a **3D segmentation** variant!

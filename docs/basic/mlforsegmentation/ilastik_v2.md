@@ -2,7 +2,7 @@
 
 ### Background Scenario
 
-You’ve acquired 3D fluorescence microscopy images with two channels:
+You’ve acquired fluorescence microscopy images with two channels:
 
 * **Green:** cytoplasmic marker
 * **Blue:** nuclear stain (e.g., DAPI)
@@ -15,29 +15,32 @@ You’ve acquired 3D fluorescence microscopy images with two channels:
 
 You try global thresholding using **Otsu’s method** on the nuclear channel:
 
-* 🔍 **Problem:**
+**Problem:**
 
   * Merged adjacent nuclei
   * Faint nuclei missed entirely
   * Intensity variation and texture not handled
 
-📸 **Result Example:**
+**Result Example:**
 Left: thresholded image with merged objects
 Right: ground truth outlines showing individual nuclei
 
-🧪 **Take‑home message:**
-We need a smarter method that considers *context* and *local features*—not just intensity.
+**Take‑home message:**
+We need a smarter method that considers *context* and *local features* — not just intensity.
 Let’s use a **pixel classifier** in ilastik!
 
 ---
 
 ## 🧭 **Step-by-Step Instructions**
 
+You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start ilastik by clicking on the ilastik icon.
+Alternatively, you can start ilastik v1.4 on the HIVE. 
+
 ---
 
 #### 📁 Step 1: Start a New Project
 
-* Open **ilastik**
+* Open **ilastik** 
 * Select the **Pixel Classification** workflow
 * Create a new project and name it meaningfully (e.g., `nuclei_segmentation.ilp`)
 
@@ -45,19 +48,19 @@ Let’s use a **pixel classifier** in ilastik!
 
 #### 🖼️ Step 2: Import Your Image
 
-* Go to **Input Data > Add New**
-* Load your image (TIFF or HDF5 preferred)
+* Go to **Input Data > Add New > Add separate Image(s)**
+* Load your images
 * Preview it in the image viewer to ensure it loads correctly
 
 ---
 
 #### 🧪 Step 3: Select Features
 
-* Navigate to the **Feature Selection** tab
+* Navigate to the **Feature Selection** tab and **Select Features...*
 * ilastik will compute image features like:
 
-  * Intensity
-  * Edges
+  * Color/Intensity
+  * Edge
   * Texture
 * Choose multiple feature scales (σ values).
   Example: `0.3`, `1.0`, `3.5`, `5.0`
@@ -67,6 +70,7 @@ Let’s use a **pixel classifier** in ilastik!
 
 #### 🏷️ Step 4: Define Classes
 
+* Go to the **Training** Tab
 * Add two classes:
 
   * **Class 1**: *Nucleus*
@@ -85,6 +89,11 @@ Let’s use a **pixel classifier** in ilastik!
   * Crowded regions
   * Background noise
 * Label at least 5–10 representative regions per class
+* You can use the **eraser** tool to correct your annotation
+
+!!!tip "Navigating ilastik"
+	Go to **Settings** --> **Keyboard Shortcuts** <br>
+	Check out the shortcuts for quick adjustment of image contrast, zoom in/out, panning and navigation between images.
 
 ---
 
@@ -93,6 +102,8 @@ Let’s use a **pixel classifier** in ilastik!
 * Activate **Live Update** (top left of viewer)
 * ilastik will update a **probability map** in real time
 * Bright areas = high likelihood of being “nucleus”
+* Familiarize yourself with the different visibility options by enabling the **eye ball** icon.
+* What does *Labels*, *Uncertainty*, *Segmentation* and *Prediction* show?
 
 ---
 
@@ -113,7 +124,6 @@ Let’s use a **pixel classifier** in ilastik!
 
   * Raw probability map (for post-processing in Fiji/ImageJ)
   * Binary segmentation mask
-* You can also export as TIFF or HDF5
 
 ---
 
@@ -125,24 +135,13 @@ Let’s use a **pixel classifier** in ilastik!
 
 ---
 
-Let me know if you'd like a companion **Fiji post-processing tutorial** (e.g., for thresholding and watershed) or to expand this for **3D segmentation**!
-
----
-
-### 🧪 **Challenge Exercise**
-
-* Try training on a noisy image vs. a clean one. How does performance change?
-* Train with **3 classes**: background, nucleus, and cytoplasm—see how the segmentation behaves.
-
----
-
 ### 📌 **Key Takeaways**
 
 | ✅ **Pros**                                  | ⚠️ **Cons**                                               |
 | ------------------------------------------- | --------------------------------------------------------- |
-| No coding or deep learning knowledge needed | Initial manual labeling takes time                        |
+| No coding or machine learning knowledge needed | Initial manual labeling takes time                        |
 | Learns from pixel patterns & textures       | Classifier might need tuning per dataset                  |
-| Great for complex or noisy images           | Segmentation is 2D (for now) unless using other workflows |
+| Great for complex or noisy images           | Semantic segmentation
 | Fast batch processing after training        | Watershed post-processing sometimes required              |
 
 ---
