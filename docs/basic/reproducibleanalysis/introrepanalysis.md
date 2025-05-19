@@ -64,3 +64,4 @@ and boost collaboration.
 You will gain practical experience with CellProfiler, including loading and processing images, configuring pipelines, 
 and analyzing results. They will learn how to navigate the software interfaces, troubleshoot common issues, and optimize 
 pipeline performance.
+
