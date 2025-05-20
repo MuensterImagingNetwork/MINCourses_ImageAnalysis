@@ -5,6 +5,9 @@ nav:
     - Basics of Image Analysis: 
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
+        - "Fiji Tutorial 1: Open and inspect Images": basic/basics/fiji_tutorial_1.md
+        - "Fiji Tutorial 2: Basic Image Processing": basic/basics/fiji_tutorial_2.md
+        - Updating Fiji: basic/basics/update.md
         - Creating Figures: basic/basics/creatingfigures.md
         - Figure Challenge: basic/basics/figurechallenge.md
     - AI for Segmentation: 
