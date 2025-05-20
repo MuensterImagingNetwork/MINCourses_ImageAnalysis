@@ -31,7 +31,7 @@
       "id": "q3",
       "question": "3. What is the purpose of using the 'RelateObjects' module in CellProfiler?",
       "type": "open",
-      "answer": ["assign", "link", "relate", "parent", "child", "relationships"]
+      "answer": ["The **RelateObjects** module in CellProfiler is used to link one set of segmented objects (e.g., nuclei) to another related set (e.g., cytoplasm). This relationship allows you to associate measurements across object types, such as calculating the intensity of a signal in the cytoplasm for each corresponding nucleus."]
     },
     {
       "id": "q4",
