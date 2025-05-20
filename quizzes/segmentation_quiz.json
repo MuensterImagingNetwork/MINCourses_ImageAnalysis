@@ -1,23 +1,94 @@
 {"questions": [
     {
       "id": "q1",
-      "question": "What is the output of 1 + 1?",
+      "question": "1. What is the primary goal of image segmentation in bioimage analysis?",
       "type": "single",
-      "options": ["1", "2", "3"],
-      "answer": "2"
+      "options": [
+        "To increase image resolution",
+        "To separate meaningful objects or regions from the background",
+        "To apply color filters to images",
+        "To compress image files"
+      ],
+      "answer": "To separate meaningful objects or regions from the background"
     },
     {
       "id": "q2",
-      "question": "Which of these are programming languages?",
+      "question": "2. Which of the following are valid applications of image segmentation in biology?",
       "type": "multiple",
-      "options": ["Python", "HTML", "C++", "Photoshop"],
-      "answer": ["Python", "C++"]
+      "options": [
+        "Counting individual cells",
+        "Identifying cell compartments (e.g. nucleus, cytoplasm)",
+        "Adjusting image brightness",
+        "Measuring signal intensities within regions of interest"
+      ],
+      "answer": [
+        "Counting individual cells",
+        "Identifying cell compartments (e.g. nucleus, cytoplasm)",
+        "Measuring signal intensities within regions of interest"
+      ]
     },
     {
       "id": "q3",
-      "question": "Explain what an image histogram represents.",
+      "question": "3. Explain the difference between supervised learning and unsupervised learning in the context of image segmentation.",
       "type": "open",
-      "answer": ["distribution", "frequency", "intensity"]
+      "answer": ["supervised", "unsupervised", "labeled", "training data", "clusters", "classes"]
+    },
+    {
+      "id": "q4",
+      "question": "4. Which type of algorithm does Ilastik use for pixel classification?",
+      "type": "single",
+      "options": [
+        "Convolutional Neural Network",
+        "Decision Tree",
+        "Random Forest",
+        "K-Means Clustering"
+      ],
+      "answer": "Random Forest"
+    },
+    {
+      "id": "q5",
+      "question": "5. Which of the following tools use deep learning for image segmentation?",
+      "type": "multiple",
+      "options": [
+        "Cellpose",
+        "StarDist",
+        "Ilastik",
+        "ImageJ Threshold"
+      ],
+      "answer": [
+        "Cellpose",
+        "StarDist"
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "6. What are convolutional neural networks (CNNs) especially good at?",
+      "type": "single",
+      "options": [
+        "Applying Gaussian filters",
+        "Analyzing tabular data",
+        "Extracting patterns from images",
+        "Compressing images"
+      ],
+      "answer": "Extracting patterns from images"
+    },
+    {
+      "id": "q7",
+      "question": "7. Describe how a probability map is used in pixel classification.",
+      "type": "open",
+      "answer": ["probability", "confidence", "likelihood", "per pixel", "classification", "class"]
+    },
+    {
+      "id": "q8",
+      "question": "8. In Cellpose, what does the tool use to separate touching cells?",
+      "type": "single",
+      "options": [
+        "K-means clustering",
+        "Thresholding edges",
+        "Flow fields pointing to cell centers",
+        "Manual annotation"
+      ],
+      "answer": "Flow fields pointing to cell centers"
     }
   ]
 }

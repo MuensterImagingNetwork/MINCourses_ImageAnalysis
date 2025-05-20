@@ -26,9 +26,7 @@ nav:
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
         - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
   - Quiz "Basic Image Analysis":
-    - Basics of Image Analysis: basic/quiz/basicsiaquiz.md 
-    - AI for Image Segmentation: basic/quiz/segmentationquiz.md
-    - Reproducible Image Analysis Workflows: basic/quiz/repiaquiz.md
+    - Self assessment: basic/quiz/basics_selfassessment.md 
 
 
 theme:

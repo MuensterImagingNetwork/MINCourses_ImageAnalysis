@@ -1,7 +1,7 @@
 {"questions": [
     {
       "id": "q1",
-      "question": "Which of the following are benefits of reproducible image analysis workflows?",
+      "question": "1. Which of the following are benefits of reproducible image analysis workflows?",
       "type": "multiple",
       "options": [
         "Reduces human bias",
@@ -17,7 +17,7 @@
     },
     {
       "id": "q2",
-      "question": "In CellProfiler, which module is typically used to measure the average intensity of a signal inside segmented objects?",
+      "question": "2. In CellProfiler, which module is typically used to measure the average intensity of a signal inside segmented objects?",
       "type": "single",
       "options": [
         "MeasureTexture",
@@ -29,13 +29,13 @@
     },
     {
       "id": "q3",
-      "question": "What is the purpose of using the 'RelateObjects' module in CellProfiler?",
+      "question": "3. What is the purpose of using the 'RelateObjects' module in CellProfiler?",
       "type": "open",
-      "answer": ["assign", "link", "relate", "parent", "child", "nucleus", "cytoplasm"]
+      "answer": ["assign", "link", "relate", "parent", "child", "relationships"]
     },
     {
       "id": "q4",
-      "question": "Which of the following statements about analysis pipelines is FALSE?",
+      "question": "4. Which of the following statements about analysis pipelines is FALSE?",
       "type": "single",
       "options": [
         "Pipelines help automate image analysis steps",
@@ -46,7 +46,7 @@
       "answer": "Pipelines make results harder to reproduce"
     },
     {     "id": "q5",
-      "question": "Which of the following are typical steps in an image analysis pipeline?",
+      "question": "5. Which of the following are typical steps in an image analysis pipeline?",
       "type": "multiple",
       "options": [
         "Image preprocessing",
