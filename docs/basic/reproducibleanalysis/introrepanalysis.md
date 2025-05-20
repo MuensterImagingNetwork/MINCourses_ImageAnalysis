@@ -1,5 +1,22 @@
 # Reproducible Image Analysis
 
+
+### 🎯 Learning Objectives
+
+By the end of this module, you will be able to:
+
+1. **Understand the importance and advantages of reproducible image analysis:** <br>
+You will be able to explain why reproducible workflows are critical in bioimage analysis and how they reduce bias 
+and boost collaboration.
+
+2. **Get hands-on experience with CellProfiler:** <br>
+You will gain practical experience with CellProfiler, including loading and processing images, configuring pipelines, 
+and analyzing results.
+
+---
+
+### Importance of Reproducible Image Analysis
+
 Reproducible image analysis is crucial in biomedical research as it ensures reliable and 
 trustworthy results. With increasing data complexity, the risk of human error and bias grows. 
 Standardized, automated workflows with clear documentation ensure that every 
@@ -29,7 +46,7 @@ increase confidence in their results, reduce errors, and accelerate scientific p
 A pipeline is a sequential chain of image‑processing modules—each with explicit settings—that take raw images to final data 
 tables. Good pipelines are:
 
-1. **Modular:** Break your workflow into logical steps (e.g., illumination correction → segmentation → measurement).
+1. **Modular:** Break your workflow into logical steps (e.g., image preprocessing → segmentation → measurement).
 2. **Configurable:** Expose key parameters (filter sizes, thresholds) so they can be tuned and logged.
 3. **Documented:** Store both the pipeline file and a human‑readable summary of versions, parameters, and test images.
 4. **Extensible:** Allow insertion of custom scripts or modules for novel analyses.
@@ -47,21 +64,8 @@ Commercial, high‑performance 3D pipelines. <br>
 [Zeiss Arivis Pro](https://www.zeiss.com/microscopy/de/produkte/software/arivis-pro.html)
 
 - **JIPipe**
-Visual programming language for ImageJ; ideal for batch‑processing large datasets using flow charts.
+Visual programming language for ImageJ; ideal for batch‑processing large datasets using flow charts. <br>
 [JPipe](https://jipipe.hki-jena.de/)
 
 ---
-
-### Learning Objectives
-
-By the end of this module, you will be able to:
-
-1. **Understand the importance and advantages of reproducible image analysis:** <br>
-You will be able to explain why reproducible workflows are critical in bioimage analysis and how they reduce bias 
-and boost collaboration.
-
-2. **Get hands-on experience with CellProfiler:** <br>
-You will gain practical experience with CellProfiler, including loading and processing images, configuring pipelines, 
-and analyzing results. They will learn how to navigate the software interfaces, troubleshoot common issues, and optimize 
-pipeline performance.
 

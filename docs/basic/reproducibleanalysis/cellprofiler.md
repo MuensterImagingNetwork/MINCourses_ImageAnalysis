@@ -20,7 +20,9 @@ data analysis workflows.
 
 [Official CellProfiler Website](https://cellprofiler.org/) | [GitHub](https://github.com/CellProfiler/CellProfiler)
 
-When using CellProfiler for your image analysis, please cite:
->***CellProfiler 4: improvements in speed, utility and usability.*** <br>
-Stirling DR, Swain-Bowden MJ, Lucas AM, Carpenter AE, Cimini BA, Goodman A . 
-BMC Bioinformatics (2021)
+!!! warning "Citation"
+	When using CellProfiler for your image analysis, please cite:
+	>***CellProfiler 4: improvements in speed, utility and usability.*** <br>
+	Stirling DR, Swain-Bowden MJ, Lucas AM, Carpenter AE, Cimini BA, Goodman A . 
+	BMC Bioinformatics (2021)
+	

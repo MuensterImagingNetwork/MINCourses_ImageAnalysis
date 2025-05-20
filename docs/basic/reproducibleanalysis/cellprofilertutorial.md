@@ -13,7 +13,7 @@ Pascual-Vargas P, Cooper S, Sero J, Bousgouni V, Arias-Garcia M, Bakal C., Scien
 [Publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC5332010/) | [Full Dataset](https://idr.openmicroscopy.org/webclient/?show=screen-1651)
 
 
-### Research question for today:
+### Research question for today
 
 **What is the YAP/TAZ ratio between nucleus and cytoplasm?**
 
@@ -63,7 +63,6 @@ cellprofiler
 
 ---
 
-
 #### 🧹 Step 3: NamesAndTypes
 
 * In **NamesAndTypes**, assign channels:
@@ -79,12 +78,14 @@ cellprofiler
 	- Click on the Update button to display a table that shows each channel pair matched up for the wells in the assay.
 
 ---
-- Start **Test Mode**
+
+Start **Test Mode**
+
 ---
 
 #### ⚪ Step 4: Identify Nuclei
 
-* Add a ***RunCellpose"** module
+* Add a **RunCellpose** module
 
   * Select the appropriate detection mode for nuclei
   * Select your input image ("Nuclei")
@@ -96,7 +97,7 @@ cellprofiler
 
 #### 🌐 Step 5: Identify Cell Bodies (Cytoplasm)
 
-* Add a ***RunCellpose"** module
+* Add a **RunCellpose** module
 
   * Select the appropriate detection mode for cytoplasm
   * Select your input image ("Actin")
@@ -108,7 +109,7 @@ cellprofiler
 
 #### 🔗 Step 6: Relate Objects
 
-* Add **“RelateObjects”** to verify each cytoplasm is assigned to its nucleus.
+* Add **RelateObjects** to verify each cytoplasm is assigned to its nucleus.
 * Choose "Cytoplasm_Segmentation" as Parent Object and "Nuclei_Segmentation" as Child Objects
 * Save the children with parents as new object set with a meaningful name (e.g. "Nuclei_Seg_Relate")
 
@@ -116,7 +117,7 @@ cellprofiler
 
 #### 📊 Step 7: Measure Intensities
 
-* Add **“MeasureObjectIntensity”**
+* Add **MeasureObjectIntensity**
 
   * Measure YAP/TAZ channel intensities in both nuclei and cytoplasm objects.
   * You need to select the images that you'd like to measure ("YapTaz")
@@ -126,7 +127,7 @@ cellprofiler
 
 #### ➗ Step 8: Compute YAP/TAZ Ratio
 
-* Add **“CalculateMath”**
+* Add **CalculateMath**
 
   * Formula: `IntegratedIntensity_Nucleus / IntegratedIntensity_Cytoplasm`
   * Name the output measurement **`YAP_TAZ_ratio`**
@@ -138,7 +139,7 @@ cellprofiler
 
 #### 💾 Step 9: Export Results
 
-* Add **“ExportToSpreadsheet”**
+* Add **ExportToSpreadsheet**
 
   * Select measurements: `YAP_TAZ_ratio`, object IDs, metadata
   * Choose CSV output path (e.g., `results/YAP_TAZ_ratios.csv`)
@@ -170,6 +171,13 @@ What is the purpose the **GrayToColor**, **OverlayOutlines**, **DisplayDataOnIma
 Why is it a good idea to add them to your pipeline?
 
 
+🧰 **Task:** <br>
+The cytoplasm segmentation actually includes the nucleus - what would a better approach be?
+Can you subtract the nucleus from the cytoplasm? Which module would you choose?
+Hint: Create a tertiary object ...
+
+---
+
 ### 📌 Key Takeaways
 
 | ✅ Pros                                         | ⚠️ Cons                                                           |
@@ -183,7 +191,7 @@ Why is it a good idea to add them to your pipeline?
 
 ### 🔗 Useful Resources
 
-* **CellProfiler Documentation:** [https://cellprofiler.org/docs](https://cellprofiler.org/docs)
+* **CellProfiler Documentation:** [https://cellprofiler.org/manual](https://cellprofiler-manual.s3.amazonaws.com/CellProfiler-4.2.6/index.html)
 * **Example Pipelines Gallery:** [https://cellprofiler.org/examples](https://cellprofiler.org/examples)
-* **Video Tutorials:** [https://www.youtube.com/c/CellProfiler](https://www.youtube.com/c/CellProfiler)
+* **Video Tutorials:** [https://www.youtube.com/CellProfiler](https://www.youtube.com/playlist?list=PLXSm9cHbSZBBy7JkChB32_e3lURUcT3RL)
 * **Discussion Forum:** [https://forum.image.sc](https://forum.image.sc)
