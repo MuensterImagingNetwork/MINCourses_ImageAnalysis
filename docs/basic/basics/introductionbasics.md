@@ -1,44 +1,11 @@
-# Content from eLab
-
-Lecture: What is an image?
-Hands-On:
--- Hands-On: Fiji, Bild öffnen und Histogram angucken (Brightness, Contrast)
-
--- Fiji Sample Images
-
--- Bild aus OMERO öffnen 
-
--- Duplicate, Channels, RGB, LookUp Tables, split und merge
-
--- z- stapel,  maxintproj 
-
-Lecture: Image Analysis (Preprocessing (filter, substract background, denoising), ROIs, Measurements)
-Hands-On:
--- subtract background
-
--- measure, drawing ROIs
-
--- thresholding, autothresholds
-
--- binary operations (evtl. kürzer)
-
--- analyse particles/measure/set measurements
-
--- ROI manager
-
- Lecture: Figure Creation
- Hands-On:
- - Scalebar
- - timestamp
- - synch windows
- - stacktools
- - image properties
- - overlay handling
 
 # Basic Principles of Image Analysis
 We highly recommend the excellent image analysis book [**Introduction to Bioimage Analysis**](https://bioimagebook.github.io/index.html) by Pete Bankhead.
 
 It’s an outstanding resource for anyone interested in bioimage analysis—from beginners to experienced researchers. The website offers clear explanations, practical examples, and is regularly updated with the latest techniques. Definitely worth a look!
+
+🚧 Construction Zone
+
 
 # Image Processing and Analysis: From Raw Data to Meaningful Measurements
 

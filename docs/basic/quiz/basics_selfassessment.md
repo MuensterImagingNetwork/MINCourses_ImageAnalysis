@@ -8,7 +8,8 @@ Let’s see what you’ve mastered—good luck! 🎯
 
 ### 📚 Basics of Image Analysis
 
-[[quiz:basic_quiz.json]]
+🚧 **Construction Zone**
+
 
 ---
 ### 📚 AI for Segmentation
