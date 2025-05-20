@@ -1,23 +1,74 @@
-{"questions": [
+{
+  "questions": [
     {
       "id": "q1",
-      "question": "What is the output of 1 + 1?",
+      "question": "What does the bit-depth of an image determine?",
       "type": "single",
-      "options": ["1", "2", "3"],
-      "answer": "2"
+      "options": [
+        "The number of pixels in the image",
+        "The physical size of the image",
+        "The number of intensity levels each pixel can have",
+        "The speed at which the image loads"
+      ],
+      "answer": "The number of intensity levels each pixel can have"
     },
     {
       "id": "q2",
-      "question": "Which of these are programming languages?",
+      "question": "Which of the following terms are used to describe characteristics of digital images?",
       "type": "multiple",
-      "options": ["Python", "HTML", "C++", "Photoshop"],
-      "answer": ["Python", "C++"]
+      "options": ["Pixel", "Bit-depth", "Contrast ratio", "ISO"],
+      "answer": ["Pixel", "Bit-depth", "Contrast ratio"]
     },
     {
       "id": "q3",
       "question": "Explain what an image histogram represents.",
       "type": "open",
-      "answer": ["distribution", "frequency", "intensity"]
+      "answer": ["distribution", "frequency", "intensity", "grayscale", "brightness"]
+    },
+    {
+      "id": "q4",
+      "question": "What is the purpose of applying a Gaussian blur filter?",
+      "type": "single",
+      "options": [
+        "To sharpen edges in the image",
+        "To reduce high-frequency noise",
+        "To change the bit-depth",
+        "To increase pixel size"
+      ],
+      "answer": "To reduce high-frequency noise"
+    },
+    {
+      "id": "q5",
+      "question": "Which of the following filters can be used for noise reduction in microscopy images?",
+      "type": "multiple",
+      "options": ["Gaussian blur", "Median filter", "Edge detection", "Histogram equalization"],
+      "answer": ["Gaussian blur", "Median filter"]
+    },
+    {
+      "id": "q6",
+      "question": "In fluorescence microscopy, what does a 'channel' typically correspond to?",
+      "type": "single",
+      "options": [
+        "A specific magnification level",
+        "A type of objective lens",
+        "A distinct fluorophore or stain",
+        "The brightness of an image"
+      ],
+      "answer": "A distinct fluorophore or stain"
+    },
+    {
+      "id": "q7",
+      "question": "Describe one reason why it's important to include a scale bar in a scientific figure.",
+      "type": "open",
+      "answer": ["size", "measurement", "reference", "distance", "spatial scale"]
+    },
+    {
+      "id": "q8",
+      "question": "Which elements are commonly included in a publication-ready microscopy figure?",
+      "type": "multiple",
+      "options": ["Merged image", "Single channels", "Scale bar", "Color legend", "Image file name"],
+      "answer": ["Merged image", "Single channels", "Scale bar", "Color legend"]
     }
   ]
 }
+
