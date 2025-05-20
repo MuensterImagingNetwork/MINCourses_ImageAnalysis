@@ -8,7 +8,7 @@ Let’s see what you’ve mastered—good luck! 🎯
 
 ### 📚 Basics of Image Analysis
 
-[[quiz:basics_quiz.json]]
+[[quiz:basic_quiz.json]]
 
 
 ---
