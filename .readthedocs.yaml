@@ -12,6 +12,7 @@ build:
   jobs:
     pre_install:
       - pip install mkdocs-material
+      - pip install https://github.com/MuensterImagingNetwork/mkdocs_quiz.git
 
 # Build documentation with Mkdocs
 mkdocs:
