@@ -1,4 +1,5 @@
 site_name: MIN - Image Analysis Courses
+
 nav:
   - Welcome: index.md
   - Course Preparation: 
@@ -24,12 +25,21 @@ nav:
         - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
         - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
+  - Quiz "Basic Image Analysis":
+    - Self assessment: basic/quiz/basics_selfassessment.md 
+
 
 theme:
    name: readthedocs
    logo: assets/logo.png
    favicon: assets/favicon.png
+
+plugins:
+  - quiz-plugin
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+  

@@ -1,0 +1,66 @@
+{"questions": [
+    {
+      "id": "q1",
+      "question": "1. Which of the following are benefits of reproducible image analysis workflows?",
+      "type": "multiple",
+      "options": [
+        "Reduces human bias",
+        "Requires no documentation",
+        "Enables consistent analysis across datasets",
+        "Improves trust and collaboration"
+      ],
+      "answer": [
+        "Reduces human bias",
+        "Enables consistent analysis across datasets",
+        "Improves trust and collaboration"
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "2. In CellProfiler, which module is typically used to measure the average intensity of a signal inside segmented objects?",
+      "type": "single",
+      "options": [
+        "MeasureTexture",
+        "MeasureObjectIntensity",
+        "IdentifySecondaryObjects",
+        "CalculateMath"
+      ],
+      "answer": "MeasureObjectIntensity"
+    },
+    {
+      "id": "q3",
+      "question": "3. What is the purpose of using the 'RelateObjects' module in CellProfiler?",
+      "type": "open",
+      "answer": ["assign", "link", "relate", "parent", "child", "relationships"]
+    },
+    {
+      "id": "q4",
+      "question": "4. Which of the following statements about analysis pipelines is FALSE?",
+      "type": "single",
+      "options": [
+        "Pipelines help automate image analysis steps",
+        "Pipelines store parameter settings and can be reused",
+        "Pipelines make results harder to reproduce",
+        "Pipelines can be modular and configurable"
+      ],
+      "answer": "Pipelines make results harder to reproduce"
+    },
+    {     "id": "q5",
+      "question": "5. Which of the following are typical steps in an image analysis pipeline?",
+      "type": "multiple",
+      "options": [
+        "Image preprocessing",
+        "Object segmentation",
+        "Manual drawing of every cell",
+        "Measurement of object properties",
+        "Result export"
+      ],
+      "answer": [
+        "Image preprocessing",
+        "Object segmentation",
+        "Measurement of object properties",
+        "Result export"
+      ]
+    }
+  ]
+}

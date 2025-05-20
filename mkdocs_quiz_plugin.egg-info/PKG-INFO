@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: mkdocs-quiz-plugin
+Version: 0.1.0
+Summary: A MkDocs plugin to embed interactive quizzes in Markdown and JSON
+Home-page: https://github.com/yourusername/mkdocs-quiz-plugin
+Author: Sarah Weischer
+Author-email: you@example.com
+Classifier: Framework :: MkDocs
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mkdocs>=1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+README
+
+Here's a test readme
