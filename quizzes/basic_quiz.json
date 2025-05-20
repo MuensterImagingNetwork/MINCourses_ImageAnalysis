@@ -23,7 +23,7 @@
       "id": "q3",
       "question": "Explain what an image histogram represents.",
       "type": "open",
-      "answer": ["distribution", "frequency", "intensity", "grayscale", "brightness"]
+      "answer": ["An image histogram represents the distribution of pixel intensity values in an image. It shows how many pixels have a particular brightness level, helping you understand the overall contrast, brightness, and dynamic range of the image."]
     },
     {
       "id": "q4",
@@ -60,7 +60,7 @@
       "id": "q7",
       "question": "Describe one reason why it's important to include a scale bar in a scientific figure.",
       "type": "open",
-      "answer": ["size", "measurement", "reference", "distance", "spatial scale"]
+      "answer": ["Including a scale bar in a scientific figure provides a reference for the actual size of structures shown in the image. This allows viewers to interpret spatial dimensions accurately, which is essential for scientific comparison and reproducibility."]
     },
     {
       "id": "q8",
