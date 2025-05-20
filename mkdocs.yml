@@ -1,4 +1,5 @@
 site_name: MIN - Image Analysis Courses
+
 nav:
   - Welcome: index.md
   - Course Preparation: 
@@ -29,7 +30,13 @@ theme:
    name: readthedocs
    logo: assets/logo.png
    favicon: assets/favicon.png
+
+plugins:
+  - quiz-plugin
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+  
