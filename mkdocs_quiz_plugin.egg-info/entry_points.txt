@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+quiz-plugin = quiz_plugin.quiz_plugin:QuizPlugin

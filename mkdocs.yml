@@ -1,4 +1,5 @@
 site_name: MIN - Image Analysis Courses
+
 nav:
   - Welcome: index.md
   - Course Preparation: 
@@ -9,11 +10,40 @@ nav:
   - Course "Basic Image Analysis":
     - Welcome to the Course: basic/index.md
     
+    - Basics of Image Analysis: 
+        - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
+        - Introduction to Fiji/ImageJ: basic/basics/fiji.md
+        - "Fiji Tutorial 1: Open and inspect Images": basic/basics/fiji_tutorial_1.md
+        - "Fiji Tutorial 2: Basic Image Processing": basic/basics/fiji_tutorial_2.md
+        - Updating Fiji: basic/basics/update.md
+        - Creating Figures: basic/basics/creatingfigures.md
+        - Figure Challenge: basic/basics/figurechallenge.md
+    - AI for Image Segmentation: 
+        - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
+        - Supervised Machine Learning: basic/mlforsegmentation/pixelclassification.md
+        - Best Practices: basic/mlforsegmentation/ilastik.md
+        - Hands-On "ilastik": basic/mlforsegmentation/ilastik_v2.md
+        - Deep Learning: basic/mlforsegmentation/dl.md
+        - Hands-On "CellPose": basic/mlforsegmentation/cellpose.md
+    - Reproducible Image Analysis Workflows:
+        - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
+        - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
+        - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
+  - Quiz "Basic Image Analysis":
+    -  Self assessment: basic/quiz/basics_selfassessment.md 
+
+
 theme:
    name: readthedocs
    logo: assets/logo.png
    favicon: assets/favicon.png
+
+plugins:
+  - quiz-plugin
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+  

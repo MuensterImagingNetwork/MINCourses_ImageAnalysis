@@ -1,5 +1,6 @@
 # Welcome to our Image Anaysis Courses
 
+Hi Hi!
 Welcome to Münster Imaging Network Image Analysis courses!
 
 This material will accompany the "Basics of Image Analysis" and "Advanced Image Analysis" courses. 
