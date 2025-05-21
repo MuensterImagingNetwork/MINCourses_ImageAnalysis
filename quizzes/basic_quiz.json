@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "1. What does the bit-depth of an image determine?",
+      "type": "single",
+      "options": [
+        "The number of pixels in the image",
+        "The physical size of the image",
+        "The number of intensity levels each pixel can have",
+        "The speed at which the image loads"
+      ],
+      "answer": "The number of intensity levels each pixel can have"
+    },
+    {
+      "id": "q2",
+      "question": "2. Which of the following terms are used to describe characteristics of digital images?",
+      "type": "multiple",
+      "options": ["Pixel", "Bit-depth", "Contrast ratio", "ISO"],
+      "answer": ["Pixel", "Bit-depth", "Contrast ratio"]
+    },
+    {
+      "id": "q3",
+      "question": "3. Explain what an image histogram represents.",
+      "type": "open",
+      "answer": ["An image histogram represents the distribution of pixel intensity values in an image. It shows how many pixels have a particular brightness level, helping you understand the overall contrast, brightness, and dynamic range of the image."]
+    },
+    {
+      "id": "q4",
+      "question": "4. What is the purpose of applying a Gaussian blur filter?",
+      "type": "single",
+      "options": [
+        "To sharpen edges in the image",
+        "To reduce high-frequency noise",
+        "To change the bit-depth",
+        "To increase pixel size"
+      ],
+      "answer": "To reduce high-frequency noise"
+    },
+    {
+      "id": "q5",
+      "question": "5. Which of the following filters can be used for noise reduction in microscopy images?",
+      "type": "multiple",
+      "options": ["Gaussian blur", "Median filter", "Edge detection", "Histogram equalization"],
+      "answer": ["Gaussian blur", "Median filter"]
+    },
+    {
+      "id": "q6",
+      "question": "6. In fluorescence microscopy, what does a 'channel' typically correspond to?",
+      "type": "single",
+      "options": [
+        "A specific magnification level",
+        "A type of objective lens",
+        "A distinct fluorophore or stain",
+        "The brightness of an image"
+      ],
+      "answer": "A distinct fluorophore or stain"
+    },
+    {
+      "id": "q7",
+      "question": "7. Describe one reason why it's important to include a scale bar in a scientific figure.",
+      "type": "open",
+      "answer": ["Including a scale bar in a scientific figure provides a reference for the actual size of structures shown in the image. This allows viewers to interpret spatial dimensions accurately, which is essential for scientific comparison and reproducibility."]
+    },
+    {
+      "id": "q8",
+      "question": "8. Which elements are commonly included in a publication-ready microscopy figure?",
+      "type": "multiple",
+      "options": ["Merged image", "Single channels", "Scale bar", "Color legend", "Image file name"],
+      "answer": ["Merged image", "Single channels", "Scale bar", "Color legend"]
+    }
+  ]
+}
+

@@ -1,7 +1,14 @@
 site_name: MIN - Image Analysis Courses
+
 nav:
   - Welcome: index.md
-  - Basic Image Analysis: 
+  - Course Preparation: 
+    - General Information: coursepreparation/generalprep.md
+    - Image Database OMERO: coursepreparation/omero.md
+    - JupyterHub: coursepreparation/jupyterhub.md
+    - The HIVE: coursepreparation/thehive.md
+  - Course "Basic Image Analysis":
+    - Welcome to the Course: basic/index.md
     - Basics of Image Analysis: 
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
@@ -10,22 +17,32 @@ nav:
         - Updating Fiji: basic/basics/update.md
         - Creating Figures: basic/basics/creatingfigures.md
         - Figure Challenge: basic/basics/figurechallenge.md
-    - AI for Segmentation: 
+    - AI for Image Segmentation: 
         - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
-        - Pixel classification: basic/mlforsegmentation/pixelclassification.md
+        - Supervised Machine Learning: basic/mlforsegmentation/pixelclassification.md
+        - Best Practices: basic/mlforsegmentation/ilastik.md
+        - Hands-On "ilastik": basic/mlforsegmentation/ilastik_v2.md
         - Deep Learning: basic/mlforsegmentation/dl.md
+        - Hands-On "CellPose": basic/mlforsegmentation/cellpose.md
     - Reproducible Image Analysis Workflows:
         - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
         - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
- 
-  - Advanced Image Analysis: 
-    - Advanced Image Analysis: advanced/advanced.md
+  - Quiz "Basic Image Analysis":
+    - Self assessment: basic/quiz/basics_selfassessment.md 
+
+
 theme:
    name: readthedocs
    logo: assets/logo.png
    favicon: assets/favicon.png
+
+plugins:
+  - quiz-plugin
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+  
