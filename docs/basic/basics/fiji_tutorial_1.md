@@ -3,6 +3,8 @@
 !!! Warning "Note"
     Some images used in this tutorial are taken from the Bioimage Analysis book by Pete Bankhead ([bioimagebook.github.io](https://bioimagebook.github.io)). Content is licensed under [**CC-BY 4.0**](https://creativecommons.org/licenses/by/4.0/), except where noted otherwise. See License & Reuse for details.
 
+---
+
 
 ###1. Start Fiji
 
@@ -22,7 +24,9 @@
 - The **Status Bar** (at the bottom of the window) displays important status messages and information, such as pixel coordinates, intensity values, and current activity in Fiji.
 
 - The **Command Finder** is a powerful search feature that allows you to quickly locate and launch any Fiji command or plugin. Just start to type into the search field to find commands instantly. You can open the Command Finder by pressing `L` on your keyboard or by selecting `Plugins → Utilities → Command Finder` from the menu.
-		
+	
+---
+	
 ###2. Opening Images in Fiji
 
 To open images in Fiji, you can simply drag and drop your image files directly into the Fiji window. In many cases, especially with proprietary microscopy formats, the *Bio-Formats Importer* window will automatically appear to guide you through the import process. 
@@ -50,6 +54,8 @@ If you encounter problems opening your files and the *Bio-Formats Importer* wind
 	- **Split Channels**: Allows you to separate the image into individual channel windows for more detailed analysis.
 - You can adjust these and other options as needed to ensure your images are displayed according to your analysis requirements.
 
+---
+
 ###3. Channel & Brightness and Contrast
 
 !!! tip "Exercise"
@@ -74,6 +80,8 @@ If you encounter problems opening your files and the *Bio-Formats Importer* wind
     When you set the minimum slider to a value (e.g., 100), all pixels with intensity 100 or lower will appear completely black. Similarly, if you move the maximum slider to a lower value (e.g., 200), all pixels with intensity 200 or higher will appear completely white. Intensities between the minimum and maximum are mapped linearly between black and white (or according to the LUT).
 
     Note: Adjusting the sliders only changes the display, not the actual pixel values. **Do not click "Apply"**—this will permanently change your image data and would affect any measurements, which is not recommended here.
+
+---
 	
 ###4. Open images from OMERO
 
@@ -99,6 +107,8 @@ OMERO Server at the MIN: [omero-imaging.uni-muenster.de](omero-imaging.uni-muens
 ![OMERO Fiji Plugin](/assets/omero_insight_groups.png)
 
 ![OMERO Fiji Plugin](/assets/omero_insight_images.png)
+
+---
 
 ###5. Commonly Used Tools for Image Inspection
 
