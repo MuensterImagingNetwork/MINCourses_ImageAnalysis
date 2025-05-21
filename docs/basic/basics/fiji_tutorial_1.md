@@ -10,8 +10,7 @@
 	Navigate to your Fiji folder (normally Fiji.app) and double click on `fiji-windows-x64`
 
 !!! Warning "Fiji on the HIVE (MIN-Server)"
-    If you are using Fiji on the Hive, please find here an instruction on how to connect to the Hive.  
-	You will find Fiji under:  located under: `D:\Progs for All - Please only copy\Fiji_MIN.app`.
+	You will find the course Fiji version on your Desktop. 
 	You can find instruction on how to connect to the Hive in the confluence of the University Münster: [HIVE FAQ](https://confluence.uni-muenster.de/spaces/WWUIMW/pages/54528157/The+HIVE+-+FAQ) (Uni-MS internal)
 
 ![Fiji GUI](/assets/Fiji_GUI_notes.png)
@@ -33,9 +32,9 @@ Alternatively, you can open images using the menu: go to `File → Open...` and 
 If you encounter problems opening your files and the *Bio-Formats Importer* window does not appear, you can start the import process manually. Go to `File → Import → Bio-Formats`, then browse and select your file. Bio-Formats supports a wide range of bioimaging file formats (such as `.lif`, `.czi`, `.nd2`, and more), ensures compatibility with many proprietary microscopy formats, and preserves important metadata during import.
 
 !!! Tip "Exercise"
-	**On Hive:** Navigate to `D:\PROJECTS\_Tutorials\Fiji_Images` and open `hela-cells.tif` by drag and drop it to the Fiji GUI.  
+	**On Hive:** Navigate to `D:\PROJECTS\Courses\Image Analysis Courses\1_BasicsOfImageAnalysis\Fiji_Images` and open `hela-cells.tif` by drag and drop it to the Fiji GUI.  
 	**Alternatively:** In Fiji go to `Plugins → Bio-Formats → Bio-Formats-Importer` and open
-	`D:\PROJECTS\_Tutorials\Fiji_Images.hela-cells.tif`
+	`D:\PROJECTS\Courses\Image Analysis Courses\1_BasicsOfImageAnalysis\Fiji_Images\hela-cells.tif`
 	
 
 
