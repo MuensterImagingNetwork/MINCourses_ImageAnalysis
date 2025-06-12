@@ -1,5 +1,6 @@
 # Welcome to our Image Anaysis Courses
 
+## Wenn du das lesen kannst, siehst du v1.0.2
 Hi Hi!
 Welcome to Münster Imaging Network Image Analysis courses!
 
