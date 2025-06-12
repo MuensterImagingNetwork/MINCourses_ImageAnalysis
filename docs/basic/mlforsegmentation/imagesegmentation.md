@@ -37,21 +37,46 @@ structure count as well as the intensity of cells and nuclei.* <br>
 ---
 ### What Makes a Good Segmentation?
 
-How to assess your segmentation—visually and practically
-- Overlay and Inspect: Always check your segmentation masks overlaid on the original image. Do the outlines match the visible objects?
--  Consistent Across the Dataset: Your segmentation should work not just for one perfect field of view, but across all images—bright, dim, noisy, or clean.
-- One Object = One Mask: Each biological object (e.g., cell, nucleus) should be represented by a single, well-defined segment—no splitting or merging.
-- Minimal False Positives and Negatives:Watch out for:
+##### How to assess your segmentation—visually and practically:
+- **Overlay and Inspect:** <br>
+Always check your segmentation masks overlaid on the original image. Do the outlines match the visible objects?
+<br>
+<br>
+- **Consistent Across the Dataset:** <br>
+Your segmentation should work not just for one perfect field of view, but across all images—bright, dim, noisy, or clean.
+<br>
+<br>
+- **One Object = One Mask:** <br>
+Each biological object (e.g., cell, nucleus) should be represented by a single, well-defined segment—no splitting or merging.
+<br>
+<br>
+- **Minimal False Positives and Negatives:** <br>
+	Watch out for:
 	- Masks in background areas (false positives)
 	- Missed objects that should be detected (false negatives)
-- Biologically Plausible Shapes and Sizes: Segmented objects should look like real cells—not blobs, fragments, or spaghetti. Are shapes and sizes in line with expectations?
-- Check Edge Cases: Test the segmentation on challenging examples:
+<br>
+<br>
+- **Biologically Plausible Shapes and Sizes:** <br>
+Segmented objects should look like real cells—not blobs, fragments, or spaghetti. Are shapes and sizes in line with expectations?
+<br>
+<br>
+- **Check Edge Cases:** <br>
+Test the segmentation on challenging examples:
 	- Low contrast areas
 	- Touching or overlapping objects
 	- Varying brightness or background
-- Compare Across Conditions: Ensure that the same segmentation settings (or model) work equally well for all your experimental conditions and replicates.
-- Manual Spot Check: Manually review a few segmented objects in each condition. Do they make sense biologically?
-- Know Your Biological Question: A “perfect” segmentation isn't always needed—only as good as required to extract the features you care about (e.g., intensity, count, shape).
+<br>
+<br>
+- **Compare Across Conditions:** <br>
+Ensure that the same segmentation settings (or model) work equally well for all your experimental conditions and replicates.
+<br>
+<br>
+- **Manual Spot Check:** <br>
+Manually review a few segmented objects in each condition. Do they make sense biologically?
+<br>
+<br>
+- **Know Your Biological Question:** <br>
+A “perfect” segmentation isn't always needed—only as good as required to extract the features you care about (e.g., intensity, count, shape).
 
 ---
 

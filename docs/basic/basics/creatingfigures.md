@@ -2,6 +2,8 @@
 !!! tip "Learning Objective"
     Learn how to create high-quality figures for publications using Fiji and OMERO.
 
+---
+
 ### **Creating Figures with Fiji**
 * **RGB and Channels:**
     * `Image > Type > RGB Color` or `Image > Color > Split Channels`: Images can be opened as multi-channel (e.g., Red, Green, Blue). Use Split Channels to separate them for individual viewing and processing. Merge them back with `Image > Color > Merge Channels...`.  
@@ -26,7 +28,8 @@
 
 * **Image Properties:**
     * `Image > Properties...`: View and edit image metadata, such as pixel size, z-step (for 3D), units, number of channels/frames, and more. Essential for correct scaling and for ensuring accurate time or z-position in figures.
-=======
+
+---
 
 ### **Creating Figures with OMERO.figure**
 

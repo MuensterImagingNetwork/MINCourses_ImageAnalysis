@@ -9,6 +9,7 @@ nav:
     - The HIVE: coursepreparation/thehive.md
   - Course "Basic Image Analysis":
     - Welcome to the Course: basic/index.md
+    
     - Basics of Image Analysis: 
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
@@ -29,7 +30,7 @@ nav:
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
         - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
   - Quiz "Basic Image Analysis":
-    - Self assessment: basic/quiz/basics_selfassessment.md 
+    -  Self assessment: basic/quiz/basics_selfassessment.md 
 
 
 theme:

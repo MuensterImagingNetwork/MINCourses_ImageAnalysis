@@ -4,8 +4,9 @@ We highly recommend the excellent image analysis book [**Introduction to Bioimag
 
 It’s an outstanding resource for anyone interested in bioimage analysis—from beginners to experienced researchers. The website offers clear explanations, practical examples, and is regularly updated with the latest techniques. Definitely worth a look!
 
-### Image Processing and Analysis: From Raw Data to Meaningful Measurements
+---
 
+### Image Processing and Analysis: From Raw Data to Meaningful Measurements
 
 Microscopy images are rich sources of information, but extracting quantitative data often requires a two-pronged approach: **Image Processing** followed by **Image Analysis**.
 
@@ -17,6 +18,8 @@ The primary goal is often to derive these quantitative insights (analysis), but 
 
 !!! tip "Work on a Duplicate!"
     Always perform processing steps on a **duplicate** of your original image. This preserves your raw data, allowing you to revisit it or try different processing strategies. The final Regions of Interest (ROIs) generated from the processed image can then be applied back to the original, unaltered image for accurate measurements (e.g., intensity).
+
+---
 
 ### The Image Analysis Workflow: A Path to Results
 
