@@ -28,7 +28,10 @@ nav:
     - Reproducible Image Analysis Workflows:
         - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
         - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
-        - CellProfiler Tutorial: basic/reproducibleanalysis/cellprofilertutorial.md
+        - CellProfiler Tutorial 1: basic/reproducibleanalysis/cellprofilertutorial1.md
+        - CellProfiler Tutorial 2: basic/reproducibleanalysis/cellprofilertutorial.md
+        - CellProfiler Cheat Sheet: basic/reproducibleanalysis/cellprofilercheatsheet.md
+        
   - Quiz "Basic Image Analysis":
     -  Self assessment: basic/quiz/basics_selfassessment.md 
 
