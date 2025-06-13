@@ -35,12 +35,21 @@ YAP/TAZ ratio between nucleus and the cytoplasm in this dataset.
 
 ### 🧭 Step‑by‑Step Instructions
 
-You can launch CellProfiler on JupyterHub via the **CellProfiler** icon, or on the HIVE using the Anaconda Prompt and type:
+Starting CellProfiler:
 
+**JupyterHub**
+
+Click on the **CellProfiler** icon.
+
+
+**HIVE**
+
+Open the Anaconda Prompt and type: 
 ```bash
 conda activate cellprofiler-cellpose
 cellprofiler
 ```
+
 
 ---
 
@@ -68,13 +77,13 @@ cellprofiler
 * In **NamesAndTypes**, assign channels:
 	- "Assign a name to" : "Images matching rules"
 	- Assign "Nuclei" to images containing "C1" in their file names. 
+	- Attention: Here the assignemnt is different - not based on the metadata, but based on the filename.
 	Select "Add another image" and assign "Actin" to files containing ""C2". 
 	Continue with “Tubulin” for “C3” and “YapTaz” for “C4”. 
 		* **C1**: Nuclei
 		* **C2**: Actin
 		* **C3**: Tubulin
 		* **C4**: YapTaz
-		* **Channel 2:** YAP/TAZ → signal of interest
 	- Click on the Update button to display a table that shows each channel pair matched up for the wells in the assay.
 
 ---
@@ -175,17 +184,6 @@ Why is it a good idea to add them to your pipeline?
 The cytoplasm segmentation actually includes the nucleus - what would a better approach be?
 Can you subtract the nucleus from the cytoplasm? Which module would you choose?
 Hint: Create a tertiary object ...
-
----
-
-### 📌 Key Takeaways
-
-| ✅ Pros                                         | ⚠️ Cons                                                           |
-| ---------------------------------------------- | ----------------------------------------------------------------- |
-| GUI‑driven, no coding required                 | Initial setup of modules can be time‑intensive                    |
-| Fully modular: you see every processing step   | Large pipelines may feel overwhelming at first                    |
-| Transparent settings: all parameters are saved | Complex scripts require Python integration                        |
-| Batch‑process dozens of images with one click  | Advanced analyses (e.g., machine learning) need plugins or export |
 
 ---
 

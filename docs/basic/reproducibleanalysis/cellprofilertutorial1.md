@@ -7,33 +7,45 @@
 
 ### Research questions for today
 
-** How many cells do we have per field of view?**
-** What is the mean DAPI intensity among all cells?**
-** What is the mean area of the nuclei?**
+**How many cells do we have per field of view?**
+**What is the mean DAPI intensity among all cells?**
+**What is the mean area of the nuclei?**
 
 
 **Analysis strategy:**
 
-- Segment nuclei
-- Measure the size and shape of the nuclei
-- Measure the DAPI intensity in the nuclei
-- Export the measurements
+1 Segment nuclei
+2 Measure the size and shape of the nuclei
+3 Measure the DAPI intensity in the nuclei
+4 Export the measurements
 
 
 ---
 
 ### 🧭 Step‑by‑Step Instructions
 
-You can launch CellProfiler on JupyterHub via the **CellProfiler** icon, or on the HIVE using the Anaconda Prompt and type:
+Starting CellProfiler:
 
+**JupyterHub**
+
+Click on the **CellProfiler** icon.
+
+
+**HIVE**
+
+Open the Anaconda Prompt and type: 
 ```bash
 conda activate cellprofiler-cellpose
 cellprofiler
 ```
 
-Open the project: "..\1_BasicsOfImageAnalysis\3_Hands-On_Cellprofiler\ExamplePipeline_v1\ExamplePipeline_v1.cpproj"
 
-In this examples the first steps are already prepared for you - follow this tutorial for understanding each module in detail.
+
+!!! hint "Getting started .."
+	**Open the project:** <br>
+	"..\1_BasicsOfImageAnalysis\3_Hands-On_Cellprofiler\ExamplePipeline_v1\ExamplePipeline_v1.cpproj". <br>
+	<br>
+	***In this examples the first steps are already prepared for you - follow this tutorial for understanding each module in detail.***
 
 ---
 
@@ -42,7 +54,7 @@ In this examples the first steps are already prepared for you - follow this tuto
 *PREPARED FOR YOU*
 
 - Right click on the "Drop field" --> "Browse for Folder"
-- Select your dataset directory (> 1_BasicsOfImageAnalysis > 3_Hands-On_Cellprofiler > Data)
+- Select your dataset directory
 
 
 ---
@@ -52,10 +64,10 @@ In this examples the first steps are already prepared for you - follow this tuto
 *PREPARED FOR YOU*
 
 * In **Metadata**, extract image identifiers.
-	- choose "Extract metadata?": Yes
-	- select "Metadata extraction method": Extract from image file headers
-	- click on "Extract metadata"
-	- at the table below, click "Update"
+	- Choose "Extract metadata?": Yes
+	- Select "Metadata extraction method": Extract from image file headers
+	- Click on "Extract metadata"
+	- At the table below, click "Update"
 	
 
 ---
@@ -98,6 +110,8 @@ Start **Test Mode**
 
 #### 📊 Step 6: Measure Intensities
 
+*PREPARED FOR YOU*
+
 * Add **MeasureObjectIntensity**
 
   * Measure channel intensity in nuclei objects.
@@ -107,6 +121,8 @@ Start **Test Mode**
 ---
 
 #### 💾 Step 7: Export Results
+
+*PREPARED FOR YOU*
 
 * Add **ExportToSpreadsheet**
 
@@ -124,16 +140,16 @@ Start **Test Mode**
 
 ---
 
-#### Exercises:
+#### Exercises
 
-🧰 **Task:** <br>
-Inspect the results output for both images and results table
+###### 🧰 **Task:** <br>
+Inspect the results output for both images and results table.
 
 
-🧰 **Task:** <br>
+###### 🧰 **Task:** <br>
 Exchange the **IdentifyPrimaryObjects** with the **RunCellPose** module.
 
-#### ⚪ Step 11: Identify Nuclei using Cellpose
+**Next Step: Identify Nuclei using Cellpose**
 
 * Add a **RunCellpose** module
 
@@ -147,12 +163,15 @@ Is this segmentation better or worse than the previous segmentation?
 
 
 ---
+###### 🧰 **Task:** <br>
+You often have two channels on which you'd like to perform measurements. 
+Also, sometimes you need to relate both channels to each other, e.g. each cell has one nucleus. 
 
-#### 🌐 Step 12: Identify Cell Bodies (Cytoplasm)
+ **Next Steps: Identify Cell Bodies (Cytoplasm)**
 
-First, add the Actin channel to your pipeline by adding it in the **NamesAndTypes** Modules:
+  First, add the Actin channel to your pipeline by adding it in the **NamesAndTypes** Modules:
 
-* In **NamesAndTypes**, assign channels:
+  * In **NamesAndTypes**, assign channels:
 	- "Assign a name to" : "Images matching rules"
 	- Assign "Actin" to images containing channel 0 in their metadata. 
 	- Click on the Update button to display a table that shows each channel pair matched up for the wells in the assay.
@@ -177,17 +196,18 @@ Assign each nucleus one cell:
 Perform size, shape and intensity measurments using your existing **MeasureObjectSizeShape** and **MeasureObjectIntensity** modules.
 
 * Add the new objects and channels to the list of things which should be measured.
+* In the ExportToSpreadsheet module: add the measurements you'd like to export.
 
 ---
 
-🧰 **Task:** <br>
+###### 🧰 **Task:** <br>
 Add another measurement module from the “Measurement” module category and configure it. 
 Which modules make sense, which don’t? <br>
 You can find more info on the measurements here: https://cellprofiler-manual.s3.amazonaws.com/CellProfiler-4.2.6/modules/measurement.html
 
 ---
 
-🧰 **Task:** <br>
+###### 🧰 **Task:** <br>
 The cytoplasm segmentation actually includes the nucleus - what would a better approach be?
 Can you subtract the nucleus from the cytoplasm? Which module would you choose?
 Hint: Create a tertiary object ...
