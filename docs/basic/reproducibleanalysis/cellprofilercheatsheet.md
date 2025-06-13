@@ -156,5 +156,3 @@
 * Output folder: e.g. “output/overlays”
 
 ---
-
-Would you like a visual version of these recipe cards (e.g. printable handouts or slides with icons and example screenshots)? I can generate those too.
