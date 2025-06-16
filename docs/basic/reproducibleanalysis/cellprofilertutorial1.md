@@ -1,8 +1,8 @@
 # 🛠 **Hands-On CellProfiler: Creating a reproducible analysis pipeline**
 
 ### **Background Scenario**
-![ImageData](fluocells_image.jpg)
 
+![ImageData](fluocells.png)
 
 
 ### Research questions for today
@@ -14,10 +14,10 @@
 
 **Analysis strategy:**
 
-1 Segment nuclei
-2 Measure the size and shape of the nuclei
-3 Measure the DAPI intensity in the nuclei
-4 Export the measurements
+1. Segment nuclei
+2. Measure the size and shape of the nuclei
+3. Measure the DAPI intensity in the nuclei
+4. Export the measurements
 
 
 ---
