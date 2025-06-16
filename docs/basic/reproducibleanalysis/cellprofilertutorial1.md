@@ -56,6 +56,8 @@ cellprofiler
 - Right click on the "Drop field" --> "Browse for Folder"
 - Select your dataset directory
 
+![CP GUI](1.PNG)
+
 
 ---
 
@@ -68,7 +70,9 @@ cellprofiler
 	- Select "Metadata extraction method": Extract from image file headers
 	- Click on "Extract metadata"
 	- At the table below, click "Update"
-	
+
+
+![CP GUI](2.PNG)	
 
 ---
 
@@ -80,6 +84,9 @@ cellprofiler
 	- "Assign a name to" : "Images matching rules"
 	- Assign "Nuclei" to images containing channel 1 in their metadata. 
 	- Click on the Update button to display a table that shows each channel pair matched up for the wells in the assay.
+
+
+![CP GUI](3.PNG)
 
 ---
 
@@ -98,6 +105,9 @@ Start **Test Mode**
   
   - Optional: Check out the advanced options and test different thresholds or use smoothing and declumping options to improve separation.
 
+
+![CP GUI](4.PNG)
+
 ---
 #### 📊 Step 5: Measure Sizes and Shapes
 
@@ -105,6 +115,9 @@ Start **Test Mode**
 
 * Add the **MeasureObjectSizeShape** module.
   * Select the object(s) you want to measure, e.g.: Nuclei_Segmentation
+
+
+![CP GUI](5.PNG)
 
 ---
 
@@ -117,6 +130,9 @@ Start **Test Mode**
   * Measure channel intensity in nuclei objects.
   * You need to select the images that you'd like to measure ("DAPI")
   * You also need to select the objects that you'd like to measure ("Nuclei_Segmentation")
+
+
+![CP GUI](6.PNG)
 
 ---
 
@@ -131,6 +147,8 @@ Start **Test Mode**
   
 * Save your pipeline via **File > Save Project As** (e.g., `YAP_TAZ_pipeline.cpproj`).
 
+
+![CP GUI](7.PNG)
 
 ---
 
@@ -162,6 +180,8 @@ Exchange the **IdentifyPrimaryObjects** with the **RunCellPose** module.
 Is this segmentation better or worse than the previous segmentation?
 
 
+![CP GUI](8.PNG)
+
 ---
 ###### 🧰 **Task:** <br>
 You often have two channels on which you'd like to perform measurements. 
@@ -176,6 +196,10 @@ Also, sometimes you need to relate both channels to each other, e.g. each cell h
 	- Assign "Actin" to images containing channel 0 in their metadata. 
 	- Click on the Update button to display a table that shows each channel pair matched up for the wells in the assay.
 
+
+![CP GUI](9.PNG)
+
+
 Segment the Cell Bodies using Cellpose:
 
 * Add a **RunCellpose** module
@@ -187,11 +211,17 @@ Segment the Cell Bodies using Cellpose:
   * Give a meaningful name to your output object (e.g. "Cytoplasm_Segmentation")
   * Review segmentation overlay and adjust diameter or threshold settings until nuclei are well separated.
 
+
+![CP GUI](10.PNG)
+
 Assign each nucleus one cell:
 
 * Add **RelateObjects** to verify each cytoplasm is assigned to its nucleus.
   * Choose "Cytoplasm_Segmentation" as Parent Object and "Nuclei_Segmentation" as Child Objects
   * Save the children with parents as new object set with a meaningful name (e.g. "Nuclei_Seg_Relate")
+
+
+![CP GUI](11.PNG)
   
 Perform size, shape and intensity measurments using your existing **MeasureObjectSizeShape** and **MeasureObjectIntensity** modules.
 
@@ -211,6 +241,8 @@ You can find more info on the measurements here: https://cellprofiler-manual.s3.
 The cytoplasm segmentation actually includes the nucleus - what would a better approach be?
 Can you subtract the nucleus from the cytoplasm? Which module would you choose?
 Hint: Create a tertiary object ...
+
+![CP GUI](12.PNG)
 
 ---
 
