@@ -15,7 +15,7 @@
 	You will find the course Fiji version on your Desktop. 
 	You can find instruction on how to connect to the Hive in the confluence of the University Münster: [HIVE FAQ](https://confluence.uni-muenster.de/spaces/WWUIMW/pages/54528157/The+HIVE+-+FAQ) (Uni-MS internal)
 
-![Fiji GUI](/../assets/Fiji_GUI_notes.png)
+![Fiji GUI](../../assets/Fiji_GUI_notes.png)
 
 - The **Menu Bar** at the top of the Fiji window provides access to all program functions, including opening and saving files, running plugins, analyzing images, and changing settings.
 
@@ -43,7 +43,7 @@ If you encounter problems opening your files and the *Bio-Formats Importer* wind
 
 
 #### The Bio-Formats Importer Dialog
-![Bio-Formats](/../assets/bio-formats.png)
+![Bio-Formats](../../assets/bio-formats.png)
 
 - By default, the following settings are usually enabled:
     - **Hyperstack**: Images are opened as hyperstacks, allowing you to easily navigate through different channels, z-slices, and time points.
@@ -64,10 +64,10 @@ If you encounter problems opening your files and the *Bio-Formats Importer* wind
 
 |     **Brightness and Contrast with Auto Adjustment**         |      **Brightness/Contrast**     |
 |:----:|:----:|
-| ![Hela-cells red](/../assets/hela_red.png)      | ![Brightness/Contrast](/../assets/bc_red.png)      |
-| ![Hela-cells green](/../assets/hela_green.png)  | ![Brightness/Contrast](/../assets/bc_green.png)    |
+| ![Hela-cells red](../../assets/hela_red.png)      | ![Brightness/Contrast](../../assets/bc_red.png)      |
+| ![Hela-cells green](../../assets/hela_green.png)  | ![Brightness/Contrast](../../assets/bc_green.png)    |
 | **Brightness and Contrast Adjusted** | **Min:270 Max: 1000**  |
-| ![Hela-cells green](/../assets/hela_green_adj.png) | ![Brightness/Contrast](/../assets/bc_green_adj.png) |
+| ![Hela-cells green](../../assets/hela_green_adj.png) | ![Brightness/Contrast](../../assets/bc_green_adj.png) |
 
 
 !!! tip "Exercise"
@@ -97,16 +97,16 @@ OMERO Server at the MIN: [omero-imaging.uni-muenster.de](omero-imaging.uni-muens
 	
 |     **OMERO.insight Plugin**         |      **Setting Up the OMERO Server**     |
 |:----:|:----:|
-| ![OMERO Plugin](/../assets/omero_insight_ij.png) | ![OMERO Server Settings](/../assets/omero_server.png) |
+| ![OMERO Plugin](../../assets/omero_insight_ij.png) | ![OMERO Server Settings](../../assets/omero_server.png) |
 
 !!! tip "Exercise"
 	- Click on `Groups` and tick on the group: **MIN_Courses** and **All Members**
 	- Now open on the left side the ***Project*** `Basics of Image Analysis` and the ***Dataset*** `ExampleImages`.
 	- Doubleclick on a Thumbnail to open the image in Fiji.
 
-![OMERO Fiji Plugin](/../assets/omero_insight_groups.png)
+![OMERO Fiji Plugin](../../assets/omero_insight_groups.png)
 
-![OMERO Fiji Plugin](/../assets/omero_insight_images.png)
+![OMERO Fiji Plugin](../../assets/omero_insight_images.png)
 
 ---
 
@@ -123,9 +123,9 @@ OMERO Server at the MIN: [omero-imaging.uni-muenster.de](omero-imaging.uni-muens
 	- Click through the different channels.
 
 
-| ![Hela Cells Channel 2](/../assets/hela_c2.png) | ![Channels Tool](/../assets/channels_c2.png) | 
+| ![Hela Cells Channel 2](../../assets/hela_c2.png) | ![Channels Tool](../../assets/channels_c2.png) | 
 | :----: | :---------: | 
-| ![Hela Cells Channel 2](/../assets/hela_c2_gray.png) | ![Channels Tool](/../assets/channels_c2_gray.png) |
+| ![Hela Cells Channel 2](../../assets/hela_c2_gray.png) | ![Channels Tool](../../assets/channels_c2_gray.png) |
 
 **Lookup Tables** (`Image > Lookup Tables`): Apply different color maps (LUTs) to visualize grayscale images in color.  
 You can also quickly select and switch LUTs using the LUT dropdown menu in the GUI Tool Bar or in the Channels Tool.
@@ -139,14 +139,14 @@ You can also quickly select and switch LUTs using the LUT dropdown menu in the G
 	
 |     **Channel 2 with gray LUT, full range**         |      **Channel 2 with blue LUT, full range**     |
 | :----: | :---------: |
-| ![Hela Cells Channel 2](/../assets/hela_c2_gray2.png) | ![Channels Tool](/../assets/hela_c2_blue.png) |
+| ![Hela Cells Channel 2](../../assets/hela_c2_gray2.png) | ![Channels Tool](../../assets/hela_c2_blue.png) |
 
 
 
 
 |     **Channel 2 with the LUT HiLo**         |
 | :----: | 
-| ![Hela Cells Channel 2](/../assets/hela_c2_hilo.png) | 
+| ![Hela Cells Channel 2](../../assets/hela_c2_hilo.png) | 
 
 
 
@@ -169,4 +169,4 @@ Alternatively, you can access this function from the toolbar menu under "stk".
 
 | **Mitosis, t:29, z:5**             | **Mitosis, t:29, MIP**          |
 | :---------------------------------:| :------------------------------------------------------:|
-| ![Mitosis](/../assets/mitosis.png)    | ![Mitosis](/../assets/mitosis_mip.png)                     |
+| ![Mitosis](../../assets/mitosis.png)    | ![Mitosis](../../assets/mitosis_mip.png)                     |
