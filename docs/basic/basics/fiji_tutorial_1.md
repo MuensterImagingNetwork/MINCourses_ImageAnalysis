@@ -15,7 +15,7 @@
 	You will find the course Fiji version on your Desktop. 
 	You can find instruction on how to connect to the Hive in the confluence of the University Münster: [HIVE FAQ](https://confluence.uni-muenster.de/spaces/WWUIMW/pages/54528157/The+HIVE+-+FAQ) (Uni-MS internal)
 
-![Fiji GUI](../assets/Fiji_GUI_notes.png)
+![Fiji GUI](/../../assets/Fiji_GUI_notes.png)
 
 - The **Menu Bar** at the top of the Fiji window provides access to all program functions, including opening and saving files, running plugins, analyzing images, and changing settings.
 
