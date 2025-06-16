@@ -159,7 +159,6 @@ please visit the [Ilastik page](https://www.ilastik.org/documentation/pixelclass
 
 
 * [ilastik Homepage](https://www.ilastik.org/)
-* [Video Tutorials](https://www.youtube.com/@ilastik)
 * [Documentation](https://www.ilastik.org/documentation/pixelclassification/pixelclassification)
 ---
 

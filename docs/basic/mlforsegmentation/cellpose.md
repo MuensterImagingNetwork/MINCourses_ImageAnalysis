@@ -2,21 +2,12 @@
 
 ### **Background Scenario**
 
-You're working with fluorescent microscopy images of densely packed cells. 
+You're working with fluorescent microscopy images of touching cells. 
 You’ve tried conventional thresholding and watershed segmentation in Fiji or ImageJ
 — but the cells are touching, boundaries are unclear, and over- or under-segmentation is a 
 common issue.
 
-![ImageData](vargas_image.jpg)
-**© Copyright by Pascual-Vargas et al.** |
-[Source](https://idr.openmicroscopy.org/webclient/img_detail/2874783/?well=1246992)
-
-The data we will analysis today, is derived from this research paper: 
-
->***Analysis of YAP/TAZ localization in triple negative breast cancer in response to Rho GTPase regulators*** <br>
-Pascual-Vargas P, Cooper S, Sero J, Bousgouni V, Arias-Garcia M, Bakal C., Scientific Data, 2017
-
-[Publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC5332010/) | [Full Dataset](https://idr.openmicroscopy.org/webclient/?show=screen-1651)
+![ImageData](fluocells.png)
 
 ---
 
@@ -29,6 +20,7 @@ even in cluttered images.
 ### 🧭 **Step-by-Step Instructions**
 
 You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start Cellpose by clicking on the Cellpose icon.
+
 Alternatively, you can start Cellpose on the HIVE using the Anaconda Prompt and type:
 ```bash
 conda activate cellpose
