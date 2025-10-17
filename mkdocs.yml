@@ -5,7 +5,6 @@ nav:
   - Course Preparation: 
     - General Information: coursepreparation/generalprep.md
     - Image Database OMERO: coursepreparation/omero.md
-    - JupyterHub: coursepreparation/jupyterhub.md
     - The HIVE: coursepreparation/thehive.md
   - Course "Basic Image Analysis":
     - Welcome to the Course: basic/index.md
