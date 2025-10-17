@@ -12,24 +12,18 @@ nav:
     - Basics of Image Analysis: 
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
-        - "Fiji Tutorial 1: Open and inspect Images": basic/basics/fiji_tutorial_1.md
-        - "Fiji Tutorial 2: Basic Image Processing": basic/basics/fiji_tutorial_2.md
-        - Updating Fiji: basic/basics/update.md
-        - Creating Figures: basic/basics/creatingfigures.md
-        - Figure Challenge: basic/basics/figurechallenge.md
-    - AI for Image Segmentation: 
-        - Image Segmentation Bascis: basic/mlforsegmentation/imagesegmentation.md
-        - Supervised Machine Learning: basic/mlforsegmentation/pixelclassification.md
+        - "Tutorial: Inspect Images & Perform Your First Measurements": basic/basics/fiji_tutorial_1.md
+        - "Tutorial: Creating Figures": basic/basics/creatingfigures.md
+        - "Task: Figure Challenge": basic/basics/figurechallenge.md
+    - Image Preprocessing and Segmentation:
+        - Image Segmentation Bascis: basic/segmentation/imagesegmentation.md
+        - Image Preprocessing: basic/basics/preprocessing.md
+        - "Tutorial: Basic Image Processing": basic/basics/tutorialpreprocessing.md
+        - Image Segmentation using ML: basic/mlforsegmentation/pixelclassification.md
         - Best Practices: basic/mlforsegmentation/ilastik.md
-        - Hands-On "ilastik": basic/mlforsegmentation/ilastik_v2.md
-        - Deep Learning: basic/mlforsegmentation/dl.md
-        - Hands-On "CellPose": basic/mlforsegmentation/cellpose.md
-    - Reproducible Image Analysis Workflows:
-        - Reproducible Image Analysis: basic/reproducibleanalysis/introrepanalysis.md
-        - CellProfiler for Batch Analysis: basic/reproducibleanalysis/cellprofiler.md
-        - CellProfiler Tutorial 1: basic/reproducibleanalysis/cellprofilertutorial1.md
-        - CellProfiler Tutorial 2: basic/reproducibleanalysis/cellprofilertutorial.md
-        - CellProfiler Cheat Sheet: basic/reproducibleanalysis/cellprofilercheatsheet.md
+        - "Tutorial: Pixel Classification - Weka": basic/mlforsegmentation/ilastik_v2.md
+        - Image Segementation using DL: basic/mlforsegmentation/dl.md
+        - "Tutorial: CellPose": basic/mlforsegmentation/cellpose.md
         
   - Quiz "Basic Image Analysis":
     -  Self assessment: basic/quiz/basics_selfassessment.md 

@@ -1,10 +1,14 @@
-# Creating Figures
+# Tutorial: Creating Figures
 !!! tip "Learning Objective"
     Learn how to create high-quality figures for publications using Fiji and OMERO.
+
 
 ---
 
 ### **Creating Figures with Fiji**
+* **Image Properties:**
+    * `Image > Properties...`: View and edit image metadata, such as pixel size, z-step (for 3D), units, number of channels/frames, and more. Essential for correct scaling and for ensuring accurate time or z-position in figures.
+
 * **RGB and Channels:**
     * `Image > Type > RGB Color` or `Image > Color > Split Channels`: Images can be opened as multi-channel (e.g., Red, Green, Blue). Use Split Channels to separate them for individual viewing and processing. Merge them back with `Image > Color > Merge Channels...`.  
     **Note:** If you convert an image to RGB Color, you lose access to the individual channels as separate data—they are merged into a single color image. The same applies if you split an RGB image: the original composite is lost, and you cannot easily recover the channel separation.
@@ -25,9 +29,6 @@
 
 * **Stack Tools:**
     * `Image > Stacks`: Provides many tools for handling image stacks (3D or time-lapse). Examples: create projections (`Image > Stacks > Z Project...`), extract sub-stacks (`Image > Stacks > Tools > Make Substack...`), split or merge stacks.
-
-* **Image Properties:**
-    * `Image > Properties...`: View and edit image metadata, such as pixel size, z-step (for 3D), units, number of channels/frames, and more. Essential for correct scaling and for ensuring accurate time or z-position in figures.
 
 ---
 

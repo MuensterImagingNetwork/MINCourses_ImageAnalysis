@@ -5,7 +5,7 @@
 
 ---
 
-### Rember: The Image Analysis Workflow: A Path to Results
+### Remember: The Image Analysis Workflow: A Path to Results
 
 An image analysis workflow is a sequence of operations that transforms your raw image into quantitative results. While there are often several ways to reach your goal, a typical workflow involves:
 
@@ -28,21 +28,3 @@ Fiji provides a vast toolkit for image processing. Here are some common steps yo
 	* `Analyze > Measure (M shortcut)`: Measures the defined properties (from Set Measurements) for the currently selected ROI. Results for each measurement are added as a new row in the Results Table.
 *	**Results Table:**
 	* The Results Table is where Fiji outputs all measured values. Each row typically corresponds to an individual measurement (e.g., one ROI or particle), and each column corresponds to a specific measurement parameter (e.g., area, mean intensity). You can copy, save, or further analyze the data directly from this table.
-* **Subtract Background / Denoise:**
-    * `Process > Subtract Background...`: Corrects for uneven illumination.
-    * `Process > Noise > Denoise...` or `Process > Filters > Gaussian Blur...`: Reduces random noise, making subsequent steps more reliable.
-* **Median Filter:**
-    * `Process > Filters > Median...`: Effective for removing salt-and-pepper noise while preserving edges better than a simple blur.
-* **Thresholding:**
-    * `Image > Adjust > Threshold...` (e.g., using Otsu's method): Converts a grayscale image into a binary image (black and white) by separating pixels into foreground (objects) and background based on their intensity.
-* **Binary Operations:**
-    * `Process > Binary > Options...` (then `Close-`, `Open-`, `Fill Holes`, `Erode`, `Dilate`): Refine binary images. For example, `Close-` (dilate then erode) can fill small holes within objects and smooth their outlines.
-* **Watershed Segmentation:**
-    * `Process > Binary > Watershed`: Separates touching objects in a binary image, often used after thresholding when objects are clumped together.
-* **Analyze Particles:**
-    * `Analyze > Analyze Particles...`: Measures properties (area, shape descriptors, etc.) of objects in a thresholded binary image and can generate ROIs for each identified particle.
-
-These tools, when combined thoughtfully, allow you to build powerful workflows to solve many common image analysis challenges. The following practical exercises will guide you through applying these steps.
-
-!!! note "Ready to Practice?"
-    The best way to understand these concepts is to apply them. Let's dive into the practical exercises with the trainer!

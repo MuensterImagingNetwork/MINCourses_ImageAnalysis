@@ -4,7 +4,7 @@
 
 This course will provide an introduction to the fundamental concepts and methods of bioimage analysis. 
 We will cover the essential tools and techniques needed to analyze and understand biological images. 
-Through this training, you will learn how to use Fiji, AI tools including Ilastik and Cellpose, and CellProfiler to answer your own research questions.
+Through this training, you will learn how to use Fiji and AI tools like Cellpose to answer your own research questions.
 
 ### General Learning Objectives
 
@@ -14,21 +14,22 @@ We will focus on key topics such as the very basics of image analysis, machine l
 Upon completing the course, you should be able to:
 
 - Understand the fundamental concepts of bioimage analysis
-- Use Fiji, Ilastik, Cellpose, Stardist, and CellProfiler for image analysis
+- Use Fiji and Cellpose for image analysis
 - Create high-quality figures for publications
 - Integrate various tools for advanced image analysis tasks
 
 ### Programme
 
-|  | Day 1 | Day 2 | 
-| --------- | -------| ----- |
-| Morning | Analysis Basics <br> Hands-On: Introduction to Fiji | Artificial Intelligence for Image Segmentation <br>  Hands-On: Ilastik & Cellpose|
-| | | |
-| Afternoon | Hands-On: Fiji cont'd <br> Hands-On: Figure Creation | Reproducible Image Analysis <br> Hands-On: CellProfiler |
+| | Day 1 | Day 2 | Day 3 |
+| ---- | ---- | ---- | ---- |
+| | **Basics of Image Analysis** <br> Hands-On: <br> Introduction to Fiji | **Image Preprocessing and Segmentation** <br>  Hands-On: <br> Fiji – Processing and Manual Segmentation | **Cell segmentation using Cellpose** <br> Hands-On: <br> Cellpose and Fiji |
+| | | | |
+| | **Scientific Figure Creation** <br> Hands-On: <br> Figure Creation with Fiji and OMERO | **Manual Image Analysis** <br> Hands-On: <br> Analysis Task | Hands-On: <br> Full Analysis Workflow |
 
 
 
-We look forward to accompanying you on this journey into the world of bioimage analysis! If you have any questions or need help, the course team is here to support you.
+We look forward to accompanying you on this journey into the world of bioimage analysis! If you have any questions or need help, the course team is here to support you. 
+You can contact us anytime at imaging@uni-muenster.de or our [Mattermost channel](https://mattermost.uni-muenster.de/min/channels/town-square).
 
 
 

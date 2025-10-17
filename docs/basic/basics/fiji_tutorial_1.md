@@ -1,4 +1,4 @@
-## Tutorial 1: Open & inspect Images
+## Tutorial: Inspect Images & Perform Your First Measurements
 
 !!! Warning "Note"
     Some images used in this tutorial are taken from the Bioimage Analysis book by Pete Bankhead ([bioimagebook.github.io](https://bioimagebook.github.io)). Content is licensed under [**CC-BY 4.0**](https://creativecommons.org/licenses/by/4.0/), except where noted otherwise. See License & Reuse for details.
@@ -9,11 +9,7 @@
 ###1. Start Fiji
 
 !!! Tip "Exercise"
-	Navigate to your Fiji folder (normally Fiji.app) and double click on `fiji-windows-x64`
-
-!!! Warning "Fiji on the HIVE (MIN-Server)"
-	You will find the course Fiji version on your Desktop. 
-	You can find instruction on how to connect to the Hive in the confluence of the University Münster: [HIVE FAQ](https://confluence.uni-muenster.de/spaces/WWUIMW/pages/54528157/The+HIVE+-+FAQ) (Uni-MS internal)
+	Navigate to your Fiji folder (normally Fiji.app) and double click on `fiji-windows-x64`.
 
 ![Fiji GUI](../../assets/Fiji_GUI_notes.png)
 
@@ -56,34 +52,7 @@ If you encounter problems opening your files and the *Bio-Formats Importer* wind
 
 ---
 
-###3. Channel & Brightness and Contrast
-
-!!! tip "Exercise"
-    After you have opened `hela-cells.tif`, go to `Image → Adjust → Brightness/Contrast` or use the shortcut `Ctrl + Shift + C`.
-    Drag the Channel Bar (indicated with a `C`) below the image and observe how the color of the Brightness and Contrast window changes. Additionally, notice that the headline (title) of the image updates according to the channel you select.
-
-|     **Brightness and Contrast with Auto Adjustment**         |      **Brightness/Contrast**     |
-|:----:|:----:|
-| ![Hela-cells red](../../assets/hela_red.png)      | ![Brightness/Contrast](../../assets/bc_red.png)      |
-| ![Hela-cells green](../../assets/hela_green.png)  | ![Brightness/Contrast](../../assets/bc_green.png)    |
-| **Brightness and Contrast Adjusted** | **Min:270 Max: 1000**  |
-| ![Hela-cells green](../../assets/hela_green_adj.png) | ![Brightness/Contrast](../../assets/bc_green_adj.png) |
-
-
-!!! tip "Exercise"
-    Now select a channel of your choice and adjust the histogram (brightness & contrast) using the minimum and maximum sliders.  
-    Observe how changing the minimum or maximum value affects the image display.
-
-??? tip "What is a Histogram?"
-    A histogram shows the distribution of grayscale values (pixel intensities) in your image. The left side represents dark pixels, the right side bright pixels. The way intensities are displayed as colors depends on the chosen LUT (Lookup Table).
-
-    When you set the minimum slider to a value (e.g., 100), all pixels with intensity 100 or lower will appear completely black. Similarly, if you move the maximum slider to a lower value (e.g., 200), all pixels with intensity 200 or higher will appear completely white. Intensities between the minimum and maximum are mapped linearly between black and white (or according to the LUT).
-
-    Note: Adjusting the sliders only changes the display, not the actual pixel values. **Do not click "Apply"**—this will permanently change your image data and would affect any measurements, which is not recommended here.
-
----
-	
-###4. Open images from OMERO
+#### Open images from OMERO
 
 The Münster Imaging Network (MIN) provides an [OMERO](https://www.openmicroscopy.org/omero/) server for managing and storing microscopy images. With the [OMERO Fiji plugin](https://www.openmicroscopy.org/omero/), you can connect directly to the OMERO server and load images into Fiji for analysis and processing. This allows you to access your microscopy data efficiently without the need to manually download files. If the plugin is not installed already to your Fiji, download the `omero_ij-xx.jar` file from the link above and copy it to the Fiji plugins folder. Detailed introductions can be found in the [OMER Guides](https://omero-guides.readthedocs.io/en/latest/fiji/docs/installation.html). 
 OMERO Server at the MIN: [omero-imaging.uni-muenster.de](omero-imaging.uni-muenster.de)
@@ -110,10 +79,41 @@ OMERO Server at the MIN: [omero-imaging.uni-muenster.de](omero-imaging.uni-muens
 
 ---
 
-###5. Commonly Used Tools for Image Inspection
+###3. Brightness and Contrast
 
-**Duplicate** (`Edit > Duplicate...`): Creates a copy of the current image or selection.  
-**Shortcut:** `CTRl+Shift+D`
+!!! tip "Exercise"
+    After you have opened `hela-cells.tif`, go to `Image → Adjust → Brightness/Contrast` or use the shortcut `Ctrl + Shift + C`.
+    Drag the Channel Bar (indicated with a `C`) below the image and observe how the color of the Brightness and Contrast window changes. Additionally, notice that the headline (title) of the image updates according to the channel you select.
+
+|     **Brightness and Contrast with Auto Adjustment**         |      **Brightness/Contrast**     |
+|:----:|:----:|
+| ![Hela-cells red](../../assets/hela_red.png)      | ![Brightness/Contrast](../../assets/bc_red.png)      |
+| ![Hela-cells green](../../assets/hela_green.png)  | ![Brightness/Contrast](../../assets/bc_green.png)    |
+| **Brightness and Contrast Adjusted** | **Min:270 Max: 1000**  |
+| ![Hela-cells green](../../assets/hela_green_adj.png) | ![Brightness/Contrast](../../assets/bc_green_adj.png) |
+
+
+**What is a Histogram?** <br>
+
+A histogram shows the distribution of grayscale values (pixel intensities) in your image. The left side represents dark pixels, the right side bright pixels. The way intensities are displayed as colors depends on the chosen LUT (Lookup Table).
+
+When you set the minimum slider to a value (e.g., 100), all pixels with intensity 100 or lower will appear completely black. Similarly, if you move the maximum slider to a lower value (e.g., 200), all pixels with intensity 200 or higher will appear completely white. Intensities between the minimum and maximum are mapped linearly between black and white (or according to the LUT).
+
+Note: Adjusting the sliders only changes the display, not the actual pixel values. **Do not click "Apply"**—this will permanently change your image data and would affect any measurements, which is not recommended here.
+
+
+!!! tip "Exercise"
+    Now select a channel of your choice and adjust the histogram (brightness & contrast) using the minimum and maximum sliders.  
+    Observe how changing the minimum or maximum value affects the image display.
+
+
+---
+
+###4. Gamma adjustments
+
+---
+
+###5. Channel management
 
 **Channels Tool** (`Image > Color > Channels Tool...`): Opens the channel management tool for viewing, splitting, or merging channels.  
 **Shortcut:** `Shift+Z`
@@ -137,25 +137,26 @@ You can also quickly select and switch LUTs using the LUT dropdown menu in the G
         - <span style="color: red;">**Red**</span>: Pixels displayed with maximum intensity (white).
     - Click through the different channels to see how the LUT and histogram settings affect each one.
 	
-|     **Channel 2 with gray LUT, full range**         |      **Channel 2 with blue LUT, full range**     |
-| :----: | :---------: |
-| ![Hela Cells Channel 2](../../assets/hela_c2_gray2.png) | ![Channels Tool](../../assets/hela_c2_blue.png) |
+|     **Channel 2 with gray LUT, full range**         |      **Channel 2 with blue LUT, full range**     |     **Channel 2 with the LUT HiLo**         |
+| :----: | :---------: | :----: |  
+| ![Hela Cells Channel 2](../../assets/hela_c2_gray2.png) | ![Channels Tool](../../assets/hela_c2_blue.png) | ![Hela Cells Channel 2](../../assets/hela_c2_hilo.png) | 
 
 
 
 
-|     **Channel 2 with the LUT HiLo**         |
-| :----: | 
-| ![Hela Cells Channel 2](../../assets/hela_c2_hilo.png) | 
-
-
+**Duplicate** (`Edit > Duplicate...`): Creates a copy of the current image or selection.  
+**Shortcut:** `CTRl+Shift+D`
 
 **Split Channels** (`Image > Color > Split Channels`): Separates a multi-channel image into individual grayscale channel images.
 
 **Merge Channels** (`Image > Color > Merge Channels`): Combines separate channel images into a single multi-channel or RGB image.
 
-**Z Project** (`Image > Stacks > Z Project...`): Processes a z-stack to create a 2D projection image from multiple z-slices.  
-Alternatively, you can access this function from the toolbar menu under "stk".
+
+---
+	
+###6. Hyperstacks
+
+
 
 !!! tip "Exercise"
     - Open the 5D Fiji sample image: `File > Open Samples > Mitosis`.
@@ -170,3 +171,22 @@ Alternatively, you can access this function from the toolbar menu under "stk".
 | **Mitosis, t:29, z:5**             | **Mitosis, t:29, MIP**          |
 | :---------------------------------:| :------------------------------------------------------:|
 | ![Mitosis](../../assets/mitosis.png)    | ![Mitosis](../../assets/mitosis_mip.png)                     |
+
+
+**Z Project** (`Image > Stacks > Z Project...`): Processes a z-stack to create a 2D projection image from multiple z-slices.  
+Alternatively, you can access this function from the toolbar menu under "stk".
+
+**Reorder Hyperstacks**
+
+---
+
+###7. First Measurements
+
+*	**Set Measurements:**
+	* `Analyze > Set Measurements...`: Select the specific measurements you wish to extract, such as area, mean intensity, shape descriptors, perimeter, and more. This step defines what quantitative data Fiji will extract in later analysis steps.  
+*	**Select ROIs (Regions of Interest):**
+	* Use the Rectangle Tool or Wand Tool (toolbar buttons) to manually select objects or regions in your image. The Rectangle Tool allows you to draw a rectangular ROI, while the Wand Tool selects areas of similar intensity by clicking inside an object. Once selected, you can manage multiple ROIs using the ROI Manager (`Analyze > Tools > ROI Manager...`, or press `t`).
+*	**Measure:**
+	* `Analyze > Measure (M shortcut)`: Measures the defined properties (from Set Measurements) for the currently selected ROI. Results for each measurement are added as a new row in the Results Table.
+*	**Results Table:**
+	* The Results Table is where Fiji outputs all measured values. Each row typically corresponds to an individual measurement (e.g., one ROI or particle), and each column corresponds to a specific measurement parameter (e.g., area, mean intensity). You can copy, save, or further analyze the data directly from this table.

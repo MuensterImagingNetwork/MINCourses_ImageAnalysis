@@ -7,7 +7,7 @@ Please bring your laptop to the course. However, a high-performance laptop is n
 We kindly ask you to prepare the following: 
 
 1. Log in to the [image database OMERO](https://omero-imaging.uni-muenster.de/) using your university-ID and password.
-2. Log in to the [JupyterHub](https://jupyterhub.uni-muenster.de/) using your university-ID and password.
-3. Prepare to be able to establish a Remote Desktop connection and log in to the analysis server "HIVE" using the login data stated below.
+2. You will use the WIFI in the Multiscale Imaging Center - please prepare to establish a VPN connection using the [Cisco Secure Client](https://www.uni-muenster.de/IT/services/kommunikation/vpn/).
+3. Prepare to be able to establish a Remote Desktop connection and log in to the analysis server "HIVE" using the login data you received by email.
 
 Further information can be found in the following sections.

@@ -9,7 +9,7 @@ of the Uni Münster Cloud is directly available. There is no need to copy and du
 
 ### Connect to the HIVE
 
-To connect to the HIVE, you need to be connected to the university WIFI or LAN or have established a VPN connection.
+To connect to the HIVE, you need to be connected to the university LAN or WIFI + VPN connection.
 Please make sure to have your **university ID** and **network password** ready during the course to connect to the "uni-ms" WIFI.
 
 The connection is established using a Remote Desktop Connection.
