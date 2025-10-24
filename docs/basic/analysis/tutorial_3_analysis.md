@@ -1,6 +1,6 @@
-## Tutorial: Analyse Your Images
+## Tutorial 3: Analyse Your Images
 
-###1. Simple Thresholding
+###3.1. Simple Thresholding
 
 - **Thresholding**:
 `Image > Adjust > Threshold...`
@@ -19,7 +19,7 @@ Converts a grayscale image into a binary image (black and white) by separating p
 	- When you are sastified with your segmentation click `Apply`. 
 
 
-###2. Cleaning the Mess - Image filters
+###3.2. Cleaning the Mess - Image filters
 
 - **Subtract Background / Denoise:**
     * `Process > Subtract Background...`: Corrects for uneven illumination.
@@ -32,7 +32,7 @@ Converts a grayscale image into a binary image (black and white) by separating p
 	- How does the filter size influence the result?
 	- Does filtering improve the segmentation?
 
-###3. Refine your Detections
+###3.3. Refine your Detections
 
 - **Binary Operations:**
     * `Process > Binary > Options...` (then `Close-`, `Open-`, `Fill Holes`, `Erode`, `Dilate`): Refine binary images. For example, `Close-` (dilate then erode) can fill small holes within objects and smooth their outlines.
@@ -43,7 +43,7 @@ Converts a grayscale image into a binary image (black and white) by separating p
     - Use *Watershed* to improve your segmentation.
 	- What are the limitations of the watershed algorithm?
 
-###4. Analyse your Images
+###3.4. Analyse your Images
 
 - **ROI Manager:**
 	*  `Analyze > Tools > ROI Manager...`: You can manage multiple ROIs using the ROI manager.

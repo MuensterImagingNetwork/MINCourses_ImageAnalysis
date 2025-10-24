@@ -1,11 +1,11 @@
-# Tutorial: Creating Figures
+# Tutorial 2: Creating Figures
 !!! tip "Learning Objective"
     Learn how to create high-quality figures for publications using Fiji and OMERO.
 
 
 ---
 
-### **Creating Figures with Fiji**
+### **2.1. Creating Figures with Fiji**
 * **Image Properties:**
     * `Image > Properties...`: View and edit image metadata, such as pixel size, z-step (for 3D), units, number of channels/frames, and more. Essential for correct scaling and for ensuring accurate time or z-position in figures.
 
@@ -30,7 +30,7 @@
 
 ---
 
-### **Creating Figures with OMERO.figure**
+### **2.2. Creating Figures with OMERO.figure**
 
 To simplify the process of making publication-ready figures, we provide OMERO.figure, a companion tool that makes figure creation intuitive and fast.
 

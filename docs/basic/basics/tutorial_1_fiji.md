@@ -1,4 +1,4 @@
-## Tutorial: Inspect Images & Perform Your First Measurements
+## Tutorial 1: Inspect Images & Perform Your First Measurements
 
 !!! Warning "Note"
     Some images used in this tutorial are taken from the Bioimage Analysis book by Pete Bankhead ([bioimagebook.github.io](https://bioimagebook.github.io)). Content is licensed under [**CC-BY 4.0**](https://creativecommons.org/licenses/by/4.0/), except where noted otherwise. See License & Reuse for details.
@@ -6,7 +6,7 @@
 ---
 
 
-###1. Start Fiji
+###1.1. Start Fiji
 
 !!! Tip "Exercise"
 	Start Fiji by double clicking on the Fiji icon on your desktop. <br>
@@ -25,7 +25,7 @@
 	
 ---
 	
-###2. Opening Images in Fiji
+###1.2. Opening Images in Fiji
 
 To open images in Fiji, you can simply drag and drop your image files directly into the Fiji window. In many cases, especially with proprietary microscopy formats, the *Bio-Formats Importer* window will automatically appear to guide you through the import process. 
 
@@ -81,7 +81,7 @@ OMERO Server at the MIN: [omero-imaging.uni-muenster.de](omero-imaging.uni-muens
 
 ---
 
-###3. Brightness and Contrast
+###1.3. Brightness and Contrast
 
 !!! tip "Exercise"
     After you have opened `hela-cells.tif`, go to `Image → Adjust → Brightness/Contrast` or use the shortcut `Ctrl + Shift + C`.
@@ -111,7 +111,7 @@ Note: Adjusting the sliders only changes the display, not the actual pixel value
 
 ---
 
-###4. Gamma adjustments
+###1.4. Gamma adjustments
 
 !!! tip "Exercise"
 	To perform **gamma adjustment** in Fiji, go to `Process → Math → Gamma`. 
@@ -125,7 +125,7 @@ Note: Adjusting the sliders only changes the display, not the actual pixel value
 
 ---
 
-###5. Channel management
+###1.5. Channel management
 
 **Channels Tool** (`Image > Color > Channels Tool...`): Opens the channel management tool for viewing, splitting, or merging channels.  
 **Shortcut:** `Shift+Z`
@@ -166,7 +166,7 @@ You can also quickly select and switch LUTs using the LUT dropdown menu in the G
 
 ---
 	
-###6. Stack Management, Substacks and Projections
+###1.6. Stack Management, Substacks and Projections
 
 !!! tip "Exercise"
     - Open the 5D Fiji sample image: `File > Open Samples > Mitosis`.
@@ -196,7 +196,7 @@ Alternatively, you can access this function from the toolbar menu under "stk".
 `Image > Stacks > Reslice` Creates a reslice over the full stack or along a drawn line, similar to the orthognal views, but more flexible with regard to xy dimensions.
 ---
 
-###7. First Measurements
+###1.7. First Measurements
 
 !!! tip "Exercise"
 	- Open the image from this folder `D:\PROJECTS\Courses\Image Analysis Courses\BasicsOfImageAnalysis_Oct25\1_FijiImages\Tutorial7_Measurements`
