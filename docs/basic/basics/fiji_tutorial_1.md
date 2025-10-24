@@ -9,7 +9,9 @@
 ###1. Start Fiji
 
 !!! Tip "Exercise"
-	Navigate to your Fiji folder (normally Fiji.app) and double click on `fiji-windows-x64`.
+	Start Fiji by double clicking on the Fiji icon on your desktop. <br>
+	On your **local PC** at the lab or home, you can find your Fiji under `C:\Users\YourUserName\Documents\Fiji.app`.
+	Navigate to your Fiji folder and double click on `fiji-windows-x64`.
 
 ![Fiji GUI](../../assets/Fiji_GUI_notes.png)
 
@@ -32,9 +34,9 @@ Alternatively, you can open images using the menu: go to `File → Open...` and 
 If you encounter problems opening your files and the *Bio-Formats Importer* window does not appear, you can start the import process manually. Go to `File → Import → Bio-Formats`, then browse and select your file. Bio-Formats supports a wide range of bioimaging file formats (such as `.lif`, `.czi`, `.nd2`, and more), ensures compatibility with many proprietary microscopy formats, and preserves important metadata during import.
 
 !!! Tip "Exercise"
-	**On Hive:** Navigate to `D:\PROJECTS\Courses\Image Analysis Courses\1_BasicsOfImageAnalysis\Fiji_Images` and open `hela-cells.tif` by drag and drop it to the Fiji GUI.  
+	**On Hive:** Navigate to `D:\PROJECTS\Courses\Image Analysis Courses\BasicsOfImageAnalysis_Oct25\1_FijiImages` and open `hela-cells.tif` by drag and drop it to the Fiji GUI.  
 	**Alternatively:** In Fiji go to `Plugins → Bio-Formats → Bio-Formats-Importer` and open
-	`D:\PROJECTS\Courses\Image Analysis Courses\1_BasicsOfImageAnalysis\Fiji_Images\hela-cells.tif`
+	`D:\PROJECTS\Courses\Image Analysis Courses\BasicsOfImageAnalysis_Oct25\1_FijiImages\hela-cells.tif`
 	
 
 
@@ -111,6 +113,16 @@ Note: Adjusting the sliders only changes the display, not the actual pixel value
 
 ###4. Gamma adjustments
 
+!!! tip "Exercise"
+	To perform **gamma adjustment** in Fiji, go to `Process → Math → Gamma`. 
+	Check the Preview box, and use the slider or input a value to adjust the midtones. A gamma value of 1.0 is normal, 
+	while values less than 1.0 will make dark areas brighter and values greater than 1.0 will make bright areas brighter, 
+	changing the relationship between dark and light pixels. 
+	Careful, when you click "OK", your histogram data will be changed!
+
+![Gammaadjustment](gamma.png)	
+
+
 ---
 
 ###5. Channel management
@@ -154,9 +166,7 @@ You can also quickly select and switch LUTs using the LUT dropdown menu in the G
 
 ---
 	
-###6. Hyperstacks
-
-
+###6. Stack Management, Substacks and Projections
 
 !!! tip "Exercise"
     - Open the 5D Fiji sample image: `File > Open Samples > Mitosis`.
@@ -172,21 +182,54 @@ You can also quickly select and switch LUTs using the LUT dropdown menu in the G
 | :---------------------------------:| :------------------------------------------------------:|
 | ![Mitosis](../../assets/mitosis.png)    | ![Mitosis](../../assets/mitosis_mip.png)                     |
 
+**Stack Tools**: <br>
+	`Image > Stacks` Provides many tools for handling image stacks (3D or time-lapse). Examples: create projections (`Image > Stacks > Z Project...`), extract sub-stacks (`Image > Stacks > Tools > Make Substack...`), split or merge stacks.
 
-**Z Project** (`Image > Stacks > Z Project...`): Processes a z-stack to create a 2D projection image from multiple z-slices.  
+**Z Project**: <br> 
+`Image > Stacks > Z Project...` Processes a z-stack to create a 2D projection image from multiple z-slices.  
 Alternatively, you can access this function from the toolbar menu under "stk".
 
-**Reorder Hyperstacks**
+**Orthogonal Views** <br>
+`Image > Stacks > Orthogonal Views`  Creates interactive orthogonal slices from an image stack. Cross-sections (XZ and YZ views) are shown for lines on your image. Orthogonal views are always RGB images. 
 
+**Reslice** <br>
+`Image > Stacks > Reslice` Creates a reslice over the full stack or along a drawn line, similar to the orthognal views, but more flexible with regard to xy dimensions.
 ---
 
 ###7. First Measurements
 
-*	**Set Measurements:**
-	* `Analyze > Set Measurements...`: Select the specific measurements you wish to extract, such as area, mean intensity, shape descriptors, perimeter, and more. This step defines what quantitative data Fiji will extract in later analysis steps.  
-*	**Select ROIs (Regions of Interest):**
-	* Use the Rectangle Tool or Wand Tool (toolbar buttons) to manually select objects or regions in your image. The Rectangle Tool allows you to draw a rectangular ROI, while the Wand Tool selects areas of similar intensity by clicking inside an object. Once selected, you can manage multiple ROIs using the ROI Manager (`Analyze > Tools > ROI Manager...`, or press `t`).
-*	**Measure:**
-	* `Analyze > Measure (M shortcut)`: Measures the defined properties (from Set Measurements) for the currently selected ROI. Results for each measurement are added as a new row in the Results Table.
-*	**Results Table:**
-	* The Results Table is where Fiji outputs all measured values. Each row typically corresponds to an individual measurement (e.g., one ROI or particle), and each column corresponds to a specific measurement parameter (e.g., area, mean intensity). You can copy, save, or further analyze the data directly from this table.
+!!! tip "Exercise"
+	- Open the image from this folder `D:\PROJECTS\Courses\Image Analysis Courses\BasicsOfImageAnalysis_Oct25\1_FijiImages\Tutorial7_Measurements`
+	- Select the channel showing the actin filaments (Phalloidin-AF488) - channel 3. 
+	- User `Image >  Properties...` to validate the pixel scaling and unit.  
+	- Select the line tool and measure the width of the actin fibers in the shown ROI.
+	- What is the width of the actin fiber?
+
+- **Set Measurements:** <br>
+	`Analyze > Set Measurements...`: Select the specific measurements you wish to extract, such as area, mean intensity, shape descriptors, perimeter, and more. This step defines what quantitative data Fiji will extract in later analysis steps.  
+
+- **Select ROIs (Regions of Interest):** <br>
+	Use the Rectangle Tool or Wand Tool (toolbar buttons) to manually select objects or regions in your image. The Rectangle Tool allows you to draw a rectangular ROI, while the Wand Tool selects areas of similar intensity by clicking inside an object. Once selected, you can manage multiple ROIs using the ROI Manager (`Analyze > Tools > ROI Manager...`, or press `t`).
+
+- **Measure:** <br>
+	`Analyze > Measure (M shortcut)`: Measures the defined properties (from Set Measurements) for the currently selected ROI. Results for each measurement are added as a new row in the Results Table.
+
+- **Results Table:** <br>
+	The Results Table is where Fiji outputs all measured values. Each row typically corresponds to an individual measurement (e.g., one ROI or particle), and each column corresponds to a specific measurement parameter (e.g., area, mean intensity). You can copy, save, or further analyze the data directly from this table.
+
+**More Accurate Measurements of Width**
+
+- **Plot Profile:** <br>
+	A more precise way to measure the width of filaments is to use the "Plot Profile" `Analyze > Plot Profile` or `Ctrl + K` function in Fiji. Plot profile will show you the intensity distribution along a line as histogram.
+	You can then measure the width of the peak where 1/2 of the full intensity at the peak is reached ("Full Width at Half Maximum" (FWHM)). 
+	
+![PlotProfile](plotprofile.png)
+	
+	
+!!! tip "Exercise"
+	- Measure the same fiber as previously
+	- Select the line tool and draw a line perpendicular to the fiber, extending along the fiber edges
+	- Use "Plot profile" to create the intensity profile
+	- Measure the FWHM 
+	- What is the width of the actin fiber?
+	

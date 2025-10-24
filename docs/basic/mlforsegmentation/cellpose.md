@@ -19,57 +19,75 @@ even in cluttered images.
 
 ### 🧭 **Step-by-Step Instructions**
 
-You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start Cellpose by clicking on the Cellpose icon.
+Start Cellpose by clicking on the Cellpose icon on your Desktop.
 
-Alternatively, you can start Cellpose on the HIVE using the Anaconda Prompt and type:
-```bash
-conda activate cellpose
-cellpose
-``` 
+![ImageData](cellposeicon.png)
+
+Your Cellpose GUI should look like this:
+
+![ImageData](cellposegui.png)
+
+
 ---
-#### 📂 Step 1: Load Your Image
+#### ▶️ Step 1: Load Your Image
 
-* Open your image using **File > Open** in the GUI
+
+
+* Open your image using `File > Load image (*.tif, *.png, *.jgp)` in the GUI
 * Your image should now appear in grayscale or RGB
 
 ---
 
-#### 🧠 Step 2: Choose a Pre-Trained Model
+#### ▶️ Step 2: Inspect the Cellpose GUI
 
-- **Model type:** Choose between:
-	- **cyto** – for whole-cell segmentation (typical for cytoplasm or membrane-stained images)
-	- **nuclei** – for nuclear staining (e.g., DAPI) 
-- **Flow threshold / cell probability:** Leave default for now
-- **Use GPU:** Enable if you have one (optional but faster)
+You'll find different sections at the left hand side of the Cellpose GUI. 
 
----
+* **Views** Control of channels, brightness and contrast
+* **Drawing**: Selection how to show segmentation and control about manual annotations
+* **Segmentation**: Parameters for Cellpose (cyto3) segmentation
+* **Other models**: Selection of custom models or other Cellpose models (a.o. nuclei, cyto2)
+* **Image restoration**: Performs denoising or filtering before segmentation if enabled
+* **Scale disk on**: Size indicator as magenta disk at the lower left side of the image
+* You can **Zoom** using the mouse wheel or <kbd>Ctrl</kbd> + <kbd>+</kbd> and <kbd>Ctrl</kbd> + <kbd>-</kbd> 
 
-#### 📐 Step 3: Set Diameter (Optional)
+<br>
 
-* Cellpose can automatically estimate object size
-* If the automatic result looks off, set a rough **diameter (in pixels)** manually (try 30–50 px to start)
+* Toggle the different views and adjust brightness and contrast for your channels.
+* Which structures do channel 0 and channel 1 show?
+
+--- 
+
+
+#### ▶️ Step 3: Apply the pre-trained model (cyto3)
+
+* Set the correct diameter of your cells - you can use a measurement from Fiji, estimate the size using the scale disk or click "Calibrate" to let Cellpose decide
+* Select the channels you'd like to segment, "chan2" can be the nuclei channel to support segmentation
+* **Flow threshold / cell probability:** Leave default for now
+* **Use GPU:** Enable if you have one (optional but faster)
 
 ---
 
 #### ▶️ Step 4: Run Segmentation
 
-* Click **“Run segmentation”**
-* You’ll see overlaid cell outlines and a segmentation mask
+* Click **“Run cyto3"** or click run next the custom or data-specific models
+* You’ll see overlaid segmentation mask
+* Use **View** to change the display, e.g. show the segmentation outlines
 * Evaluate: Are all cells segmented? Are there missed detections or merged objects?
+
+<br>
+
 * Compare results between the different **cyto** and **nuclei** models.
-* Try adjusting the **diameter** or **flow threshold**—what changes?
+* Try adjusting the **diameter** or **flow threshold** — what changes?
 
 ---
 
-#### ✏️ Step 5: Refine or Save
+#### ▶️ Step 5: Refine or Save
 
 * Use the **brush tool** to manually correct any mistakes if needed
 * Export masks as:
 
-  * **Masks** (as image)
-  * **Outlines**
-  * **CSV** with shape properties
-* Save your segmented image using **File > Save**
+  * **Label Images**: `File > Save masks as PNG/tif`
+  * **ROIs**: `File > Save outlines as .zip archive of ROI files for ImageJ`  
 
 ---
 
