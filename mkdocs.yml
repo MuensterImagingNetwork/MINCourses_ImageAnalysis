@@ -12,19 +12,12 @@ nav:
     - Basics of Image Analysis: 
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
-        - "Tutorial: Inspect Images & Perform Your First Measurements": basic/basics/fiji_tutorial_1.md
-        - "Tutorial: Creating Figures": basic/basics/creatingfigures.md
+        - "Tutorial 1: Inspect Images & Perform Your First Measurements": basic/basics/fiji_tutorial_1.md
+        - "Tutorial 2: Creating Figures": basic/basics/creatingfigures.md
         - "Task: Figure Challenge": basic/basics/figurechallenge.md
     - Image Processing and Analysis:
         - The Image Analysis Workflow: basic/analysis/workflow.md
-        - Image Segmentation Basics: basic/segmentation/imagesegmentation.md
-        - "Tutorial: Thresholding your Images": basic/segmentation/thresholding.md
-        - Image Preprocessing: basic/basics/preprocessing.md
-        - "Tutorial: Basic Image Processing": basic/segmentation/tutorialpreprocessing.md
-        - Refine Detections: basic/segmentation/detections.md
-        - "Tutorial: Watershed": basic/segmentation/watershed.md
-        - Analyse Your Data: basic/analysis/analyseparticles.md
-        - "Tutorial: Analyse Particles": basic/analysis/tutorialanalyseparticles.md
+        - "Tutorial 3: Analyse your Images": basic/analysis/tutorial3_analysis.md
         - "Task:  Manual Image Analysis": basic/analysis/taskmanualanalysis.md
     - Image Segmentation using AI:
         - Image Segmentation using ML: basic/mlforsegmentation/pixelclassification.md

@@ -27,8 +27,6 @@
 * **Sync Windows:**
     * `Plugins > Synchronize Windows`: Synchronize zooming and scrolling across multiple open images (e.g., different channels or samples). This is very helpful for comparative analysis.
 
-* **Stack Tools:**
-    * `Image > Stacks`: Provides many tools for handling image stacks (3D or time-lapse). Examples: create projections (`Image > Stacks > Z Project...`), extract sub-stacks (`Image > Stacks > Tools > Make Substack...`), split or merge stacks.
 
 ---
 
