@@ -12,19 +12,18 @@ nav:
     - Basics of Image Analysis: 
         - Introduction to Bioimage Analysis: basic/basics/introductionbasics.md
         - Introduction to Fiji/ImageJ: basic/basics/fiji.md
-        - "Tutorial 1: Inspect Images & Perform Your First Measurements": basic/basics/fiji_tutorial_1.md
-        - "Tutorial 2: Creating Figures": basic/basics/creatingfigures.md
+        - "Tutorial 1: Inspect Images & Perform Your First Measurements": basic/basics/tutorial_1_fiji.md
+        - "Tutorial 2: Creating Figures": basic/basics/tutorial_2_creatingfigures.md
         - "Task: Figure Challenge": basic/basics/figurechallenge.md
     - Image Processing and Analysis:
         - The Image Analysis Workflow: basic/analysis/workflow.md
-        - "Tutorial 3: Analyse your Images": basic/analysis/tutorial3_analysis.md
+        - "Tutorial 3: Analyse your Images": basic/analysis/tutorial_3_analysis.md
         - "Task:  Manual Image Analysis": basic/analysis/taskmanualanalysis.md
     - Image Segmentation using AI:
         - Image Segmentation using ML: basic/mlforsegmentation/pixelclassification.md
-        - Best Practices: basic/mlforsegmentation/ilastik.md
-        - "Tutorial: Pixel Classification - Weka": basic/mlforsegmentation/ilastik_v2.md
+        - "Tutorial 4: Pixel Classification - Weka": basic/mlforsegmentation/tutorial_4_weka.md
         - Image Segementation using DL: basic/mlforsegmentation/dl.md
-        - "Tutorial: CellPose": basic/mlforsegmentation/cellpose.md
+        - "Tutorial 5: CellPose": basic/mlforsegmentation/tutorial_5_cellpose.md
         - "Task: Analysis Workflow using Fiji and Cellpose": basic/mlforsegmentation/fullworkflow.md
         
   - Quiz "Basic Image Analysis":

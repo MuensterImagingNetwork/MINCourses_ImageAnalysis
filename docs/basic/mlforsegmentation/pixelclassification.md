@@ -42,21 +42,18 @@ In a typical pixel classification workflow, you:
 
 ---
 
-### Tools for Pixel Classification
+### Fiji Plugin for Pixel Classification
 
-Several user-friendly applications let you build a pixel classifier without writing code:
-
-- **Ilastik**<br>
-Interactive GUI for pixel‑ and object‑level classification, segmentation, and tracking. 
-Great for rapid prototyping and batch processing. <br>
-[Ilastik](https://www.ilastik.org) | [GitHub](https://github.com/ilastik/ilastik)
 
 - **Trainable Weka Segmentation (Fiji/ImageJ)**<br>
 Leverages the Weka machine‑learning library inside ImageJ. Offers a familiar ImageJ interface with feature selection 
 and model training.  <br>
 [Trainable Weka Segmentation in Fiji](https://imagej.net/plugins/tws/)
 
-- **Machine Learning Segmenter (Zeiss Arivis Pro)**<br>
-Commercial, point‑and‑click segmentation tool embedded in the Arivis Vision4D environment. Provides GPU acceleration and 3D support.
 
 
+The Trainable Weka Segmentation is a Fiji plugin that combines a collection of machine learning algorithms with a set of selected image 
+features to produce pixel-based segmentations. Weka (Waikato Environment for Knowledge Analysis) can itself be called from the plugin. 
+It contains a collection of visualization tools and algorithms for data analysis and predictive modeling, together with graphical user interfaces for easy access to this functionality.
+
+![ImageData](../../assets/tws-pipeline.png)
