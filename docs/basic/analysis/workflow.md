@@ -27,6 +27,8 @@ The **goal** is not just to make nice-looking images, but to make measurements t
 *Image segmentation to obtain information about the intranuclear structures such as size and change, 
 structure count as well as the intensity of cells and nuclei.* <br>
 
+---
+
 ### The workflow in Fiji
 
 In Fiji, it’s essential to work on a duplicate of your image because Fiji performs most processing steps directly on the image, without keeping a record of each action. 
@@ -44,6 +46,8 @@ It also ensures that any measurements—such as intensity or area—are made on 
 	
 !!! tip "Work on a Duplicate!"
     Always perform processing steps on a **duplicate** of your original image. This preserves your raw data, allowing you to revisit it or try different processing strategies. The final Regions of Interest (ROIs) generated from the processed image can then be applied back to the original, unaltered image for accurate measurements (e.g., intensity).
+
+---
 
 
 ### Image Segmentation
@@ -66,9 +70,11 @@ cellular interactions.
 *Image segmentation to obtain information about the intranuclear structures such as size and change, structure count as well as the intensity of cells and nuclei.* <br>
 
 ---
+
 ##### What Makes a Good Segmentation?
 
 How to assess your segmentation—visually and practically:
+
 - **Overlay and Inspect:** <br>
 Always check your segmentation masks overlaid on the original image. Do the outlines match the visible objects?
 <br>

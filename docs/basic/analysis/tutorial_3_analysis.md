@@ -1,4 +1,10 @@
-## Tutorial 3: Analyse Your Images
+## 🛠 Tutorial 3: Analyse Your Images
+
+### 🎯 Learning Objective
+
+- Combine Fiji’s core tools to preprocess images, segment relevant structures, and extract measurements from your data.
+
+--- 
 
 ###3.1. Simple Thresholding
 
@@ -18,6 +24,7 @@ Converts a grayscale image into a binary image (black and white) by separating p
 	- Try the Autothresholds - what differences do they show?
 	- When you are sastified with your segmentation click `Apply`. 
 
+---
 
 ###3.2. Cleaning the Mess - Image filters
 
@@ -32,6 +39,8 @@ Converts a grayscale image into a binary image (black and white) by separating p
 	- How does the filter size influence the result?
 	- Does filtering improve the segmentation?
 
+---
+
 ###3.3. Refine your Detections
 
 - **Binary Operations:**
@@ -42,6 +51,8 @@ Converts a grayscale image into a binary image (black and white) by separating p
 !!! tip "Exercise"
     - Use *Watershed* to improve your segmentation.
 	- What are the limitations of the watershed algorithm?
+
+---
 
 ###3.4. Analyse your Images
 

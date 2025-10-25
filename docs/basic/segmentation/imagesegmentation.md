@@ -1,4 +1,4 @@
-## Basics of Image Segmentation
+### Basics of Image Segmentation
 
 ##### What is Image Segmentation?
 

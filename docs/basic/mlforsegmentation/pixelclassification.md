@@ -1,5 +1,13 @@
 # Machine-learning for image segmentation
 
+### 🎯 Learning Objective
+
+- Explain how supervised machine learning is used for image segmentation.
+
+- Use the Trainable Weka Segmentation plugin in Fiji to train and apply a pixel classifier.
+
+--- 
+
 Machine‑learning–based segmentation teaches a computer to recognize and delineate structures in microscopy images by example rather than by writing explicit rules for 
 every possible case. 
 

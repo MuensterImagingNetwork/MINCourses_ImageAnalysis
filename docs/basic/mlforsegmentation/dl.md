@@ -1,5 +1,13 @@
 # Deep Learning (DL) in Bioimage Analysis
 
+### 🎯 Learning Objectives
+
+- Describe the basic principles of deep learning and how it is applied to image segmentation.
+
+- Use beginner-friendly DL tools (Cellpose) to segment biological images without coding.
+
+---
+
 Deep learning has quickly become a go‑to approach for making sense of complex biological images. 
 By “learning” directly from examples, these methods handle challenges like uneven lighting, overlapping cells, 
 and noisy backgrounds far better than traditional techniques. Today, you can train a ready‑made model on just a 

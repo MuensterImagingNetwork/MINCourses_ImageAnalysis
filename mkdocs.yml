@@ -18,13 +18,13 @@ nav:
     - Image Processing and Analysis:
         - The Image Analysis Workflow: basic/analysis/workflow.md
         - "Tutorial 3: Analyse your Images": basic/analysis/tutorial_3_analysis.md
-        - "Task:  Manual Image Analysis": basic/analysis/taskmanualanalysis.md
+        - "Task:  Manual Image Analysis": basic/analysis/task_manualanalysis.md
     - Image Segmentation using AI:
         - Image Segmentation using ML: basic/mlforsegmentation/pixelclassification.md
         - "Tutorial 4: Pixel Classification - Weka": basic/mlforsegmentation/tutorial_4_weka.md
         - Image Segementation using DL: basic/mlforsegmentation/dl.md
         - "Tutorial 5: CellPose": basic/mlforsegmentation/tutorial_5_cellpose.md
-        - "Task: Analysis Workflow using Fiji and Cellpose": basic/mlforsegmentation/fullworkflow.md
+        - "Task: Analysis Workflow using Fiji and Cellpose": basic/mlforsegmentation/task_cellposeanalysis.md
         
   - Quiz "Basic Image Analysis":
     -  Self assessment: basic/quiz/basics_selfassessment.md 

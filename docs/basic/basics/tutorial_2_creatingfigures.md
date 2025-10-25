@@ -1,11 +1,16 @@
-# Tutorial 2: Creating Figures
-!!! tip "Learning Objective"
-    Learn how to create high-quality figures for publications using Fiji and OMERO.
+## 🛠 Tutorial 2: Creating Figures
 
+### 🎯 Learning Objective
+
+- Create publication-ready **scientific figures** in Fiji and OMERO.figure by arranging images, adding scale bars and overlays.
 
 ---
 
 ### **2.1. Creating Figures with Fiji**
+
+![Fiji Figure](t2-1_figure.png)
+
+
 * **Image Properties:**
     * `Image > Properties...`: View and edit image metadata, such as pixel size, z-step (for 3D), units, number of channels/frames, and more. Essential for correct scaling and for ensuring accurate time or z-position in figures.
 
@@ -32,6 +37,8 @@
 
 ### **2.2. Creating Figures with OMERO.figure**
 
+![OMERO Figure](t2-2_figure.png)
+
 To simplify the process of making publication-ready figures, we provide OMERO.figure, a companion tool that makes figure creation intuitive and fast.
 
 Each panel in OMERO.figure is actually an interactive image viewer—allowing you to:
@@ -43,4 +50,6 @@ Each panel in OMERO.figure is actually an interactive image viewer—allowing yo
 - Scroll through Z-stacks or timepoints.
 
 When you're ready, you can export your figures as high-quality TIFF images or PDF files, which can be directly imported into tools like Adobe Illustrator for further editing.
+
+**Detailed tutorials** can be found here: <https://www.openmicroscopy.org/omero/figure/>.
 

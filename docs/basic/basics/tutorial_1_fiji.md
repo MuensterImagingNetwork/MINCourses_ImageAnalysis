@@ -1,4 +1,8 @@
-## Tutorial 1: Inspect Images & Perform Your First Measurements
+## 🛠 Tutorial 1: Inspect Images & Perform Your First Measurements
+
+### 🎯 Learning Objective
+
+- Use **Fiji** to open, visualize, and inspect multi-dimensional microscopy images, adjust contrast safely, and explore different display modes.
 
 !!! Warning "Note"
     Some images used in this tutorial are taken from the Bioimage Analysis book by Pete Bankhead ([bioimagebook.github.io](https://bioimagebook.github.io)). Content is licensed under [**CC-BY 4.0**](https://creativecommons.org/licenses/by/4.0/), except where noted otherwise. See License & Reuse for details.

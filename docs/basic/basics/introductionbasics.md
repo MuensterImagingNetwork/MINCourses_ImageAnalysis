@@ -8,7 +8,7 @@ during processing or misinterpret measurement results. By first learning how dig
 and extract reliable biological insights from your data.
 
 
-### Learning Objectives Basics Of Image Analysis
+### 🎯 Learning Objectives Basics Of Image Analysis
 
 By the end of this session, participants will be able to:
 

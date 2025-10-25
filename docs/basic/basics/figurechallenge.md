@@ -21,12 +21,12 @@ You are preparing a figure for your next high-impact paper—or a conference pos
 
 ### 🧭 **Your Tasks**
 
-#### Step 1: Choose a Multi-Channel Image
+#### ▶️ Step 1: Choose a Multi-Channel Image
 
 * Use an image with **at least 2–3 channels** (e.g., nuclei, cytoskeleton, membrane).
 * Open it in **Fiji** (`File > Open` or drag & drop).
 
-#### Step 2: Color Your Channels
+#### ▶️ Step 2: Color Your Channels
 
 * Use **`Image > Color > Channels Tool`** to assign a color to each channel. Adjust visibility and brightness for each channel.
 
@@ -34,7 +34,7 @@ You are preparing a figure for your next high-impact paper—or a conference pos
   > * Actin 
   > * Membrane or tubulin 
 
-> 💡 Tip: Don’t just slap on colors—think about contrast and what tells your story best. 
+> 💡 Tip: Don’t just slap on colors — think about contrast and what tells your story best. 
 
 > 🔴🟢 Avoid Red-Green Combos!
 Current best practices recommend avoiding red-green color combinations, as they can be difficult to distinguish for 
@@ -43,7 +43,7 @@ Your figure should be accessible to everyone—including your future co-author o
 
 ---
 
-#### Step 3: Enhance Your Image (Carefully!)
+#### ▶️ Step 3: Enhance Your Image (Carefully!)
 
 * Apply **Gaussian Blur**, if needed, to reduce noise (`Process > Filters > Gaussian Blur`).
 * Don’t overdo it—your image should be informative, not misleading!
@@ -52,7 +52,7 @@ Your figure should be accessible to everyone—including your future co-author o
 
 ---
 
-#### Step 4: Create Insets (Zoomed Views)
+#### ▶️ Step 4: Create Insets (Zoomed Views)
 
 * Use **`Image > Duplicate`** to crop and zoom into an interesting area.
 * Create a square or circle around your zoom area using **ROI tools**.
@@ -62,7 +62,7 @@ Your figure should be accessible to everyone—including your future co-author o
 
 ---
 
-#### **Step 5: Duplicate and Save Individual Channels**
+#### ▶️ Step 5: Duplicate and Save Individual Channels
 
 * Duplicate each single channel from the composite (`Image > Duplicate`).
 * Create RGBs from each single channel.
@@ -71,7 +71,7 @@ Your figure should be accessible to everyone—including your future co-author o
 
 ---
 
-#### Step 6: Add Labels and Scale Bar
+#### ▶️ Step 6: Add Labels and Scale Bar
 
 * Add **channel labels** using the **Text Tool**.
 * Add a **scale bar** via `Analyze > Tools > Scale Bar`:
@@ -83,19 +83,19 @@ Your figure should be accessible to everyone—including your future co-author o
 
 ---
 
-#### Step 7: Create the Final Figure
+#### ▶️ Step 7: Create the Final Figure
 
 * Arrange images (composite and channels) into a figure in your program of choice (e.g Powerpoint, Inkscape).
 * Include:
 
-  * Single channels + composite
-  * Original image and Zoom-ins, connected by appropriate lines
-  * Clear labels and scale bars
-  * Color legend, if needed
+	  * Single channels + composite
+	  * Original image and Zoom-ins, connected by appropriate lines
+	  * Clear labels and scale bars
+	  * Color legend, if needed
 
 ---
 
-#### Step 7: Save Your Masterpiece
+#### ▶️ Step 8: Save Your Masterpiece
 
 * Save as a **.tif** (preserves image quality)
 * Export your final figure as **.png** or **.pdf** for presentation or printing
