@@ -1,6 +1,6 @@
 # Machine-learning for image segmentation
 
-### 🎯 Learning Objective
+### 🎯 Learning Objectives
 
 - Explain how supervised machine learning is used for image segmentation.
 

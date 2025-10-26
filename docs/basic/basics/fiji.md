@@ -1,4 +1,5 @@
-<img src="/assets/fiji_logo.png" alt="Fiji Logo" width="150">
+
+![FijiLogo](../../assets/fiji_logo.png)
 ## Fiji
 
 ### **What is Fiji?**  
@@ -14,8 +15,8 @@ Fiji is widely used for biological image analysis, including tasks such as image
 ### Download Fiji
 - Official Fiji Website: https://fiji.sc/  
 - Fiji-MIN Package: The Fiji-MIN package consist of the practical MIN-Toolbar and some already installed Plugins. [Download Fiji with the MIN-Toolbar](https://uni-muenster.sciebo.de/s/7LJ7fBS6PKi6nGi)  
-<img src="/assets/MIN_Toolbar.png" alt="MIN_Toolbar" width="150">
 
+![MIN_Toolbar](../../assets/MIN_Toolbar.png)
 ---
 
 ### Citation of Fiji 

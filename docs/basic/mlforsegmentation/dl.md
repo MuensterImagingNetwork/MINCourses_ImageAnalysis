@@ -126,7 +126,7 @@ Images were derived from the Broad Bioimage Benchmark Collection (Caicedo et al.
 
 !!! warning "Citation"
 	When using CellPose for your image analysis, please cite:
-	>***Cellpose: a generalist algorithm for cellular segmentation. *** <br>
+	>***Cellpose: a generalist algorithm for cellular segmentation.*** <br>
 	Stringer, C., Wang, T., Michaelos, M. et al. Nat Methods 18, 100–106 (2021).
 	DOI: [https://doi.org/10.1038/s41592-020-01018-x](https://doi.org/10.1038/s41592-020-01018-x)
 	

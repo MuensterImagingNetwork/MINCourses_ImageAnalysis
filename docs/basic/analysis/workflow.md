@@ -23,7 +23,8 @@ Each of these steps can be seen as a small piece of a larger puzzle. There is ra
 combination of steps that works best for a particular experiment or image type. The art of image analysis lies in selecting and optimizing these steps to reliably extract the information you need from your images.
 The **goal** is not just to make nice-looking images, but to make measurements that are accurate, reproducible, and meaningful in the biological context.
 
-<img src="/../../assets/workflow.png" alt="GoalsOfImageAnalysis" width="800">
+
+![GoalsOfImageAnalysis](../../assets/workflow.png)
 *Image segmentation to obtain information about the intranuclear structures such as size and change, 
 structure count as well as the intensity of cells and nuclei.* <br>
 
@@ -66,7 +67,8 @@ basis for downstream workflows such as time‑lapse tracking, colocalization stu
 cellular interactions.
 <br>
 <br>
-<img src="/../../assets/segmentationgoals.png" alt="GoalsOfImageAnalysis" width="800">
+
+![GoalsOfImageAnalysis](../../assets/segmentationgoals.png)
 *Image segmentation to obtain information about the intranuclear structures such as size and change, structure count as well as the intensity of cells and nuclei.* <br>
 
 ---
@@ -126,7 +128,7 @@ whereas instance segmentation would allow you to count and measure each mitochon
 and more detailed single‑cell or subcellular analyses.
 <br>
 <br>
-<img src="/../../assets/semanticvsinstance.png" alt="SemanticVSInstanceSegmentation" width="800">
+![SemanticVSInstanceSegmentation](../../assets/semanticvsinstance.png)
 *Principle of semantic and instance segmentation.* <br>
 
 ---
@@ -139,8 +141,7 @@ algorithms that expand from seed points. For instance, you might set an intensit
 then apply a watershed transform to delineate touching cells. 
 <br>
 <br>
-
-<img src="/../../assets/bioimagebook_thresholding.png" alt="thresholding" width="800">
+![thresholding](../../assets/bioimagebook_thresholding.png)
 *An image where evaluating the histogram suggests two candidate thresholds. The ‘correct’ threshold depends upon the desired outcome.* 
 *Note that here we identify pixels below the threshold value, rather than above, because the background is ligher.* <br>
 ***By Pete Bankhead © Copyright 2022-2024. Derived from https://bioimagebook.github.io/***  <br>
