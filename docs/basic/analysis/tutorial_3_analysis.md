@@ -13,7 +13,7 @@
 Converts a grayscale image into a binary image (black and white) by separating pixels into foreground (objects) and background based on their intensity.
 
 
-![thresholding](../../assets/t3_thresholding.png.png)
+![thresholding](../../assets/t3_thresholding.png)
 *Image segmentation to obtain information about the intranuclear structures such as size and change, structure count as well as the intensity of cells and nuclei.* <br>
 
 

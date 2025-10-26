@@ -67,8 +67,7 @@ basis for downstream workflows such as time‑lapse tracking, colocalization stu
 cellular interactions.
 <br>
 <br>
-
-![GoalsOfImageAnalysis](../../assets/segmentationgoals.png)
+![segmentationgoals](../../assets/imagesegmentation_1.png)
 *Image segmentation to obtain information about the intranuclear structures such as size and change, structure count as well as the intensity of cells and nuclei.* <br>
 
 ---
@@ -141,6 +140,7 @@ algorithms that expand from seed points. For instance, you might set an intensit
 then apply a watershed transform to delineate touching cells. 
 <br>
 <br>
+
 ![thresholding](../../assets/bioimagebook_thresholding.png)
 *An image where evaluating the histogram suggests two candidate thresholds. The ‘correct’ threshold depends upon the desired outcome.* 
 *Note that here we identify pixels below the threshold value, rather than above, because the background is ligher.* <br>
