@@ -13,11 +13,10 @@ common issue.
 
 ### **Goal:** 
 Use **Cellpose** to generate accurate cell masks, separating individual cells, 
-even in cluttered images.
+even in cluttered images. Then use **Fiji** to measurement cell properties.
 
 ---
-
-### 🧭 **Step-by-Step Instructions**
+### 5.1 Cellpose Sgmentation
 
 Start Cellpose by clicking on the Cellpose icon on your Desktop.
 
@@ -91,7 +90,7 @@ You'll find different sections at the left hand side of the Cellpose GUI.
 
 ---
 
-### 🧪 **Challenge Exercise**
+#### 🧪 **Challenge Exercise**
 
 Try running Cellpose on:
 
@@ -101,7 +100,7 @@ Try running Cellpose on:
 
 ---
 
-### 📌 **Key Takeaways**
+#### 📌 **Key Takeaways**
 
 | Pros                       | Cons                                      |
 | -------------------------- | ----------------------------------------- |
@@ -112,7 +111,52 @@ Try running Cellpose on:
 
 ---
 
-### 🔗 Useful Resources
+#### 🔗 Useful Resources
 
 * [Official Cellpose Tutorial (YouTube)](https://www.youtube.com/watch?v=K1o2YzEYrRc)
 * [Cellpose GitHub Page](https://github.com/MouseLand/cellpose)
+
+### 5.2 Import of Cellpose Results to Fiji
+
+There are several ways to bring your **Cellpose** segmentation results into **Fiji** for further measurements and visualization.  
+Choose the method that matches the type of output you exported.
+
+---
+
+#### 1. Import ROIs (.zip) from Cellpose
+
+If you exported **ROI files** directly from Cellpose:
+
+1. Open your corresponding image in **Fiji**.  
+2. Go to **`Analyze > Tools > ROI Manager`**.  
+3. Click **`Open`** and select your exported **`.zip`** file.  
+4. Your segmented objects will appear as ROIs — you can measure, label, or overlay them as needed.
+
+> 💡 *Use* `Measure` *to get per-object area, mean intensity, or shape statistics.*
+
+---
+
+#### 2️. Import Label Images and Convert to ROIs
+
+If you exported **label images** (where each object has a unique integer value):
+
+1. Open the **label image** in Fiji.  
+2. Run **`BIOP > Image Analysis > Label To ROI`**.  
+3. A new ROI set is created in the **ROI Manager** to inspect or edit the results.  
+
+If you want to exclude the cells at the image edges, use the **MorpholibJ** plugin:
+**`Plugins > MorpholibJ > Label Images > Remove Border Labels`**
+
+---
+
+## 3️. Run Cellpose Directly in Fiji
+
+You can also run Cellpose inside Fiji via the **BIOP plugin**:
+
+1. Go to **`BIOP > Cellpose/Omnipose > Cellpose`**.  
+2. Set the parameters as previously defined in the Cellpose GUI. 
+3. Click **`OK`**.  
+4. The output will be a label image - you can transfer the label image to Fiji ROIs using the strategy above.
+
+
+### 5.3 Object-based measurements

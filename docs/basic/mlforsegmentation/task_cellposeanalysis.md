@@ -81,8 +81,7 @@ to measure mitochondrial size *per individual cell*.
 2. Load your **cell ROIs** from the Cellpose segmentation.  
 3. For each cell ROI:  
 	   - Select it in the ROI Manager  
-	   - Use `Image > Duplicate...` (*Duplicate only selected region*)  
-	   - Measure mitochondria within that ROI using `Analyze Particles...`  
+	   - Measure mitochondria within that ROI using `Analyze Particles...`  - Select `Summarize` to get a summarized results table per cell
 4. Calculate for each cell:  
 	   - **Mitochondria count**  
 	   - **Average mitochondrial size**
