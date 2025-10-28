@@ -126,7 +126,7 @@ Choose the method that matches the type of output you exported.
 
 ---
 
-#### 1. Import ROIs (.zip) from Cellpose
+#### ▶️ Option 1. Import ROIs (.zip) from Cellpose
 
 If you exported **ROI files** directly from Cellpose:
 
@@ -139,7 +139,7 @@ If you exported **ROI files** directly from Cellpose:
 
 ---
 
-#### 2️. Import Label Images and Convert to ROIs
+#### ▶ Option 2️. Import Label Images and Convert to ROIs
 
 If you exported **label images** (where each object has a unique integer value):
 
@@ -152,7 +152,7 @@ If you want to exclude the cells at the image edges, use the **MorpholibJ** plug
 
 ---
 
-#### 3️. Run Cellpose Directly in Fiji
+#### ▶ Option 3️. Run Cellpose Directly in Fiji
 
 You can also run Cellpose inside Fiji via the **BIOP plugin**:
 
