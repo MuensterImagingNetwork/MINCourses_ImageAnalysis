@@ -163,5 +163,18 @@ You can also run Cellpose inside Fiji via the **BIOP plugin**:
 
 ---
 
-
 ### 5.3 Object-based measurements
+
+If you want to perform measurements inside individual cells/nuclei/compartments, you'll perform object-based measurements. 
+In Fiji, there is no easy way to do this, but requires manual work.
+
+1. Open the image you want to analyse
+2. Import your cell segmentation to the Fiji ROI Manager (see 5.2)
+3. Open your mitochondria segmentation or quickly threshold your mitochondria:
+	* Median filter and Yen threshold, watershed
+4. `Analyze > Set Measurements..`: Activate `Limit to threshold` and set `Redirect to:` to your original image
+5. In your original image, select the channel you would like to measure
+6. Now select the first ROI in the ROI Manager
+7. Use `Analyze > Analyze Particles` and select `Summarize`. Then press `OK`. 
+8. Repeat with the next ROI. 
+8. Output: **Results table**: all individual measurements, **Summary table**: per cell measurement
