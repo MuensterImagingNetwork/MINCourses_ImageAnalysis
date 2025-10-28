@@ -61,6 +61,11 @@ Converts a grayscale image into a binary image (black and white) by separating p
 
 ###3.4. Analyse your Images
 
+- **Measurements in Fiji:**
+	*`Analyse > Set Measurements`
+	* You can select a couple of different measurements for size (area, perimeter), shape (Ferrets diameter, shape descriptors) and intensities (mean, min, max, integrated density)
+	* [A detailed description of all measurements can be found here](https://imagej.net/ij/docs/menus/analyze.html)
+
 - **ROI Manager:**
 	*  `Analyze > Tools > ROI Manager...`: You can manage multiple ROIs using the ROI manager.
 	* Having your ROI selected, press `t` to add it to the ROI manager.
