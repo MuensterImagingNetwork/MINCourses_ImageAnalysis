@@ -48,6 +48,10 @@ Converts a grayscale image into a binary image (black and white) by separating p
     * `Process > Binary > Options...` (then `Close-`, `Open-`, `Fill Holes`, `Erode`, `Dilate`): Refine binary images. For example, `Close-` (dilate then erode) can fill small holes within objects and smooth their outlines.
 - **Watershed Segmentation:**
     * `Process > Binary > Watershed`: Separates touching objects in a binary image, often used after thresholding when objects are clumped together.
+- **Advanced Watershed Segmentation:**
+	* `Plugins > Biovoxxel > Watershed Irregular Features`
+	* Here you have more features to finetune your watershed, such as Erosion Cycle Number - Convexity threshold 
+	* [BioVoxxel Documentation](https://imagej.net/plugins/biovoxxel-toolbox#watershed-irregular-features)
 
 !!! tip "Exercise"
     - Use *Watershed* to improve your segmentation.
