@@ -177,4 +177,6 @@ In Fiji, there is no easy way to do this, but requires manual work.
 6. Now select the first ROI in the ROI Manager
 7. Use `Analyze > Analyze Particles` and select `Summarize`. Then press `OK`. 
 8. Repeat with the next ROI. 
-8. Output: **Results table**: all individual measurements, **Summary table**: per cell measurement
+8. Output: 
+	* **Results table**: all individual measurements
+	* **Summary table**: per cell measurement
