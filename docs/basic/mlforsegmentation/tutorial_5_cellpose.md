@@ -180,3 +180,4 @@ In Fiji, there is no easy way to do this, but requires manual work.
 8. Output: 
 	* **Results table**: all individual measurements
 	* **Summary table**: per cell measurement
+	
