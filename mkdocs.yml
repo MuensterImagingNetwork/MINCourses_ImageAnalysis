@@ -35,9 +35,9 @@ nav:
         - "Task: Analysis Workflow using Fiji and Cellpose": basic/mlforsegmentation/task_cellposeanalysis.md
     - Reproducible Image Analysis:
         - Introduction To Reproducible Image Analysis: advanced/repIA.md
-        - CellProfiler: advanced/cellprofiler.md
-        - "Tutorial 3: CellProfiler": advanced/tutorial_3_cellprofiler.md
-        - "Task: Reproducible Image Analysis with CellProfiler": advanced/task_cellprofiler.md
+        - CellProfiler: advanced/cellprofiler/cellprofiler.md
+        - "Tutorial 3: CellProfiler": advanced/cellprofiler/tutorial_3_cellprofiler.md
+        - "Task: Reproducible Image Analysis with CellProfiler": advanced/cellprofiler/task_cellprofiler.md
     - Cell Tracking:
         - Cell Tracking: advanced/celltracking.md
         - "Tutorial 4: TrackMate": advanced/tutorial_4_trackmate.md
