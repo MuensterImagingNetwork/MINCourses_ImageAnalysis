@@ -32,17 +32,21 @@ nav:
         - "Tutorial 1: Pixel Classification - Weka": basic/mlforsegmentation/tutorial_4_weka.md
         - Image Segementation using DL: basic/mlforsegmentation/dl.md
         - "Tutorial 2: CellPose": basic/mlforsegmentation/tutorial_5_cellpose.md
+        - "Checklist: Correct Segmentation": advanced/checklist_segmentation.md
         - "Task: Analysis Workflow using Fiji and Cellpose": basic/mlforsegmentation/task_cellposeanalysis.md
     - Reproducible Image Analysis:
         - Introduction To Reproducible Image Analysis: advanced/repIA.md
         - CellProfiler: advanced/cellprofiler/cellprofiler.md
-        - "Tutorial 3: CellProfiler": advanced/cellprofiler/tutorial_3_cellprofiler.md
+        - "Tutorial 3: CellProfiler - Part 1": advanced/cellprofiler/tutorial_3_p1_cellprofiler.md
+        - "Intermezzo: Cheat-Sheet CellProfiler Modules": advanced/cellprofiler/cheatsheet_cellprofiler.md
+        - "Tutorial 3: CellProfiler - Part 2": advanced/cellprofiler/tutorial_2_p1_cellprofiler.md
         - "Task: Reproducible Image Analysis with CellProfiler": advanced/cellprofiler/task_cellprofiler.md
+        - "Checklist: Reproducible Image Analysis": advanced/checklist_ria.md
     - Cell Tracking:
         - Cell Tracking: advanced/celltracking.md
         - "Tutorial 4: TrackMate": advanced/tutorial_4_trackmate.md
-        
-       
+        - "Checklist: Correct Tracking": advanced/checklist_tracking.md
+
   - Quiz "Basic Image Analysis":
     -  Self assessment: basic/quiz/basics_selfassessment.md 
 
