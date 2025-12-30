@@ -28,18 +28,19 @@ nav:
   - Course "Reproducible bioimage analysis of morphology and dynamics":
     - Welcome to the Course: advanced/index.md
     - Image Segmentation using AI:
-        - Image Segmentation using ML: basic/mlforsegmentation/pixelclassification.md
-        - "Tutorial 1: Pixel Classification - Weka": basic/mlforsegmentation/tutorial_4_weka.md
-        - Image Segementation using DL: basic/mlforsegmentation/dl.md
-        - "Tutorial 2: CellPose": basic/mlforsegmentation/tutorial_5_cellpose.md
+        - Image Segmentation using ML: advanced/dl/pixelclassification.md
+        - Ilastik: advanced/dl/ilastik.md
+        - "Tutorial 1: Pixel Classification - ilastik": advanced/dl/ilastik_v2.md
+        - Image Segementation using DL: advanced/dl/dl.md
+        - Cellpose: advanced/dl/cellpose_background.md
+        - "Tutorial 2: CellPose": advanced/dl/cellpose.md
         - "Checklist: Correct Segmentation": advanced/checklist_segmentation.md
-        - "Task: Analysis Workflow using Fiji and Cellpose": basic/mlforsegmentation/task_cellposeanalysis.md
     - Reproducible Image Analysis:
         - Introduction To Reproducible Image Analysis: advanced/repIA.md
         - CellProfiler: advanced/cellprofiler/cellprofiler.md
         - "Tutorial 3: CellProfiler - Part 1": advanced/cellprofiler/tutorial_3_p1_cellprofiler.md
         - "Intermezzo: Cheat-Sheet CellProfiler Modules": advanced/cellprofiler/cheatsheet_cellprofiler.md
-        - "Tutorial 3: CellProfiler - Part 2": advanced/cellprofiler/tutorial_2_p1_cellprofiler.md
+        - "Tutorial 3: CellProfiler - Part 2": advanced/cellprofiler/tutorial_3_p2_cellprofiler.md
         - "Task: Reproducible Image Analysis with CellProfiler": advanced/cellprofiler/task_cellprofiler.md
         - "Checklist: Reproducible Image Analysis": advanced/checklist_ria.md
     - Cell Tracking:
