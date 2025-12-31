@@ -2,9 +2,11 @@
 
 ### 🎯 Learning Objectives
 
-- Explain how supervised machine learning is used for image segmentation.
+* **Explain the basic principle of pixel classification for image segmentation**, including the role of image features and supervised learning.
+* **Train a custom pixel classifier in ilastik** by defining pixel classes and providing representative training annotations.
+* **Apply the trained classifier to segment new images** and export the resulting probability or label maps.
+* **Assess the quality of the segmentation results**, identifying common errors caused by insufficient or biased training data.
 
-- Use the Trainable Weka Segmentation plugin in Fiji to train and apply a pixel classifier.
 
 --- 
 
@@ -20,13 +22,17 @@ In ***supervised learning***, you give the software a handful of images where yo
 
 Here’s how it works step by step:
 
-- **Feature Extraction:** The algorithm examines each pixel (and its local neighborhood) to compute simple characteristics—intensity, texture, edge responses, or color.
+- **Feature Extraction** <br>
+	The algorithm examines each pixel (and its local neighborhood) to compute simple characteristics—intensity, texture, edge responses, or color.
 
-- **Model Training:** Using your labeled examples, the algorithm “learns” which combinations of features correspond to the object class (e.g., cell, nucleus, background). It builds a mathematical model—often a decision tree or a small neural network—that can predict the class of each pixel.
+- **Model Training** <br>
+	Using your labeled examples, the algorithm “learns” which combinations of features correspond to the object class (e.g., cell, nucleus, background). It builds a mathematical model—often a decision tree or a small neural network—that can predict the class of each pixel.
 
-- **Validation:** A separate set of labeled images (the “validation” or “test” set) checks how well the model performs on new data. This helps avoid overfitting (when a model learns the training examples too exactly but fails on unseen images).
+- **Validation** <br>
+	A separate set of labeled images (the “validation” or “test” set) checks how well the model performs on new data. This helps avoid overfitting (when a model learns the training examples too exactly but fails on unseen images).
 
-- **Prediction:** Once the model is trained and validated, you feed it new, unlabeled images. It applies the learned rules to assign each pixel to a class, producing a segmentation mask automatically.
+- **Prediction** <br>
+	Once the model is trained and validated, you feed it new, unlabeled images. It applies the learned rules to assign each pixel to a class, producing a segmentation mask automatically.
 
 ---
 
@@ -34,6 +40,12 @@ Here’s how it works step by step:
 
 ***Pixel classification*** is a specific type of supervised segmentation where each pixel is assigned to a category such as "signal" or "background" 
 by evaluating not only its raw intensity but also a suite of engineered features (that capture local texture, edge, and spatial information.
+
+##### Key ideas
+- Each pixel is described by **image features** rather than treated in isolation.
+- A classifier learns the relationship between features and classes from **annotated training data**.
+- The trained model predicts class probabilities for unseen pixels.
+
 
 In a typical pixel classification workflow, you:
 
@@ -48,20 +60,13 @@ In a typical pixel classification workflow, you:
 <br>
 ![Principle of Pixel Classification](pixelclassification_1.jpg)
 
----
 
-### Fiji Plugin for Pixel Classification
-
-
-- **Trainable Weka Segmentation (Fiji/ImageJ)**<br>
-Leverages the Weka machine‑learning library inside ImageJ. Offers a familiar ImageJ interface with feature selection 
-and model training.  <br>
-[Trainable Weka Segmentation in Fiji](https://imagej.net/plugins/tws/)
+##### Pixel classification vs. classical segmentation
+- **Classical methods**: thresholding, filters, morphology, rule-based pipelines
+- **Pixel classification**:
+	- Handles complex textures and varying intensities
+	- Reduces manual rule tuning
+	- Depends strongly on training data quality
 
 
 
-The Trainable Weka Segmentation is a Fiji plugin that combines a collection of machine learning algorithms with a set of selected image 
-features to produce pixel-based segmentations. Weka (Waikato Environment for Knowledge Analysis) can itself be called from the plugin. 
-It contains a collection of visualization tools and algorithms for data analysis and predictive modeling, together with graphical user interfaces for easy access to this functionality.
-
-![ImageData](../../assets/tws-pipeline.png)

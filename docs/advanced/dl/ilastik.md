@@ -9,6 +9,25 @@ that can accurately segment your images and scale across large datasets with min
 
 ---
 
+### Ilastik
+
+**ilastik** is an interactive machine learning tool designed for image classification and segmentation without coding.
+
+* Interactive machine learning and segmentation toolkit
+* No machine learning knowledge required
+* Works on various data types
+* Several workflows for different tasks
+
+
+![ImageData](ilastik.png) <br>
+*The image shows different ilastik workflows derived from Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine learning for (bio)image analysis. Nat Methods 16, 2019*
+
+### Defining pixel classes
+- Typical setup: object vs. background
+- Optional: multiple object or tissue classes
+- Classes should be biologically and visually meaningful
+
+
 ### Selection of Features
 Ilastik offers three main feature types, each available in 2D or 3D and at multiple scales: <br>
 
@@ -52,6 +71,16 @@ The user starts by creating initial annotations, which are then used to generate
 models. The user evaluates these predictions, identifies areas for improvement, 
 and adds additional annotations to correct any mistakes, thereby refining the model's 
 performance through multiple iterations.
+
+### Creating training annotations
+- Use **sparse but representative** annotations
+- Cover variability in:
+	- Intensity
+	- Texture
+	- Object appearance
+	- Background and artifacts
+- Avoid over-annotating a single region
+
 
 ![ImageData](training.png) <br> 
 *The image is showing the iterative training process in ilastik. By evaluating the prediction, the user can add targeted annotations to improve the model.* 

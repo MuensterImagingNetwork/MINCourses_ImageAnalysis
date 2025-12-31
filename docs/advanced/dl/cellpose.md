@@ -16,7 +16,7 @@ Use **Cellpose** to generate accurate cell masks, separating individual cells,
 even in cluttered images. Then use **Fiji** to measurement cell properties.
 
 ---
-### 5.1 Cellpose Sgmentation
+### 5.1 Cellpose Segmentation
 
 Start Cellpose by clicking on the Cellpose icon on your Desktop.
 

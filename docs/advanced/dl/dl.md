@@ -2,10 +2,10 @@
 
 ### 🎯 Learning Objectives
 
-* Explain the basic principles of deep learning–based image segmentation and how it differs from classical segmentation approaches.
+* Explain the **basic principles of deep learning–based image segmentation** and how it differs from classical segmentation approaches.
 * Apply **Cellpose** to segment 2D microscopy images using the GUI and appropriate model and parameter choices.
-* Assess segmentation quality by identifying common errors and limitations in Cellpose results.
-* Train a custom Cellpose model using the GUI with user-provided annotated data.
+* **Assess segmentation quality** by identifying common errors and limitations in Cellpose results.
+* **Train a custom Cellpose model** using the GUI with user-provided annotated data.
 * Compare the performance of a custom-trained model to a pre-trained Cellpose model on new images.
 
 
