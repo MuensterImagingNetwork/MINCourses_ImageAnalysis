@@ -39,12 +39,10 @@ Right: ground truth outlines showing individual nuclei*
 
 We need a smarter method that considers *context* and *local features* — not just intensity.
 Let’s use a **pixel classifier** in ilastik!
-You can work on the [JupyterHub](https://jupyterhub.uni-muenster.de/) and start ilastik by clicking on the ilastik icon.
-Alternatively, you can start ilastik v1.4 on the HIVE. 
 
 ---
 
-#### 📁 Step 1: Start a New Project
+#### ▶️ Step 1: Start a New Project
 
 * Open **ilastik** 
 * Select the **Pixel Classification** workflow
@@ -52,7 +50,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### 🖼️ Step 2: Import Your Image
+#### ▶️ Step 2: Import Your Image
 
 * Go to **Input Data > Add New > Add separate Image(s)**
 * Load your image (red channel only)
@@ -60,7 +58,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### 🧪 Step 3: Select Features
+#### ▶️ Step 3: Select Features
 
 * Navigate to the **Feature Selection** tab and **Select Features...*
 * ilastik will compute image features like:
@@ -74,7 +72,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### 🏷️ Step 4: Define Classes
+#### ▶️ Step 4: Define Classes
 
 * Go to the **Training** Tab
 * Add two classes:
@@ -84,15 +82,14 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### ✍️ Step 5: Annotate Training Regions
+#### ▶️ Step 5: Annotate Training Regions
 
 * Use the **paintbrush** tool to label regions for each class
 * Cover a variety of image areas:
-
-  * Bright nuclei
-  * Dim nuclei
-  * Crowded regions
-  * Background noise
+	* Bright nuclei
+	* Dim nuclei
+	* Crowded regions
+	* Background noise
 * Label at least 5–10 representative regions per class
 * You can use the **eraser** tool to correct your annotation
 
@@ -102,17 +99,17 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### 🔄 Step 6: Train the Classifier
+#### ▶️ Step 6: Train the Classifier
 
 * Activate **Live Update** (top left of viewer)
 * ilastik will update a **probability map** in real time
 * Bright areas = high likelihood of being “lysosomes”
 * Familiarize yourself with the different visibility options by enabling the **eye ball** icon.
-* What does *Labels*, *Uncertainty*, *Segmentation* and *Prediction* show?
+* What do *Labels*, *Uncertainty*, *Segmentation* and *Prediction* show?
 
 ---
 
-#### 🧹 Step 7: Refine Annotations
+#### ▶️ Step 7: Refine Annotations
 
 * If the classifier is making mistakes:
 	- Add or erase brush strokes
@@ -121,7 +118,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### 💾 Step 8: Export the Probability Map
+#### ▶️ Step 8: Export the Probability Map
 
 * Go to the **Prediction Export** tab
 * Choose what to export:
@@ -131,7 +128,7 @@ Alternatively, you can start ilastik v1.4 on the HIVE.
 
 ---
 
-#### 🔁 Step 9: Batch Apply to New Images
+#### ▶️ Step 9: Batch Apply to New Images
 
 *If we had any more images ...* <br>
 
