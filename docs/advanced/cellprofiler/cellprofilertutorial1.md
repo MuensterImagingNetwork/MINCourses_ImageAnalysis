@@ -263,3 +263,4 @@ Hint: Create a tertiary object ...
 * **Example Pipelines Gallery:** [https://cellprofiler.org/examples](https://cellprofiler.org/examples)
 * **Video Tutorials:** [https://www.youtube.com/CellProfiler](https://www.youtube.com/playlist?list=PLXSm9cHbSZBBy7JkChB32_e3lURUcT3RL)
 * **Discussion Forum:** [https://forum.image.sc](https://forum.image.sc)
+

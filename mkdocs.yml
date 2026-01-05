@@ -39,7 +39,7 @@ nav:
         - Introduction To Reproducible Image Analysis: advanced/repIA.md
         - CellProfiler: advanced/cellprofiler/cellprofiler.md
         - "Tutorial 3: CellProfiler - Part 1": advanced/cellprofiler/tutorial_3_p1_cellprofiler.md
-        - "Intermezzo: Cheat-Sheet CellProfiler Modules": advanced/cellprofiler/cheatsheet_cellprofiler.md
+        - "Intermezzo: Cheat-Sheet CellProfiler Modules": advanced/cellprofiler/cheatsheets_half.md
         - "Tutorial 3: CellProfiler - Part 2": advanced/cellprofiler/tutorial_3_p2_cellprofiler.md
         - "Task: Reproducible Image Analysis with CellProfiler": advanced/cellprofiler/task_cellprofiler.md
         - "Checklist: Reproducible Image Analysis": advanced/checklist_ria.md
