@@ -1,4 +1,4 @@
-## ⚪ **Step 8: Assign each cytoplasm one nucleus**
+## ▶️ **Step 8: Assign each cytoplasm one nucleus**
 
 Assign each nucleus one cell:
 
@@ -8,7 +8,10 @@ Assign each nucleus one cell:
 
 ---
 
-## 📐 **Step 5: MeasureObjectSizeShape**
+## ▶️  **Step 9: MeasureObjectSizeShape**
+
+This module computes morphological features such as area, perimeter, and shape descriptors for each segmented nucleus. Reliable measurements depend directly on accurate object segmentation.
+
 
 * Add the **MeasureObjectSizeShape** module.
   * Select the object(s) you want to measure, e.g.: Nuclei_Segmentation
@@ -16,13 +19,14 @@ Assign each nucleus one cell:
 
 ![CP GUI](5.PNG)
 
-**Module explanation:**  
-This module computes morphological features such as area, perimeter, and shape descriptors for each segmented nucleus. Reliable measurements depend directly on accurate object segmentation.
 
 
 ---
 
-## 🔬 **Step 6: MeasureObjectIntensity**
+## ▶️  **Step 10: MeasureObjectIntensity**
+
+MeasureObjectIntensity quantifies fluorescence intensity statistics (e.g. mean, sum, maximum) within each nucleus. Ensure the correct intensity image (DAPI channel) is selected to avoid invalid measurements.
+
 
 * Add **MeasureObjectIntensity**
 
@@ -33,12 +37,12 @@ This module computes morphological features such as area, perimeter, and shape d
 
 ![CP GUI](6.PNG)
 
-**Module explanation:**  
-MeasureObjectIntensity quantifies fluorescence intensity statistics (e.g. mean, sum, maximum) within each nucleus. Ensure the correct intensity image (DAPI channel) is selected to avoid invalid measurements.
 
 ---
 
-## 🧮 **Step 7: ExportToSpreadsheet**
+## ▶️  **Step 11: ExportToSpreadsheet**
+
+Exports object- and image-level measurements to CSV files for downstream analysis. Including metadata columns in the export is critical for traceability and reproducibility.
 
 * Add **ExportToSpreadsheet**
 
@@ -50,13 +54,12 @@ MeasureObjectIntensity quantifies fluorescence intensity statistics (e.g. mean, 
 
 ![CP GUI](7.PNG)
 
-**Module explanation:**  
-Exports object- and image-level measurements to CSV files for downstream analysis. Including metadata columns in the export is critical for traceability and reproducibility.
+
 
 ---
 
 
-## ✅ **Final Reproducibility Check**
+## **Final Reproducibility Check**
 
 Before running **Analysis Mode**, confirm that:
 - Segmentation overlays look correct across multiple images  
@@ -64,14 +67,14 @@ Before running **Analysis Mode**, confirm that:
 
 --- 
 
-###### 🧰 **Task:** <br>
+###### **Task:** <br>
 Add another measurement module from the “Measurement” module category and configure it. 
 Which modules make sense, which don’t? <br>
-You can find more info on the measurements here: https://cellprofiler-manual.s3.amazonaws.com/CellProfiler-4.2.6/modules/measurement.html
+You can find more info on the measurements here: [Cellprofiler Manual](https://cellprofiler-manual.s3.amazonaws.com/CellProfiler-4.2.6/modules/measurement.html)
 
 ---
 
-###### 🧰 **Task:** <br>
+###### **Task:** <br>
 The cytoplasm segmentation actually includes the nucleus - what would a better approach be?
 Can you subtract the nucleus from the cytoplasm? Which module would you choose?
 Hint: Create a tertiary object ...

@@ -33,17 +33,19 @@
 
 ## ▶️  **Step 2: Load Your Images**
 
+This step defines the raw input images for the pipeline. A reproducible analysis always starts from unchanged raw data stored in a stable and well-organized location.
+
 - Right click on the *Drop field* → **Browse for Folder**  
 - Select your dataset directory  
 
 ![CP GUI](1.PNG)
 
-**Module explanation:**  
-This step defines the raw input images for the pipeline. A reproducible analysis always starts from unchanged raw data stored in a stable and well-organized location.
-
 ---
 
 ## ▶️  **Step 3: Metadata**
+
+The Metadata module extracts experimental identifiers (e.g. channel, well, position) and attaches them to each image. 
+Correct metadata is essential to keep images, measurements, and experimental conditions consistently linked.
 
 - In **Metadata**, extract image identifiers:
   - *Extract metadata?*: **Yes**
@@ -53,13 +55,12 @@ This step defines the raw input images for the pipeline. A reproducible analysis
 
 ![CP GUI](2.PNG)
 
-**Module explanation:**  
-The Metadata module extracts experimental identifiers (e.g. channel, well, position) and attaches them to each image. 
-Correct metadata is essential to keep images, measurements, and experimental conditions consistently linked.
 
 ---
 
 ## ▶️  **Step 4: NamesAndTypes**
+
+NamesAndTypes assigns meaningful names to image channels (e.g. “Nuclei” instead of “Channel1”). All downstream modules rely on these names, so incorrect assignments will affect the entire pipeline.
 
 - In **NamesAndTypes**, assign channels:
   - *Assign a name to*: **Images matching rules**
@@ -68,8 +69,6 @@ Correct metadata is essential to keep images, measurements, and experimental con
 
 ![CP GUI](3.PNG)
 
-**Module explanation:**  
-NamesAndTypes assigns meaningful names to image channels (e.g. “Nuclei” instead of “Channel1”). All downstream modules rely on these names, so incorrect assignments will affect the entire pipeline.
 
 ---
 
@@ -81,6 +80,9 @@ Test Mode allows step-by-step inspection and parameter tuning on a small number 
 ---
 
 ## ▶️  **Step 6: Identify Cells using Cellpose**
+
+RunCellpose performs automated segmentation of nuclei using a deep learning model. Always visually inspect the segmentation results, 
+as model performance depends strongly on image quality, contrast, and scale.
 
 - Add a new module by clicking **“+”** under *Adjust modules*  
 * Add a **RunCellpose** module
@@ -95,10 +97,6 @@ Test Mode allows step-by-step inspection and parameter tuning on a small number 
 
 ![CP GUI](10.PNG)
 - 
-
-**Module explanation:**  
-RunCellpose performs automated segmentation of nuclei using a deep learning model. Always visually inspect the segmentation results, 
-as model performance depends strongly on image quality, contrast, and scale.
 
 ---
 
