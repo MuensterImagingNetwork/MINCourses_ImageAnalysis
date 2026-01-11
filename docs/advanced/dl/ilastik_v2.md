@@ -1,37 +1,35 @@
-# 🛠️ **Hands-on ilastik: <br> Segmenting Lysosomes with Pixel Classification**
+# 🛠️ **Hands-on ilastik: <br> Segmenting Mitochondria with Pixel Classification**
 
 ### Background Scenario
 
 You’ve acquired a fluorescence microscopy image with three channels:
 
-* **Red**: lysosomes
-* **Green:** mitochondria
-* **Blue:** nuclear stain
+* **Magenta:** mitochondria
+* **Green:** actin
+* **Cyan:** nuclear stain
 
-![ImageData](helacells.jpg) <br>
-*Fiji - Sample Image. This is a composite color image of HeLa cells is courtesy of Tony Collins, creator of the ImageJ for Microscopy
-collection of plugins at <http://www.macbiophotonics.ca/imagej/>.*
+![ImageData](mito_pixelclassification.png) <br>
+
 
 ---
 
 ### **Goal:** 
-Segment individual lysosomes from the red channel, even in crowded or noisy areas.
+Segment individual mitochondria from magenta channel, even in crowded or noisy areas.
 
 ---
 
 ### Where Traditional Segmentation Fails
 
-You try global thresholding of the red lysosomes channel:
+You try global thresholding of the mitochondria channel:
 
 **Problem:**
 
-  * Merged adjacent lysosomes
-  * Faint lysosomes missed entirely
+  * Faint mitochondria missed entirely
+  * Background included in segmentation
   * Intensity variation and texture not handled
 
-![ImageData](segmentationproblem.jpg) <br>
-*Original: Channel 1 (lysosomes) - in gray scale; Threshold 1: thresholded image with merged objects; Threshold 2: thresholded image with missing objects
-Right: ground truth outlines showing individual nuclei*
+![ImageData](failed_seg_mito.png) <br>
+*Original: Channel 1 (mitochondria) - in gray scale; Threshold 1: thresholded image with merged objects; Threshold 2: thresholded image with missing objects; Right: improved segmentation excluding background signal*
 
 ---
 
@@ -46,14 +44,14 @@ Let’s use a **pixel classifier** in ilastik!
 
 * Open **ilastik** 
 * Select the **Pixel Classification** workflow
-* Create a new project and name it meaningfully (e.g., `lysosome_segmentation.ilp`)
+* Create a new project and name it meaningfully (e.g., `mito_segmentation.ilp`)
 
 ---
 
 #### ▶️ Step 2: Import Your Image
 
 * Go to **Input Data > Add New > Add separate Image(s)**
-* Load your image (red channel only)
+* Load your image (magenta channel only)
 * Preview it in the image viewer to ensure it loads correctly
 
 ---
@@ -76,7 +74,7 @@ Let’s use a **pixel classifier** in ilastik!
 
 * Go to the **Training** Tab
 * Add two classes:
-	- **Class 1**: *Lysosomes*
+	- **Class 1**: *Mitochondria*
 	- **Class 2**: *Background*
 * You can rename classes by double-clicking their labels
 
@@ -86,8 +84,8 @@ Let’s use a **pixel classifier** in ilastik!
 
 * Use the **paintbrush** tool to label regions for each class
 * Cover a variety of image areas:
-	* Bright nuclei
-	* Dim nuclei
+	* Bright mitos
+	* Dim mitos
 	* Crowded regions
 	* Background noise
 * Label at least 5–10 representative regions per class
@@ -103,7 +101,7 @@ Let’s use a **pixel classifier** in ilastik!
 
 * Activate **Live Update** (top left of viewer)
 * ilastik will update a **probability map** in real time
-* Bright areas = high likelihood of being “lysosomes”
+* Bright areas = high likelihood of being “mitochondria”
 * Familiarize yourself with the different visibility options by enabling the **eye ball** icon.
 * What do *Labels*, *Uncertainty*, *Segmentation* and *Prediction* show?
 
@@ -124,13 +122,12 @@ Let’s use a **pixel classifier** in ilastik!
 * Choose what to export:
 
 	- Raw probability map (for post-processing in Fiji/ImageJ)
+	- Make sure to export as .tif!
 	- Binary segmentation mask
 
 ---
 
 #### ▶️ Step 9: Batch Apply to New Images
-
-*If we had any more images ...* <br>
 
 - In **Batch Input**, load additional images
 - ilastik will apply your trained classifier across the entire set
@@ -157,6 +154,7 @@ please visit the [Ilastik page](https://www.ilastik.org/documentation/pixelclass
 
 * [ilastik Homepage](https://www.ilastik.org/)
 * [Documentation](https://www.ilastik.org/documentation/pixelclassification/pixelclassification)
+* [Workshop](https://files.ilastik.org/ilastik%20workshop.pdf)
 ---
 
 

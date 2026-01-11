@@ -34,7 +34,7 @@ nav:
         - Image Segementation using DL: advanced/dl/dl.md
         - Cellpose: advanced/dl/cellpose_background.md
         - "Tutorial 2: CellPose": advanced/dl/cellpose.md
-        - "Checklist: Correct Segmentation": advanced/checklist_segmentation.md
+        # - "Checklist: Correct Segmentation": advanced/checklist_segmentation.md
     - Reproducible Image Analysis:
         - Introduction To Reproducible Image Analysis: advanced/repIA.md
         - CellProfiler: advanced/cellprofiler/cellprofiler.md

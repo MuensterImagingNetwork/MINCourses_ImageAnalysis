@@ -10,63 +10,56 @@
 
 --- 
 
-Machine‑learning–based segmentation teaches a computer to recognize and delineate structures in microscopy images by example rather than by writing explicit rules for 
-every possible case. 
+## Machine Learning–Based Segmentation
 
-In ***supervised learning***, you give the software a handful of images where you’ve already drawn the correct outlines (the “ground truth”).
- The program then figures out which pixel patterns—brightness, texture, edges—match your drawings. After checking that it works on a 
- few test images, it can automatically create masks on new images for you, saving hours of manual tweaking.
- 
- Thus the programs learns to discern different cells or structures — much as a student might study example slides showing healthy 
- versus diseased cells to learn what visual cues distinguish them.
+Machine learning–based segmentation teaches a computer to recognize and separate structures in microscopy images **from examples rather than explicit rules**. Instead of defining fixed thresholds or handcrafted pipelines, the model learns how pixels should be classified based on annotated training data.
 
-Here’s how it works step by step:
+In **supervised learning**, users provide example annotations that label pixels as belonging to different classes (e.g. object, background). From these annotations, the algorithm learns which **image features**—such as intensity, edges, texture, and local context—are characteristic for each class. Once trained, the model can automatically segment new, unseen images.
 
-- **Feature Extraction** <br>
-	The algorithm examines each pixel (and its local neighborhood) to compute simple characteristics—intensity, texture, edge responses, or color.
-
-- **Model Training** <br>
-	Using your labeled examples, the algorithm “learns” which combinations of features correspond to the object class (e.g., cell, nucleus, background). It builds a mathematical model—often a decision tree or a small neural network—that can predict the class of each pixel.
-
-- **Validation** <br>
-	A separate set of labeled images (the “validation” or “test” set) checks how well the model performs on new data. This helps avoid overfitting (when a model learns the training examples too exactly but fails on unseen images).
-
-- **Prediction** <br>
-	Once the model is trained and validated, you feed it new, unlabeled images. It applies the learned rules to assign each pixel to a class, producing a segmentation mask automatically.
+This process is comparable to how a student learns to distinguish cell types by studying annotated reference images: patterns are learned from examples, not from written rules.
 
 ---
 
-### The Principle behind Pixel Classification
+## The Principle of Pixel Classification
 
-***Pixel classification*** is a specific type of supervised segmentation where each pixel is assigned to a category such as "signal" or "background" 
-by evaluating not only its raw intensity but also a suite of engineered features (that capture local texture, edge, and spatial information.
+**Pixel classification** is a supervised segmentation approach in which **each pixel is assigned to a class** (e.g. signal or background) based on learned image features rather than raw intensity alone.
 
-##### Key ideas
-- Each pixel is described by **image features** rather than treated in isolation.
-- A classifier learns the relationship between features and classes from **annotated training data**.
-- The trained model predicts class probabilities for unseen pixels.
+### Key ideas
+- Each pixel is represented by a **feature vector** (intensity, edges, texture, context).
+- A classifier learns the relationship between features and classes from **user annotations**.
+- The trained model predicts **class probabilities** for all pixels in new images.
 
+---
 
-In a typical pixel classification workflow, you:
+## Pixel Classification Workflow
 
-**1. Select Features:** Choose features and scales that capture the structural and textural cues in your data.
+1. **Feature extraction**  
+   Image features are computed for each pixel at multiple spatial scales to capture fine detail and broader context.
 
-**2. Annotate:** Scribble example regions for each class (signal vs. background).
+2. **Annotation (training data)**  
+   Users provide **sparse but representative** annotations for each pixel class.
 
-**3. Train & Refine:** Fit a Random Forest (or similar) to your annotations, inspect the results, then iteratively add or adjust annotations until the segmentation is robust.
+3. **Model training and refinement**  
+   A classifier (commonly a **Random Forest**) is trained on the annotated pixels. Results are inspected visually and annotations are refined iteratively until performance is stable.
 
-**4. Batch‑Apply:** Use the finalized classifier to process all images in your dataset automatically.
-<br>
-<br>
+4. **Application to new data**  
+   The trained classifier is applied to unseen images to generate probability maps or label images, enabling batch processing of entire datasets.
+
 ![Principle of Pixel Classification](pixelclassification_1.jpg)
 
+---
 
-##### Pixel classification vs. classical segmentation
-- **Classical methods**: thresholding, filters, morphology, rule-based pipelines
-- **Pixel classification**:
-	- Handles complex textures and varying intensities
-	- Reduces manual rule tuning
-	- Depends strongly on training data quality
+## Pixel Classification vs. Classical Segmentation
+
+- **Classical segmentation**  
+	- Thresholding, filtering, morphology, rule-based pipelines  
+	→ Explicit rules defined by the user
+
+- **Pixel classification**  
+	  - Learns decision boundaries from data  
+	  - Integrates multiple image cues automatically  
+	  - Performs well on complex, heterogeneous images  
+	  - Strongly depends on the quality and representativeness of training data
 
 
 

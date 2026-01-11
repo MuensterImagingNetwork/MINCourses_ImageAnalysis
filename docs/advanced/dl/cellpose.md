@@ -16,7 +16,7 @@ Use **Cellpose** to generate accurate cell masks, separating individual cells,
 even in cluttered images. Then use **Fiji** to measurement cell properties.
 
 ---
-### 5.1 Cellpose Segmentation
+### Cellpose
 
 Start Cellpose by clicking on the Cellpose icon on your Desktop.
 
@@ -93,13 +93,13 @@ You'll find different sections at the left hand side of the Cellpose GUI.
 
 Try running Cellpose on:
 
-* A brightfield image of adherent cells
-* A DAPI-stained image with clustered nuclei
-* A tissue section with mixed cell sizes
+* A yeast cell example, including bright field images
+* A tissue section with HE staining
+* A fluorescently-labeled tissue section with mixed cell sizes
 
 ---
 
-### 5.2 Training your own Cellpose model
+### Training your own Cellpose model
 
 
 #### ▶️ Step 1: Prepare your training images

@@ -8,23 +8,24 @@ Through this training, you will learn how to use Fiji and AI tools like Cellpose
 
 ### General Learning Objectives
 
-The goal of the course is to equip you with the necessary skills and knowledge to independently perform bioimage analyses and achieve high-quality results. 
-We will focus on key topics such as the very basics of image analysis, machine learning for image segmentation, creating publication-quality figures, and integrating various tools.
+Goal of the course is to equip you with the necessary skills and knowledge to independently perform bioimage analyses and achieve high-quality results. 
 
 Upon completing the course, you should be able to:
+	- Apply **advanced segmentation strategies** and critically evaluate segmentation quality
+	- Design, build, and optimize **image analysis pipelines** for reproducible, quantitative analysis
+	- Diagnose **common analysis pitfalls** and apply quality control at each pipeline step
+	- Interpret **quantitative results** in the context of image quality and analysis choices
 
-- LO1
-- LO2
-- LO3
-- LO4
 
 ### Programme
 
 | | Day 1 | Day 2 | Day 3 |
 | ---- | ---- | ---- | ---- |
-| | **Advanced Image Segmentation** <br> Hands-On: <br> Introduction to Pixel Classification | **Reproducible Image Analysis** <br>  Hands-On: <br> CellProfiler | **Cell Tracking** <br> Hands-On: <br> Arivis and TrackMate |
+| | **Advanced Segmentation** | **Reproducible analysis**  |
+| | **Machine Learning for Segmentation** <br> Hands-On: <br> ilastik | **Image Analysis Pipelines** <br>  Hands-On: <br> CellProfiler | **Cell Tracking** <br> Hands-On: <br> Arivis and TrackMate |
 | | | | |
-| | Hands-On: <br> Cellpose for Cell segmentation | Hands-On: <br> Analysis Task | Hands-On: <br> Analysis Task |
+| | **Deep Learning for Segmentation** <br> Hands-On: <br> Cellpose | **Image Analysis Pipelines (3D)** <br> Hands-On: <br> Arivis | Misc |
+
 
 
 
